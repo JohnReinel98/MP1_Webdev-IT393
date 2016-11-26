@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> Login </title>
+<title> Login Power User </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -140,7 +140,7 @@ body{
 <div id="header">
 </div>
 <div class = "login">
-	<form method = "POST" action = "loginsessioncode.php">
+	<form method = "POST" action = "loginpowerusercode.php">
 	<tr>
 	<td><font face="Verdana" color="white" class="usertxt">Username:</font><br>
 	<td><input type = "text" class="username" name = "txtUsername" id = "txtUsername" placeholder="  Username here..." autocomplete="off" />

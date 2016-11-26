@@ -253,6 +253,15 @@ body{
 	background-color: darkgray;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.poweruser{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.btnPower{
+	background: none;
+	border: none;
+}
 </style>
 </head>
 <body>
@@ -284,7 +293,9 @@ body{
 <input class="sub" type="submit" value="Track"/>
 </form>
 </div>
-<div>
+<div class="poweruser">
+<form method="POST" action="loginpoweruser.php">
+<input type="submit" value="" class="btnPower">
 </div>
 <div class="gif1">
 <img src="Assets/index.gif" />
