@@ -17,7 +17,7 @@
 	$consigneeno = $_POST['txtConsigneeNo'];	
 	$amount = $_POST['txtAmount'];
 	$branch = $_POST['txtBranch'];
-	$remitstatus = $_POST['txtStatus'];
+	$remitstatus = 'Pending';
 	
 	if($amount ==100)
 		$fee = 6;
@@ -49,16 +49,18 @@
 		$fee = 180;
 	else if($amount>=4001 and $amount<=5000)
 		$fee = 220;
-	else
+	else{
 		echo "Enter amount higher than 100";
-?>
-
-<?php
+	}
 	$totalamount = $fee + $amount;
 ?>
 
+
+	
+
 <html>
 <head>
+<title> Remit Receipt </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -80,11 +82,11 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 300px;
-	height: 500px;
+	width: 730px;
+	height: 510px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 190px 520px 0;
+	margin: 190px 360px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -92,12 +94,91 @@ body{
 .fields{
 	position:absolute;
 	top:210px;
-	left:570px;
+	left:400px;
+}
+.fields2{
+	position: absolute;
+	top: -10px;
+	left: 480px;
 }
 .logo{
 	position: absolute;
 	top: -45px;
 	left: 10px;
+}
+.house{
+	width: 60px;
+}
+.street{
+	width: 70px;
+}
+.barangay{
+	width: 80px;
+}
+.city{
+	width: 80px;
+}
+.province{
+	width: 90px;
+}
+.chouse{
+	width: 60px;
+}
+.cstreet{
+	width: 70px;
+}
+.cbarangay{
+	width: 80px;
+}
+.ccity{
+	width: 80px;
+}
+.cprovince{
+	width: 90px;
+}
+.btnBack{
+	position: absolute;
+	top: 650px;
+	left: 600px;
+}
+.back{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.back:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.sub{
+	position: absolute;
+	top: 440px;
+	left: 5px;
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.sub:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 </style>
 </head>
@@ -135,6 +216,7 @@ body{
 <td><input type = "text" value="<?php echo "$consigneemail"?>" name = "txtConsigneeEmail" id = "txtConsigneeEmail" readonly><p>
 <p><font face="Helvetica" color="white">Consignee Contact Number:</font><br>
 <td><input type = "text" value="<?php echo "$consigneeno"?>" name = "txtConsigneeNo" id = "txtConsigneeNo" readonly><p>
+<div class="fields2">
 <p><font face="Helvetica" color="white">Amount:</font><br>
 <td><input type = "text" value="<?php echo "$amount"?>" name = "txtAmount" id = "txtAmount" readonly><p>
 <p><font face="Helvetica" color="white">Fee:</font><br>
@@ -145,7 +227,13 @@ body{
 <td><input type = "text" value="<?php echo "$branch"?>" name = "txtBranch" id = "txtBranch" readonly><p>
 <p><font face="Helvetica" color="white">Status:</font><br>
 <td><input type = "text" value="<?php echo "$remitstatus"?>" name = "txtStatus" id = "txtStatus" readonly><p>
-<input type = "submit" value = "Submit Transaction">
+</div>
+<input type = "submit" value = "Submit Transaction" class="sub">
+</form>
+</div>
+<div class= "btnBack">
+<form method="POST" action="createremitform.php">
+<input type= "submit" value="Back" class="back">
 </form>
 </div>
 <div class="logo">

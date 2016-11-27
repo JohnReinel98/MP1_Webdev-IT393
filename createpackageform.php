@@ -115,11 +115,11 @@ th {
 <td><font face="Helvetica" color="white">Consignor:</font><br>
 <td><input type = "text" name = "txtConsignor" id = "txtConsignor"><p>
 <p><font face="Helvetica" color="white">Consignor Address:</font><br> 
-<td><input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" class="house">
-<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" class="street">
-<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" class="barangay">
-<input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" class="city">
-<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" class="province"><p>
+<td><input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" placeholder="House" class="house">
+<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder="Street" class="street">
+<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder="Barangay" class="barangay">
+<input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" placeholder="City" class="city">
+<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder="Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignor Email:</font><br> 
 <td><input type = "text" name = "txtConsignorEmail" id = "txtConsignorEmail"><p>
 <p><font face="Helvetica" color="white">Consignor Contact No.:</font><br> 
@@ -127,11 +127,11 @@ th {
 <p><font face="Helvetica" color="white">Consignee:</font><br>
 <td><input type = "text" name = "txtConsignee" id = "txtConsignee"><p>
 <p><font face="Helvetica" color="white">Consignee Address:</font><br> 
-<td><input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" class="house">
-<input type = "text" name = "txtConsigneeStreet" id = "txtConsignorStreet" class="street">
-<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" class="barangay">
-<input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" class="city">
-<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" class="province"><p>
+<td><input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" placeholder="House" class="house">
+<input type = "text" name = "txtConsigneeStreet" id = "txtConsignorStreet" placeholder="Street" class="street">
+<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder="Barangay" class="barangay">
+<input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" placeholder="City" class="city">
+<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder="Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignee Email:</font><br>
 <td><input type = "text" name = "txtConsigneeEmail" id = "txtConsigneeEmail"><p>
 <p><font face="Helvetica" color="white">Consignee Contact No.:</font><br>
@@ -144,7 +144,7 @@ th {
 <option> VISAYAS </option>
 <option> MINDANAO </option></select><p>
 <p><font face="Helvetica" color="white">Size:</font><br>
-<td><select type = "choice" name = "txtSize" id = "txtSize"><p>
+<td><select type = "choice" name = "txtKilo" id = "txtKilo"><p>
 <option> KB Small </option>
 <option> KB Medium </option>
 <option> KB Large </option>

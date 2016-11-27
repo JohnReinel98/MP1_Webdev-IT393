@@ -33,11 +33,11 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 910px;
+	width: 430px;
 	height: 150px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 220px 250px 0;
+	margin: 220px 450px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -45,7 +45,7 @@ body{
 .table1{
 	position: absolute;
 	top:250px;
-	left:280px;
+	left:480px;
 }
 table{
 	border-collapse: collapse;
@@ -79,7 +79,7 @@ th {
     top: 420px;
 	left: 1050px;
 }
-a:hover{
+.backmain:hover{
 	background-color: darkgray;
 	color:white;
 }
@@ -98,37 +98,22 @@ a:hover{
 <div class = "table1">
 	<table>
 	<tr>
-	<th> Track No </th>
-	<th> Consignor </th>
-	<th> Consignor No </th>
-	<th> Consignee </th>
-	<th> Consignee No </th>
-	<th> Total Amount </th>
-	<th> Branch </th>
-	<th> Remit Status </th>
+	<th> Date Dispatched </th>
+	<th> Status </th>
+	<th> Expected Delivery Date </th>
 	
 	<?php
 	$tracksearch = $_POST['txtTrackOrder'];
-	$sql = mysql_query("select * from tblmoney_remit where TrackNo = '$tracksearch'",$conn);
+	$sql = mysql_query("select * from tblpackage_delivery where TrackNo = '$tracksearch'",$conn);
 	while($rows=mysql_fetch_array($sql)){
-			$track = $rows['TrackNo'];
-			$consignor = $rows['Consignor'];
-			$consignorno = $rows['ConsignorNo'];
-			$consigneeno = $rows['ConsigneeNo'];
-			$consignee = $rows['Consignee'];
-			$totalamount = $rows['TotalAmount'];
-			$branch = $rows['Branch'];
-			$remitstatus = $rows['RemitStatus'];
+			$datedispatched = $rows['DateDelivered'];
+			$status = $rows['DeliveryStatus'];
+			$expected = $rows['DateReceived'];
 	
 	
-	echo "<tr><td align = 'center'> $track </td>";
-	echo "<td align = 'center'> $consignor </td>";
-	echo "<td align = 'center'> $consignorno </td>";
-	echo "<td align = 'center'> $consigneeno </td>";
-	echo "<td align = 'center'> $consignee </td>";
-	echo "<td align = 'center'> $totalamount </td>";
-	echo "<td align = 'center'> $branch </td>";
-	echo "<td align = 'center'> $remitstatus </td></tr>";
+	echo "<tr><td align = 'center'> $datedispatched </td>";
+	echo "<td align = 'center'> $status </td>";
+	echo "<td align = 'center'> $expected </td></tr>";
 	
 	}
 	?>

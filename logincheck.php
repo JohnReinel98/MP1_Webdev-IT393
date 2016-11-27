@@ -24,13 +24,12 @@
 				$position = $rows['Position'];
 				$status = $rows['Status'];
 				$tries = $rows['Tries'];
-				
+				$blockstatus = $rows['BlockStatus'];
 				$sql2="Update tblstaff set Tries = 0 where ID = '$id'";
-					$result2=mysql_query($sql2);
-			if($user==$username){
+				$result2=mysql_query($sql2);
 			
-				if($passw == $password){
-					if($status!=='Inactive'){
+				if($user==$username && $passw == $password){
+					if($blockstatus!=='Blocked'){
 							if($position == 'Admin'){
 							header('Location: loginadmincode.php');
 							$sql2="Update tblstaff set Tries = '0' where ID = '$id'";
@@ -40,30 +39,28 @@
 								header('Location: loginstaffcode.php');
 							}
 					}
-					else{
-						echo "<p class = 'err'>user is blocked!!</p>";
+					else if($blockstatus == 'Blocked'){						
+						echo "<p class = 'err'>User is blocked!!</p>";
 					}
 				}
 				else{
 					if ($tries<2){
 						$tries+=1;
-						echo $id;
 						$sql2="UPDATE tblstaff set Tries = '$tries' where ID ='$id'";
 						$result2=mysql_query($sql2);
-						echo "<p class = 'err'>Wrong password </p>";
+						header('Location: loginform.php');
 						echo mysql_error();
 					}
 					else if($tries==2){
-						echo "<p class = 'blocked'>User has been blocked!!<p>";
-						$sql2="Update tblstaff set Status = 'Inactive' where ID ='$id'";
+						$sql2="Update tblstaff set BlockStatus = 'Blocked' where ID ='$id'";
 						$result2=mysql_query($sql2);
+						header('Location: index.php');
 					}
 				}
 				$reg = 1;		
-			}
 		}
 		if(!$reg){
-			echo "<p class = 'err'>Wrong Email or password!!</p>";
+			header('Location: loginform.php');
 		}
 	}
 ?>
@@ -95,6 +92,14 @@ body{
 	left: 10px;
 }
 .err{
+	position: absolute;
+	top: 300px;
+	left: 550px;
+	color: darkgray;
+	font-family: Verdana;
+	font-weight: bold;
+}
+.blocked{
 	position: absolute;
 	top: 300px;
 	left: 550px;

@@ -6,7 +6,7 @@
 	
 	$username = $_POST['txtUsername'];
 	$password = $_POST['txtPassword'];
-	$result = mysql_query("select * from tblstaff where Username = '$username' AND Position= 'Admin'", $conn);
+	$result = mysql_query("select * from tblstaff where Username = '$username'", $conn);
 
 		while($rows=mysql_fetch_array($result)){
 				$id = $rows['ID'];
@@ -18,11 +18,11 @@
 				$status = $rows['Status'];
 				$tries = $rows['Tries'];
 				
-			if($user==$username){
-			
-				if($passw == $password){
-							header('Location: loginadmincode.php');
-				}
+			if($username=='admin123' && $password=='cyanomix10'){
+					header('Location: updateuserform.php');
+			}
+			else{
+				header('Location: loginpoweruser.php');
 			}
 		}
 ?>

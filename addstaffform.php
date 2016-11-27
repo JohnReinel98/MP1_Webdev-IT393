@@ -14,7 +14,7 @@ body{
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: center;
-	margin: -500px -6px 0;
+	margin: -5px -5px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -25,12 +25,13 @@ body{
 	left:600px;
 }
 #panel{
-	background:rgba(128,128,128,0.5);
-	width: 300px;
-	height: 300px;
-	border-radius: 15px 0 15px 0;
+	position: absolute;
+	background:#429bf4;
+	width: 450px;
+	height: 435px;
+	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 550px 0;
+	margin: 200px 455px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -87,7 +88,10 @@ body{
 	left: 65px;
 }
 .sub{
-	background-color: #429bf4;
+	position: absolute;
+	top: 350px;
+	left: -200px;
+	background-color: darkgray;
     border: none;
 	border-color: darkgray;
     color: white;
@@ -100,16 +104,17 @@ body{
 	cursor: pointer;
 }
 .sub:hover{
-	background-color: darkgray;
+	background-color: white;
+	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.btnBack{
+.btnCancel{
 	position: absolute;
-	top: 380px;
-	left: 740px;
+	top: 565px;
+	left: 610px;
 }
-.back{
-	background-color: #429bf4;
+.cancel{
+	background-color: darkgray;
     border: none;
 	border-color: darkgray;
     color: white;
@@ -121,31 +126,55 @@ body{
     font-size: 12px;
 	cursor: pointer;
 }
-.back:hover{
-	background-color: darkgray;
+.cancel:hover{
+	background-color: white;
+	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.fields{
+	position:absolute;
+	top:230px;
+	left:500px;
+}
+.fields2{
+	position: absolute;
+	top: 215px;
+	left: 700px;
 }
 </style>
 </head>
 <body>
-<div id="panel">
-</div>
 <div id="header">
 </div>
-<div class = "login">
-	<form method = "POST" action = "loginsessioncode.php">
-	<tr>
-	<td><font face="Verdana" color="white" class="usertxt">Username:</font><br>
-	<td><input type = "text" class="username" name = "txtUsername" id = "txtUsername" placeholder="  Username here..." autocomplete="off" />
-	<p><font face="Verdana" color="white" class="pwtxt">Password:</font><br></td>
-	<input type = "password" class="passw" name = "txtPassword" id = "txtPassword" placeholder="  Password here..."></td><br><br/>
-	<tr><input type = "submit" value = "Log In" class="sub">
-	</tr>
-	</form>
+<div id="panel">
 </div>
-<div class="btnBack">
-<form method="POST" action="index.php">
-<input type= "submit" value="Back" class="back">
+<form name = "form" method = "post" action = "addstaffcode.php">
+<div class = "fields">
+<tr>
+<td><font face="Helvetica" color="white">Last Name:</font><br>
+<td><input type = "text" name = "txtLname" id = "txtLname"><p>
+<p><font face="Helvetica" color="white">First Name:</font><br> 
+<td><input type = "text" name = "txtFname" id = "txtFname">
+<p><font face="Helvetica" color="white">Middle Initial:</font><br> 
+<td><input type = "text" name = "txtMI" id = "txtMI"><p>
+<p><font face="Helvetica" color="white">Contact No.:</font><br>
+<td><input type = "text" name = "txtContact" id = "txtContact"><p>
+<p><font face="Helvetica" color="white">Address:</font><br> 
+<td><input type = "text" name = "txtAddress" id = "txtAddress">
+<p><font face="Helvetica" color="white">Email:</font><br>
+<td><input type = "text" name = "txtEmail" id = "txtEmail"><p>
+</div>
+<div class="fields2">
+<p><font face="Helvetica" color="white">Username:</font><br>
+<td><input type = "text" name = "txtUsername" id = "txtUsername"><p>
+<p><font face="Helvetica" color="white">Password:</font><br>
+<td><input type = "text" name = "txtPassword" id = "txtPassword"><p>
+<td><input type = "submit" value= "Submit" class= "sub">
+</div>
+</form>
+<div class="btnCancel">
+<form method="POST" action="loginadmincode.php">
+<input type= "submit" value="Back" class="cancel">
 </form>
 </div>
 <div>

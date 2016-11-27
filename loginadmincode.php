@@ -93,6 +93,20 @@ body{
 .btnLogout:hover{
 	color: darkgray;
 }
+.btnCr8Staff{
+	position: absolute;
+	top: 60px;
+	left: 450px;
+	border: none;
+	background: transparent;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.btnCr8Staff:hover{
+	color: darkgray;
+}
 #panel{
 	position: absolute;
 	background:#429bf4;
@@ -128,6 +142,19 @@ body{
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 30px 630px 0;
+	color: #fff;
+	padding: 20px;
+	box-sizing:border-box;
+}
+#panel3{
+	position: absolute;
+	background:#429bf4;
+	opacity: 0.9;
+	width: 200px;
+	height: 80px;
+	border-radius: 15px 15px 15px 15px;
+	float: center;
+	margin: 30px 410px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -172,6 +199,8 @@ th {
 </div>
 <div id="panel2">
 </div>
+<div id="panel3">
+</div>
 <div class="logo">
 <a href="index.php">
 <img src="Assets/indexlogo.png"/>
@@ -185,6 +214,9 @@ th {
 </form>
 <form method="POST" action="createpackageform.php">
 	<input type="submit" value="Package Delivery" class="btnCr8Pack">
+</form>
+<form method="POST" action="addstaffform.php">
+	<input type="submit" value="Add Staff" class="btnCr8Staff">
 </form>
 <div class = "table1">
 	<table>

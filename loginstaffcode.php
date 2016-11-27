@@ -1,3 +1,20 @@
+<?php
+	session_start();
+	$conn = @mysql_connect("localhost","root","");
+	if(!$conn)
+		die("Cannot to the database");
+	mysql_select_db("dbmplogistics", $conn);
+	
+	$username = $_SESSION['user'];
+	$password = $_SESSION['password'];
+	
+	$show = mysql_query("Select Lname,Fname from tblstaff where Username ='$username'");
+	$rows = mysql_fetch_array($show);
+	$lname1 = $rows['Lname'];
+	$fname = $rows['Fname'];
+	echo "<p class=welcome> Welcome: $fname $lname1 </p>";
+	
+?>
 <html>
 <head>
 <title> Employee Panel </title>
@@ -144,6 +161,11 @@ th {
 	top: 20px;
 	left: 200px;
 }
+.welcome{
+	position: absolute;
+	top: 130px;
+	left: 1100px;
+}
 </style>
 </head>
 <body>
@@ -169,6 +191,5 @@ th {
 <form method="POST" action="createpackageform.php">
 	<input type="submit" value="Package Delivery" class="btnCr8Pack">
 </form>
-<form method = "post" action = "index.php">
-	<input type = "submit" value = "" class = "hidden">
-</form>
+</body>
+</html>

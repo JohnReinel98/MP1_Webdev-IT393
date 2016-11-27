@@ -22,11 +22,11 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 300px;
-	height: 450px;
+	width: 500px;
+	height: 550px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 160px 0;
+	margin: 200px 50px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -46,7 +46,7 @@ body{
 .fields{
 	position:absolute;
 	top:230px;
-	left:200px;
+	left:100px;
 }
 .table1{
 	position: absolute;
@@ -124,22 +124,22 @@ th {
 <tr>
 <td><font face="Helvetica" color="white">Consignor:</font><br>
 <td><input type = "text" name = "txtConsignor" id = "txtConsignor"><p>
-<p><font face="Helvetica" color="white">Consignor Address:</font><br> 
-<td><input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" class="house">
-<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" class="street">
-<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" class="barangay">
-<input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" class="city">
-<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" class="province"><p>
+<p><font face="Helvetica" color="white">Consignee Address:</font><br>
+<input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" placeholder=" House" class="house">
+<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder=" Street" class="street">
+<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder=" Barangay" class="barangay">
+<input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" placeholder=" City" class="city">
+<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder=" Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignor Contact Number:</font><br> 
 <td><input type = "text" name = "txtConsignorNo" id = "txtConsignorNo"><p>
 <p><font face="Helvetica" color="white">Consignee:</font><br>
 <td><input type = "text" name = "txtConsignee" id = "txtConsignee"><p>
-<p><font face="Helvetica" color="white">Consignee Address:</font><br> 
-<td><input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" class="chouse">
-<input type = "text" name = "txtConsigneeStreet" id = "txtConsigneeStreet" class="cstreet">
-<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" class="cbarangay">
-<input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" class="ccity">
-<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" class="cprovince"><p>
+<p><font face="Helvetica" color="white">Consignee Address:</font><br>
+<input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" placeholder=" House" class="house">
+<input type = "text" name = "txtConsigneeStreet" id = "txtConsigneeStreet" placeholder=" Street" class="street">
+<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder=" Barangay" class="barangay">
+<input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" placeholder=" City" class="city">
+<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder=" Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignee Email:</font><br>
 <td><input type = "text" name = "txtConsigneeEmail" id = "txtConsigneeEmail"><p>
 <p><font face="Helvetica" color="white">Consignee Contact Number:</font><br>
@@ -153,8 +153,6 @@ th {
 <option> S. LUZON </option>
 <option> VISAYAS </option>
 <option> MINDANAO </option></select><p>
-<p><font face="Helvetica" color="white">Status:</font><br>
-<td><input type = "text" name = "txtStatus" id = "txtStatus"><p>
 <input type = "submit" value = "Submit Transaction">
 <input type = "reset" value = "Clear All Fields">
 </form>

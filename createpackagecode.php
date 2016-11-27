@@ -63,6 +63,7 @@ $conn = @mysql_connect("localhost","root","");
 	$city = $_POST['txtConsignorCity'];
 	$province = $_POST['txtConsignorProvince'];
 	$consignorno = $_POST['txtConsignorNo'];
+	$consignoremail = $_POST['txtConsignorEmail'];
 	$consignee = $_POST['txtConsignee'];
 	$chouse = $_POST['txtConsigneeHouse'];
 	$cstreet = $_POST['txtConsigneeStreet'];
@@ -71,22 +72,23 @@ $conn = @mysql_connect("localhost","root","");
 	$cprovince = $_POST['txtConsigneeProvince'];
 	$consigneeemail = $_POST['txtConsigneeEmail'];
 	$consigneeno = $_POST['txtConsigneeNo'];
-	
+	$kilo = $_POST['txtSize'];
+	$pay = $_POST['txtPayment'];
+	$dispatched = $_POST['txtDispatched'];
+	$expected = $_POST['txtExpected'];
 	$branch = $_POST['txtBranch'];
-	$date = getdate();
-	$dateremitted = "$date[year]-$date[mon]-$date[mday]";
-	$day = "$date[mday]";
-	$addday = $day +2;
-	$datereceived = "$date[year]-$date[mon]-$addday";
-	$remitstatus = $_POST['txtStatus'];
+	$remitstatus = 'Pending';
+	$notiftod = 'false';
+	$notiftmr = 'false';
+	$insurance = $_POST['txtInsurance'];
 
-	$result = mysql_query("insert into tblmoney_remit(TrackNo,Consignor,ConsignorNo,
-							ConsignorHouseNo,ConsignorStreet,ConsignorBarangay,ConsignorCity,ConsignorProvince,
+	$result = mysql_query("insert into tblpackage_delivery(TrackNo,Consignor,ConsignorNo,
+							ConsignorHouseNo,ConsignorStreet,ConsignorBarangay,ConsignorCity,ConsignorProvince,ConsignorEmail,
 							Consignee,ConsigneeNo,ConsigneeHouseNo,ConsigneeStreet,ConsigneeBarangay,ConsigneeCity,ConsigneeProvince,
-							ConsigneeEmail,Size,Amount,DateDelivered,DateReceived,DeliveryStatus,Branch)
+							ConsigneeEmail,Size,Amount,Insurance,DateDelivered,DateReceived,NotifyToday,NotifyTmr,DeliveryStatus,Branch)
 							values('$trackid','$consignor','$consignorno','$house','$street','$barangay','$city','$province',
-							'$consignee','$consigneeno','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
-							'$amount','$fee','$totalamount','$dateremitted','$datereceived','$branch','$remitstatus')");
+							'$consignoremail','$consignee','$consigneeno','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
+							'$kilo','$pay','$insurance','$dispatched','$expected','$notiftod','$notiftmr','$remitstatus','$branch')");
 	if($result){
 		$username = 'johnrenielcaluag1009@gmail.com'; 
 		$hash = 'Cyanomix10';
@@ -129,8 +131,8 @@ $conn = @mysql_connect("localhost","root","");
 		$mailer->Body = "Good day! Here are the details of the package $trackid.
 
 Date Dispatched: '$trackid'
-Status: '$amount'
-Expected Delivery Date: '$branch'
+Status: '$remitstatus'
+Expected Delivery Date: '$expected'
 Consignor Information: '$consignor'";
 		$mailer->Subject = 'Package Delivery';
 		$mailer->AddAddress("$consigneeemail");

@@ -16,98 +16,122 @@
 	$consignee = $_POST['txtConsignee'];
 	$consigneemail = $_POST['txtConsigneeEmail'];
 	$consigneeno = $_POST['txtConsigneeNo'];
-	$size = $_POST['txtSize'];
+	$kilo = $_POST['txtKilo'];
 	$branch = $_POST['txtBranch'];
+	$date=getdate();
+	$today = "$date[year]-$date[mon]-$date[mday]";
+	$day = "$date[mday]";
+switch($kilo){
+		case "KB Small":
+			if($branch == "NCR"){
+				$amount=200;
+				$add = $day+1;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "N. LUZON"){
+				$amount=255;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "S. LUZON"){
+				$amount=255;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "VISAYAS"){
+				$amount=265;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "MINDANAO"){
+				$amount=265;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			break;
+		case "KB Medium":
+			if($branch == "NCR"){
+				$amount=325;
+				$add = $day+1;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "N. LUZON"){
+				$amount=400;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "S. LUZON"){
+				$amount=400;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "VISAYAS"){
+				$amount=435;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "MINDANAO"){
+				$amount=435;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			break;
+		case "KB Large":
+			if($branch == "NCR"){
+				$amount=600;
+				$add = $day+1;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "N. LUZON"){
+				$amount=800;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "S. LUZON"){
+				$amount=800;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "VISAYAS"){
+				$amount=870;$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "MINDANAO"){
+				$amount=870;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			break;
+		case "KB Extra Large":
+			if($branch == "NCR"){
+				$amount=1235;
+				$add = $day+1;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "N. LUZON"){
+				$amount=1425;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "S. LUZON"){
+				$amount=1425;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "VISAYAS"){
+				$amount=1558;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			else if($branch == "MINDANAO"){
+				$amount=1558;
+				$add = $day+3;
+				$delivered = "$date[year]-$date[mon]-$add";
+			}
+			break;
+	}
+	$insurance = $amount /500*50;
 	
-	$kilo = $_POST['txtkilo'];
-	$size = $_POST['txtsize'];
-	$branch = $_POST['txtBranch'];
-
-
-if($branch == "NCR" and $size == "Small"){
-	$value = "200";
-	$value = $value * $kilo;
-}
-else if($branch == "NCR" and $size == "Medium"){
-	$value = "200";
-	$value = $value * $kilo;
-}
-else if($branch == "NCR" and $size == "Large"){
-	$value = "600";
-	$value = $value * $kilo;
-}
-else if($branch == "NCR" and $size == "ExtraLarge"){
-	$value = "1235";
-	$value = $value * $kilo;
-}
-else if($branch == "N.Luzon" and $size == "Small"){
-	$value = "255";
-	$value = $value * $kilo;
-}
-else if($branch == "N.Luzon" and $size == "Medium"){
-	$value = "400";
-	$value = $value * $kilo;
-}
-else if($branch == "S.Luzon" and $size == "Large"){
-	$value = "800";
-	$value = $value * $kilo;
-}
-else if($branch == "N.Luzon" and $size == "ExtraLarge"){
-	$value = "1425";
-	$value = $value * $kilo;
-}
-else if($branch == "S.Luzon" and $size == "Small"){
-	$value = "255";
-	$value = $value * $kilo;
-}
-else if($branch == "S.Luzon" and $size == "Medium"){
-	$value = "400";
-	$value = $value * $kilo;
-}
-else if($branch == "S.Luzon" and $size == "Large"){
-	$value = "800";
-	$value = $value * $kilo;
-}
-else if($branch == "S.Luzon" and $size == "ExtraLarge"){
-	$value = "1425";
-	$value = $value * $kilo;
-}
-else if($branch == "Visayas" and $size == "Small"){
-	$value = "265";
-	$value = $value * $kilo;
-}
-else if($branch == "Visayas" and $size == "Medium"){
-	$value = "435";
-	$value = $value * $kilo;
-}
-else if($branch == "Visayas" and $size == "Large"){
-	$value = "870";
-	$value = $value * $kilo;
-}
-else if($branch == "Visayas" and $size == "ExtraLarge"){
-	$value = "1558";
-	$value = $value * $kilo;
-}
-else if($branch == "Mindanao" and $size == "Small"){
-	$value = "265";
-	$value = $value * $kilo;
-}
-else if($branch == "Mindanao" and $size == "Medium"){
-	$value = "435";
-	$value = $value * $kilo;
-}
-else if($branch == "Mindanao" and $size == "Large"){
-	$value = "870";
-	$value = $value * $kilo;
-}
-else if($branch == "Mindanao" and $size == "ExtraLarge"){
-	$value = "1558";
-	$value = $value * $kilo;
-}else{
-	echo "enter amount";
-}
-
-$insurance = $value / 500 * 50;
 
 ?>
 
@@ -115,6 +139,7 @@ $insurance = $value / 500 * 50;
 
 <html>
 <head>
+<title> Package Receipt </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -136,11 +161,11 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 300px;
-	height: 500px;
+	width: 780px;
+	height: 540px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 190px 520px 0;
+	margin: 190px 270px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -148,12 +173,47 @@ body{
 .fields{
 	position:absolute;
 	top:210px;
-	left:570px;
+	left:320px;
+}
+.fields2{
+	position: absolute;
+	top: -10px;
+	left: 480px;
 }
 .logo{
 	position: absolute;
 	top: -45px;
 	left: 10px;
+}
+.house{
+	width: 60px;
+}
+.street{
+	width: 70px;
+}
+.barangay{
+	width: 80px;
+}
+.city{
+	width: 80px;
+}
+.province{
+	width: 90px;
+}
+.chouse{
+	width: 60px;
+}
+.cstreet{
+	width: 70px;
+}
+.cbarangay{
+	width: 80px;
+}
+.ccity{
+	width: 80px;
+}
+.cprovince{
+	width: 90px;
 }
 </style>
 </head>
@@ -165,7 +225,7 @@ body{
 <div id="panel1">
 </div>
 <div class = "fields">
-<form name = "form" method = "post" action = "createpackagecode.php">
+<form name = "form" method = "POST" action = "createpackagecode.php">
 <tr>
 <td><font face="Helvetica" color="white">Track No: </font><br>
 <td><input type = "text" value="<?php echo "$trackid"?>" name="txtTrack" id="txtTrack" readonly><p>
@@ -193,12 +253,20 @@ body{
 <td><input type = "text" value="<?php echo "$consigneemail"?>" name = "txtConsigneeEmail" id = "txtConsigneeEmail" readonly><p>
 <p><font face="Helvetica" color="white">Consignee Contact No.:</font><br>
 <td><input type = "text" value="<?php echo "$consigneeno"?>" name = "txtConsigneeNo" id = "txtConsigneeNo" readonly><p>
-<p><font face="Helvetica" color="white">Amount:</font><br>
-<td><input type = "text" value="<?php echo "$amount"?>" name = "txtAmount" id = "txtAmount" readonly><p>
+<div class="fields2">
 <p><font face="Helvetica" color="white">Size:</font><br>
-<td><input type = "text" value="<?php echo "$fee"?>" name = "txtFee" id = "txtFee" readonly><p>
+<td><input type = "text" value="<?php echo "$kilo"?>" name = "txtSize" id = "txtSize" readonly><p>
+<p><font face="Helvetica" color="white">Payment:</font><br>
+<td><input type = "text" value="<?php echo "$amount"?>" name = "txtPayment" id = "txtPayment" readonly><p>
+<p><font face="Helvetica" color="white">Insurance:</font><br>
+<td><input type = "text" value="<?php echo "$insurance"?>" name = "txtInsurance" id = "txtInsurance" readonly><p>
+<p><font face="Helvetica" color="white">Date Dispatched:</font><br>
+<td><input type = "text" value="<?php echo "$today"?>" name = "txtDispatched" id = "txtDispatched" readonly><p>
+<p><font face="Helvetica" color="white">Expected Delivery Date:</font><br>
+<td><input type = "text" value="<?php echo "$delivered"?>" name = "txtExpected" id = "txtExpected" readonly><p>
 <p><font face="Helvetica" color="white">Branch:</font><br>
 <td><input type = "text" value="<?php echo "$branch"?>" name = "txtBranch" id = "txtBranch" readonly><p>
+</div>
 <input type = "submit" value = "Submit Transaction">
 </form>
 </div>

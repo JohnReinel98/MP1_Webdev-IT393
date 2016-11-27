@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1360px;
+	width: 1590px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -28,8 +28,8 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 300px;
-	height: 520px;
+	width: 230px;
+	height: 610px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 10px 0;
@@ -40,11 +40,11 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1050px;
+	width: 1350px;
 	height: 520px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 310px 0;
+	margin: 200px 240px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -57,17 +57,17 @@ body{
 .table1{
 	position: absolute;
 	top:240px;
-	left:330px;
+	left:260px;
 }
 table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width: 100%;
+    width:100%;
 }
 th, td {
     text-align: left;
-    padding: 5px;
+    padding: 4px;
 }
 
 tr:nth-child(even){
@@ -111,9 +111,9 @@ th {
 <td><input type = "text" name = "txtEmail" id = "txtEmail"><p>
 <p><font face="Helvetica" color="white">Username:</font><br>
 <td><input type = "text" name = "txtUsername" id = "txtUsername"><p>
-<p><font face="Helvetica" color="white">Password:</font>
+<p><font face="Helvetica" color="white">Password:</font><br>
 <td><input type = "password" name = "txtPassword" id = "txtPassword"><p>
-<p><font face="Helvetica" color="white">Status:</font>
+<p><font face="Helvetica" color="white">Status:</font><br>
 <td><input type = "text" name = "txtStatus" id = "txtStatus"><p>
 <input type = "submit" value = "Update Staff">
 <input type = "reset" value = "Clear All Fields">
@@ -131,7 +131,11 @@ th {
 	<th> Email </th>
 	<th> Username </th>
 	<th> Password </th>
-	<th> Status </th></tr>
+	<th> Status </th>
+	<th> Archive </th>
+	<th> Unarchive </th>
+	<th> Block Status </th>
+	<th> Unblock </th></tr>
 
 	<?php
 	$sql = mysql_query("select * from tblstaff");
@@ -146,6 +150,7 @@ th {
 			$username = $rows['Username'];
 			$passw = $rows['Password'];
 			$status = $rows['Status'];
+			$blockstatus = $rows['BlockStatus'];
 	
 	
 	echo "<tr><td align = 'center'> $id </td>";
@@ -157,7 +162,11 @@ th {
 	echo "<td align = 'center'> $email </td>";
 	echo "<td align = 'center'> $username </td>";
 	echo "<td align = 'center'> $passw </td>";
-	echo "<td align = 'center'> $status </td></tr>";
+	echo "<td align = 'center'> $status </td>";
+	echo "<td align = 'center'> <a href= 'archiverecords.php?id=$id'> Archive </a> </td>";
+	echo "<td align = 'center'> <a href= 'unarchiverecords.php?id=$id'> Unarchive </a> </td>";
+	echo "<td align = 'center'> $blockstatus </td>";
+	echo "<td align = 'center'> <a href= 'unblockstaff.php?id=$id'> Unblock </a> </td></tr>";
 	
 	}
 	?>
