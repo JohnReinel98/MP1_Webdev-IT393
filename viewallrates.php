@@ -78,7 +78,7 @@ th {
     top: 850px;
 	left: 1190px;
 }
-a:hover{
+.backmain:hover{
 	background-color: darkgray;
 	color:white;
 }
@@ -105,7 +105,9 @@ a:hover{
 <div id="header">
 </div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 <div id="panel1">
 </div>

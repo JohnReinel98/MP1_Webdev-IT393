@@ -149,7 +149,9 @@ body{
 </form>
 </div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 </body>
 </html>

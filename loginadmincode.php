@@ -73,7 +73,7 @@ body{
 .welcome{
 	position: absolute;
 	top: 140px;
-	left: 1030px;
+	left: 1100px;
 	font-size: 14px;
 	font-family: Verdana;
 	font-weight: bold;
@@ -135,7 +135,7 @@ body{
 .table1{
 	position: absolute;
 	top:240px;
-	left:25px;
+	left:0px;
 }
 table{
 	border-collapse: collapse;
@@ -173,7 +173,9 @@ th {
 <div id="panel2">
 </div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 <form method="POST" action="logoutsessioncode.php">
 	<input type="submit" value="Logout" class="btnLogout">
@@ -183,9 +185,6 @@ th {
 </form>
 <form method="POST" action="createpackageform.php">
 	<input type="submit" value="Package Delivery" class="btnCr8Pack">
-</form>
-<form method = "post" action = "index.php">
-	<input type = "submit" value = "" class = "hidden">
 </form>
 <div class = "table1">
 	<table>
@@ -199,7 +198,8 @@ th {
 	<th> Email </th>
 	<th> Username </th>
 	<th> Password </th>
-	<th> Status </th></tr>
+	<th> Status </th>
+	<th> Block Status </th></tr>
 
 	<?php
 	$sql = mysql_query("select * from tblstaff");
@@ -214,7 +214,7 @@ th {
 			$username = $rows['Username'];
 			$passw = $rows['Password'];
 			$status = $rows['Status'];
-	
+			$blockstatus = $rows['BlockStatus'];
 	
 	echo "<tr><td align = 'center'> $id </td>";
 	echo "<td align = 'center'> $lname </td>";
@@ -225,8 +225,8 @@ th {
 	echo "<td align = 'center'> $email </td>";
 	echo "<td align = 'center'> $username </td>";
 	echo "<td align = 'center'> $passw </td>";
-	echo "<td align = 'center'> $status </td></tr>";
-	
+	echo "<td align = 'center'> $status </td>";
+	echo "<td align = 'center'> $blockstatus </td></tr>";
 	}
 	?>
 </table>

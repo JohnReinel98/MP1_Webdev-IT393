@@ -91,7 +91,9 @@ a:hover{
 <div id="panel1">
 </div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 <div class = "table1">
 	<table>

@@ -21,6 +21,7 @@
 				$mname = $rows['MI'];
 				$user = $rows['Username'];
 				$passw = $rows['Password'];
+				$position = $rows['Position'];
 				$status = $rows['Status'];
 				$tries = $rows['Tries'];
 				
@@ -30,9 +31,14 @@
 			
 				if($passw == $password){
 					if($status!=='Inactive'){
+							if($position == 'Admin'){
 							header('Location: loginadmincode.php');
 							$sql2="Update tblstaff set Tries = '0' where ID = '$id'";
 							$result2=mysql_query($sql2);
+							}
+							else if($position == 'Employee'){
+								header('Location: loginstaffcode.php');
+							}
 					}
 					else{
 						echo "<p class = 'err'>user is blocked!!</p>";
@@ -108,7 +114,9 @@ body{
 <div id="panel2">
 </div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 </body>
 </html>	

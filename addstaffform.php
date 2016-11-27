@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> Login Power User </title>
+<title> Add Employee/Staff </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -34,13 +34,6 @@ body{
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
-}
-.hidden{
-	position:absolute;
-	top:665px;
-	left:-15px;
-	background-color:green;
-	height:4px;
 }
 .mnyrem{
 	position:absolute;
@@ -140,7 +133,7 @@ body{
 <div id="header">
 </div>
 <div class = "login">
-	<form method = "POST" action = "loginpowerusercode.php">
+	<form method = "POST" action = "loginsessioncode.php">
 	<tr>
 	<td><font face="Verdana" color="white" class="usertxt">Username:</font><br>
 	<td><input type = "text" class="username" name = "txtUsername" id = "txtUsername" placeholder="  Username here..." autocomplete="off" />

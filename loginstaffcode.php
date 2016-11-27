@@ -156,7 +156,9 @@ th {
 <div id="panel2">
 </div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 <form method="POST" action="logoutsessioncode.php">
 	<input type="submit" value="Logout" class="btnLogout">

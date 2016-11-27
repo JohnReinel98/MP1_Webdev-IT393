@@ -301,7 +301,9 @@ body{
 <img src="Assets/index.gif" />
 </div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 <div class="p1">
 <p> How to Send Money Online </p>

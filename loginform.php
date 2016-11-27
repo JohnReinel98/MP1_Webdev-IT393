@@ -35,13 +35,6 @@ body{
 	padding: 20px;
 	box-sizing:border-box;
 }
-.hidden{
-	position:absolute;
-	top:665px;
-	left:-15px;
-	background-color:green;
-	height:4px;
-}
 .mnyrem{
 	position:absolute;
 	top:60px;
@@ -157,7 +150,9 @@ body{
 </div>
 <div>
 <div class="logo">
+<a href="index.php">
 <img src="Assets/indexlogo.png"/>
+</a>
 </div>
 </body>
 </html>
