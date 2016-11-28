@@ -22,8 +22,7 @@
 		
 		if($status == "Pending"){
 			if($notifyToday != "true"){
-				if(strtotime($dateDel) <= time()){
-					//echo "$trackid should be deliver";	
+				if(strtotime($dateDel) <= time()){	
 					$update = mysql_query("update tblpackage_delivery set NotifyToday = 'true' where TrackNo = $trackid");
 					
 					$username = 'caluagjohnreinel1000@gmail.com'; 
@@ -58,7 +57,6 @@
 			}
 			if($notifyTmr != "true"){
 				if(time() >= strtotime($dateDel . "-1 day")){
-					//echo "$trackid should be deliver tomorrow";
 					$update = mysql_query("update tblpackage_delivery set NotifyTmr = 'true' where TrackNo = $trackid");
 					
 					$username = 'caluagjohnreinel1000@gmail.com'; 

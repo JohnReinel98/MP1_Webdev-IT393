@@ -23,6 +23,7 @@ $conn = @mysql_connect("localhost","root","");
 							
 	if($result){
 		echo "Success";
+		header('Location: addstaffform.php');
 	}
 	else{
 		echo mysql_error();

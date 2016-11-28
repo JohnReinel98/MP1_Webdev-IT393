@@ -6,7 +6,7 @@ $conn = @mysql_connect("localhost","root","");
 ?>
 <html>
 <head>
-<title> Update Money Remit Information </title>
+<title> Update Package Information </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1460px;
+	width: 1370px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -28,11 +28,11 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1430px;
-	height: 430px;
+	width: 1350px;
+	height: 520px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 10px 0;
+	margin: 200px 2px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -45,7 +45,7 @@ body{
 .table1{
 	position: absolute;
 	top:240px;
-	left:30px;
+	left:25px;
 }
 table{
 	border-collapse: collapse;
@@ -73,8 +73,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 580px;
-	left: 1330px;
+	top: 650px;
+	left: 1250px;
 }
 .cancel{
 	background-color: darkgray;
@@ -111,38 +111,36 @@ th {
 	<th> Consignor </th>
 	<th> Consignor No </th>
 	<th> Consignee </th>
-	<th> Consignee Email </th>
 	<th> Consignee No </th>
+	<th> Size </th>
 	<th> Amount </th>
-	<th> Fee </th>
-	<th> Total </th>
-	<th> Date Remitted </th>
+	<th> Insurance </th>
+	<th> Date Dispatched </th>
 	<th> Expected Delivey Date </th>
-	<th> Branch </th>
 	<th> Status </th>
 	<th> Archive </th>
-	<th> Unarchive </th>
-	<th> Remit Status </th>
-	<th> Delivered </th></tr>
+	<th> Delivey Status </th>
+	<th> Delivered </th>
+	<th> Branch </th></tr>
 	
 	<?php
-	$sql = mysql_query("select * from tblmoney_remit");
+	$sql = mysql_query("select * from tblpackage_delivery where Status = 'Active'");
 	while( $rows=mysql_fetch_array($sql)){
 			$id = $rows['ID'];
 			$trackid = $rows['TrackNo'];
 			$consignor = $rows['Consignor'];
-			$consignorno = $rows['ConsignorNo'];
-			$consigneeno = $rows['ConsigneeNo'];	
+			$consignorno = $rows['ConsignorNo'];			
 			$consignee = $rows['Consignee'];
-			$consigneeemail = $rows['ConsigneeEmail'];
+			$consigneeno = $rows['ConsigneeNo'];
+			$size = $rows['Size'];
 			$amount = $rows['Amount'];
-			$fee = $rows['Fee'];
-			$total = $rows['TotalAmount'];
-			$daterem = $rows['DateRemitted'];
-			$datedel = $rows['DateDelivered'];
-			$branch = $rows['Branch'];
+			$insurance = $rows['Insurance'];
+			$datedis = $rows['DateDelivered'];
+			$dateexp = $rows['DateReceived'];
 			$status = $rows['Status'];
-			$remitstatus = $rows['RemitStatus'];
+			$deliverystatus = $rows['DeliveryStatus'];
+			$branch = $rows['Branch'];
+			
 	
 	
 	echo "<tr><td align = 'center'> $id </td>";
@@ -150,19 +148,17 @@ th {
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno</td>";
 	echo "<td align = 'center'> $consignee </td>";
-	echo "<td align = 'center'> $consigneeemail </td>";
 	echo "<td align = 'center'> $consigneeno </td>";
+	echo "<td align = 'center'> $size </td>";
 	echo "<td align = 'center'> $amount </td>";
-	echo "<td align = 'center'> $fee </td>";
-	echo "<td align = 'center'> $total </td>";
-	echo "<td align = 'center'> $daterem </td>";
-	echo "<td align = 'center'> $datedel </td>";
-	echo "<td align = 'center'> $branch </td>";
+	echo "<td align = 'center'> $insurance </td>";
+	echo "<td align = 'center'> $datedis </td>";
+	echo "<td align = 'center'> $dateexp </td>";
 	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> <a href= 'archivemoneyremit.php?id=$id'> Archive </a> </td>";	
-	echo "<td align = 'center'> <a href= 'unarchivemoneyremit.php?id=$id'> Unarchive </a> </td>";
-	echo "<td align = 'center'> $remitstatus </td>";
-	echo "<td align = 'center'> <a href= 'deliveredmoneyremit.php?id=$id&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td></tr>";
+	echo "<td align = 'center'> <a href= 'archivepackage.php?id=$id'> Archive </a> </td>";
+	echo "<td align = 'center'> $deliverystatus </td>";
+	echo "<td align = 'center'> <a href= 'deliveredpackage.php?id=$id&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td>";
+	echo "<td align = 'center'> $branch </td></tr>";
 	
 	}
 	?>

@@ -97,12 +97,32 @@ th {
 .province{
 	width: 90px;
 }
+.btnCancel{
+	position: absolute;
+	top: 750px;
+	left: 1170px;
+}
+.cancel{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.cancel:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 </style>
 </head>
 <body>
-<?php
-	$trackid = uniqid();
-?>
 <div id="header">
 </div>
 <div id="panel">
@@ -194,6 +214,11 @@ th {
 <a href="index.php">
 <img src="Assets/indexlogo.png"/>
 </a>
+</div>
+<div class="btnCancel">
+<form method="POST" action="loginadmincode.php">
+<input type= "submit" value="Back" class="cancel">
+</form>
 </div>
 </body>
 </html>

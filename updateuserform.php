@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1590px;
+	width: 1540px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -40,7 +40,7 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1350px;
+	width: 1290px;
 	height: 520px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
@@ -82,6 +82,29 @@ th {
 	position: absolute;
 	top: -45px;
 	left: 10px;
+}
+.btnCancel{
+	position: absolute;
+	top: 750px;
+	left: 1230px;
+}
+.cancel{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.cancel:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 </style>
 </head>
@@ -133,12 +156,11 @@ th {
 	<th> Password </th>
 	<th> Status </th>
 	<th> Archive </th>
-	<th> Unarchive </th>
 	<th> Block Status </th>
 	<th> Unblock </th></tr>
 
 	<?php
-	$sql = mysql_query("select * from tblstaff");
+	$sql = mysql_query("select * from tblstaff where Status = 'Active'");
 	while( $rows=mysql_fetch_array($sql)){
 			$id = $rows['ID'];
 			$lname = $rows['Lname'];
@@ -164,7 +186,6 @@ th {
 	echo "<td align = 'center'> $passw </td>";
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> <a href= 'archiverecords.php?id=$id'> Archive </a> </td>";
-	echo "<td align = 'center'> <a href= 'unarchiverecords.php?id=$id'> Unarchive </a> </td>";
 	echo "<td align = 'center'> $blockstatus </td>";
 	echo "<td align = 'center'> <a href= 'unblockstaff.php?id=$id'> Unblock </a> </td></tr>";
 	
@@ -176,6 +197,11 @@ th {
 <a href="index.php">
 <img src="Assets/indexlogo.png"/>
 </a>
+</div>
+<div class="btnCancel">
+<form method="POST" action="loginadmincode.php">
+<input type= "submit" value="Back" class="cancel">
+</form>
 </div>
 </body>
 </html>

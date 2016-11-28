@@ -6,7 +6,7 @@
 ?>
 <html>
 <head>
-<title> Archived Records </title>
+<title> Archived Staff Records </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -33,7 +33,7 @@ body{
 .table1{
 	position: absolute;
 	top:240px;
-	left:14px;
+	left:10px;
 }
 table{
 	border-collapse: collapse;
@@ -53,6 +53,29 @@ tr:nth-child(even){
 th {
     background-color: gray;
     color: white;
+}
+.btnCancel{
+	position: absolute;
+	top: 550px;
+	left: 1230px;
+}
+.cancel{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.cancel:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 </style>
 </head>
@@ -107,10 +130,16 @@ th {
 	echo "<td align = 'center'> $username </td>";
 	echo "<td align = 'center'> $passw </td>";
 	echo "<td align = 'center'> $status </td>";
+	echo "<td align = 'center'> <a href= 'unarchiverecords.php?id=$id'> Unarchive </a> </td>";
 	echo "<td align = 'center'> $blockstatus </td></tr>";
 	}
 	?>
 </table>
+</div>
+<div class="btnCancel">
+<form method="POST" action="loginadmincode.php">
+<input type= "submit" value="Back" class="cancel">
+</form>
 </div>
 </body>
 </html>

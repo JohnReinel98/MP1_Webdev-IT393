@@ -166,6 +166,17 @@ th {
 	top: 130px;
 	left: 1100px;
 }
+.hrf{
+	position: absolute;
+	top: 155px;
+	left: 500px;
+}
+a{
+	color: white;
+}
+a:hover{
+	color: darkgray;
+}
 </style>
 </head>
 <body>
@@ -191,5 +202,12 @@ th {
 <form method="POST" action="createpackageform.php">
 	<input type="submit" value="Package Delivery" class="btnCr8Pack">
 </form>
+<div class="hrf">
+<a href="updatemoneyremitcode.php" style="text-decoration:none;"> Update Money Remit </a> |
+<a href="updatepackagecode.php" style="text-decoration:none;"> Update Package </a> |
+<a href="archivecodetablemonrem.php" style="text-decoration:none;"> Archived Money Remit </a> |
+<a href="archivecodetablepackage.php" style="text-decoration:none;"> Archived Package </a> |
+</div>
+
 </body>
 </html>

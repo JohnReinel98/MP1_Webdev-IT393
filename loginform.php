@@ -125,12 +125,20 @@ body{
 	background-color: darkgray;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.timecheck{
+	position: absolute;
+	top: -200px;
+	left: 0px;
+}
 </style>
 </head>
 <body>
 <div id="panel">
 </div>
 <div id="header">
+</div>
+<div class="timecheck">
+<?php include'deliveryreceivedcode.php'; ?>
 </div>
 <div class = "login">
 	<form method = "POST" action = "loginsessioncode.php">

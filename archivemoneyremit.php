@@ -5,6 +5,6 @@ $conn = @mysql_connect("localhost","root","");
 	mysql_select_db("dbmplogistics", $conn);
 	$id = $_GET['id'];
 
-	$result = mysql_query("Update tblstaff set Status = 'Active' where ID = '$id'");
-	header('Location: archivecodetablestaff.php');
+	$result = mysql_query("Update tblmoney_remit set Status = 'Inactive' where ID = '$id'");
+	header('Location: updatemoneyremitcode.php');
 ?>

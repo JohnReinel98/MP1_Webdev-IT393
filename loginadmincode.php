@@ -39,31 +39,31 @@ body{
 
 .btnCr8Pack{
 	position: absolute;
-	top: 60px;
-	left: 645px;
+	top: 20px;
+	left: 790px;
 	border: none;
-	background: transparent;
+	background: darkgray;
 	font-size: 25px;
 	color: white;
 	font-family:Verdana, Geneva, sans-serif;
 	cursor:pointer;
 }
 .btnCr8Pack:hover{
-	color: darkgray;
+	color: black;
 }
 .btnCr8Remit{
 	position: absolute;
-	top: 60px;
-	left: 905px;
+	top: 20px;
+	left: 1020px;
 	border: none;
-	background: transparent;
+	background: darkgray;
 	font-size: 25px;
 	color: white;
 	font-family:Verdana, Geneva, sans-serif;
 	cursor:pointer;
 }
 .btnCr8Remit:hover{
-	color: darkgray;
+	color: black;
 }
 .logo{
 	position: absolute;
@@ -81,83 +81,115 @@ body{
 }
 .btnLogout{
 	position: absolute;
-	top: 60px;
-	left: 1200px;
+	top: 20px;
+	left: 1250px;
 	border: none;
-	background: transparent;
+	background: darkgray;
 	font-size: 25px;
 	color: white;
 	font-family:Verdana, Geneva, sans-serif;
 	cursor:pointer;
 }
 .btnLogout:hover{
-	color: darkgray;
+	color: black;
 }
 .btnCr8Staff{
 	position: absolute;
-	top: 60px;
-	left: 450px;
+	top: 20px;
+	left: 650px;
 	border: none;
-	background: transparent;
+	background: darkgray;
 	font-size: 25px;
 	color: white;
 	font-family:Verdana, Geneva, sans-serif;
 	cursor:pointer;
 }
 .btnCr8Staff:hover{
-	color: darkgray;
+	color: black;
 }
-#panel{
+.btnUpd8Staff{
 	position: absolute;
-	background:#429bf4;
-	opacity: 0.8;
-	width: 180px;
-	height: 80px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 30px 1150px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
+	top: 20px;
+	left: 470px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
 }
-#panel1{
-	position: absolute;
-	background:#429bf4;
-	opacity: 0.8;
-	width: 240px;
-	height: 80px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 30px 890px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
+.btnUpd8Staff:hover{
+	color: black;
 }
-#panel2{
+.btnArchStaff{
 	position: absolute;
-	background:#429bf4;
-	opacity: 0.8;
-	width: 240px;
-	height: 80px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 30px 630px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
+	top: 20px;
+	left: 260px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
 }
-#panel3{
+.btnArchStaff:hover{
+	color: black;
+}
+.btnArchMon{
 	position: absolute;
-	background:#429bf4;
-	opacity: 0.9;
-	width: 200px;
-	height: 80px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 30px 410px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
+	top: 70px;
+	left: 260px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.btnArchMon:hover{
+	color: black;
+}
+.btnArchPckg{
+	position: absolute;
+	top: 70px;
+	left: 550px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.btnArchPckg:hover{
+	color: black;
+}
+.tblArchMon{
+	position: absolute;
+	top: 70px;
+	left: 770px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.tblArchMon:hover{
+	color: black;
+}
+.tblArchPckg{
+	position: absolute;
+	top: 70px;
+	left: 1080px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.tblArchPckg:hover{
+	color: black;
 }
 .table1{
 	position: absolute;
@@ -187,6 +219,91 @@ th {
 	position: absolute;
 	top: 20px;
 	left: 200px;
+}
+.tblArchMon{
+	position: absolute;
+	top: 70px;
+	left: 770px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.tblArchMon:hover{
+	color: black;
+}
+.tblArchPckg{
+	position: absolute;
+	top: 70px;
+	left: 1080px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.tblArchPckg:hover{
+	color: black;
+}
+.tblArchMon{
+	position: absolute;
+	top: 70px;
+	left: 770px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.tblArchMon:hover{
+	color: black;
+}
+.pdf1{
+	position: absolute;
+	top: 110px;
+	left: 270px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.pdf1:hover{
+	color: black;
+}
+.pdf2{
+	position: absolute;
+	top: 110px;
+	left: 590px;
+	border: darkgray;
+	border-radius: 15px, 15px, 15px, 15px;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.pdf2:hover{
+	color: black;
+}
+.pdf3{
+	position: absolute;
+	top: 110px;
+	left: 910px;
+	border: none;
+	background: darkgray;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	cursor:pointer;
+}
+.pdf3:hover{
+	color: black;
 }
 </style>
 </head>
@@ -218,6 +335,33 @@ th {
 <form method="POST" action="addstaffform.php">
 	<input type="submit" value="Add Staff" class="btnCr8Staff">
 </form>
+<form method="POST" action="updateuserform.php">
+	<input type="submit" value="Update Staff" class="btnUpd8Staff">
+</form>
+<form method="POST" action="archivecodetablestaff.php">
+	<input type="submit" value="Archived Staffs" class="btnArchStaff">
+</form>
+<form method="POST" action="updatemoneyremitcode.php">
+	<input type="submit" value="Update Money Remits" class="btnArchMon">
+</form>
+<form method="POST" action="updatepackagecode.php">
+	<input type="submit" value="Update Package" class="btnArchPckg">
+</form>
+<form method="POST" action="archivecodetablemonrem.php">
+	<input type="submit" value="Archived Money Remits" class="tblArchMon">
+</form>
+<form method="POST" action="archivecodetablepackage.php">
+	<input type="submit" value="Archived Packages" class="tblArchPckg">
+</form>
+<form method="POST" action="generatepdfremits.php">
+	<input type="submit" value="PDF Money Remittances" class="pdf1">
+</form>
+<form method="POST" action="generatepdfdelivered.php">
+	<input type="submit" value="PDF Delivered Packages" class="pdf2">
+</form>
+<form method="POST" action="generatepdfreceivedremits.php">
+	<input type="submit" value="PDF Received Money Remittances" class="pdf3">
+</form>
 <div class = "table1">
 	<table>
 	<tr>
@@ -234,7 +378,7 @@ th {
 	<th> Block Status </th></tr>
 
 	<?php
-	$sql = mysql_query("select * from tblstaff");
+	$sql = mysql_query("select * from tblstaff where Status = 'Active'");
 	while( $rows=mysql_fetch_array($sql)){
 			$id = $rows['ID'];
 			$lname = $rows['Lname'];

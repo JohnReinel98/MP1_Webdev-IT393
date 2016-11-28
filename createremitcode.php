@@ -85,15 +85,15 @@ $conn = @mysql_connect("localhost","root","");
 	$result = mysql_query("insert into tblmoney_remit(TrackNo,Consignor,ConsignorNo,
 							ConsignorHouseNo,ConsignorStreet,ConsignorBarangay,ConsignorCity,ConsignorProvince,
 							ConsigneeNo,Consignee,ConsigneeHouseNo,ConsigneeStreet,ConsigneeBarangay,ConsigneeCity,ConsigneeProvince,
-							ConsigneeEmail,Amount,Fee,TotalAmount,DateRemitted,DateDelivered,Branch,RemitStatus)
+							ConsigneeEmail,Amount,Fee,TotalAmount,DateRemitted,DateDelivered,Branch,Status,RemitStatus)
 							values('$trackid','$consignor','$consignorno','$house','$street','$barangay','$city','$province','$consigneeno',
 							'$consignee','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
-							'$amount','$fee','$totalamount','$dateremitted','$datereceived','$branch','$remitstatus')");
+							'$amount','$fee','$totalamount','$dateremitted','$datereceived','$branch','Active','$remitstatus')");
 	if($result){
-		$username = 'johnrenielcaluag1009@gmail.com'; 
-		$hash = 'Cyanomix10';
+		$username = 'convergelogistics2016@gmail.com'; 
+		$hash = 'Convergelogistics10';
 
-		$from = "Converge Logistics -JRC";
+		$from = "Converge Logistics";
 		$message = "You have money remittance ready to be picked up. Check your email for more details about the tracking no. and the pick-up branch. \nDo not reply, This is a computer-generated message.";
 		$aftermessage = "You have an expected door-to-door delivery today. In case you are not around, please leave an authorization letter and a valid ID. Thank you for using Converge Logistics.";
 
@@ -144,11 +144,10 @@ Consignor Information: '$consignor'";
 		else
 		{
 			echo "Message has been sent";
+			header('Location: index.php');
 		}
 	}
 	else{
 		echo mysql_error();
-		echo "Failed to add";
-		echo "</br><a href='index.php' class='button' style='font-size:9pt;'>Main Menu</a>";
 	}
 ?>

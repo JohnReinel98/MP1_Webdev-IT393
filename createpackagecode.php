@@ -90,61 +90,7 @@ $conn = @mysql_connect("localhost","root","");
 							'$consignoremail','$consignee','$consigneeno','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
 							'$kilo','$pay','$insurance','$dispatched','$expected','$notiftod','$notiftmr','$remitstatus','$branch')");
 	if($result){
-		$username = 'johnrenielcaluag1009@gmail.com'; 
-		$hash = 'Cyanomix10';
-
-		$from = "Converge Logistics -JRC";
-		$message = "You have money remittance ready to be picked up. Check your email for more details about the tracking no. and the pick-up branch. \nDo not reply, This is a computer-generated message.";
-		$aftermessage = "You have an expected door-to-door delivery today. In case you are not around, please leave an authorization letter and a valid ID. Thank you for using Converge Logistics.";
-
-		$sender = urlencode($from); 
-		$message = rawurlencode($message);
-
-		$numbers = $_POST['txtConsigneeNo'];
-
-		$data=array('username'=> $username, 'hash'=> $hash, 'numbers' => $numbers, "sender"=>$sender,"message"=>$message);
-
-		$ch = curl_init('http://api.txtlocal.com/send/'); 
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$response = curl_exec($ch);
-
-		if($response)
-			echo "Message Sent!"."<br>";
-		else 
-			echo "Failed to send...";
-
-		echo $response;
-
-		curl_close($ch);
-		
-		require("PHPMailer\class.phpmailer.php");
-		$mailer = new PHPMailer();
-		$mailer->IsSMTP();
-		$mailer->Host = 'ssl://smtp.gmail.com:465';
-		$mailer->SMTPAuth = TRUE;
-		$mailer->Username = 'convergelogistics2016@gmail.com';
-		$mailer->Password = 'cyanomix10';
-		$mailer->From = 'convergelogistics2016@gmail';
-		$mailer->FromName = 'Converge Logistics Center';
-		$mailer->Body = "Good day! Here are the details of the package $trackid.
-
-Date Dispatched: '$trackid'
-Status: '$remitstatus'
-Expected Delivery Date: '$expected'
-Consignor Information: '$consignor'";
-		$mailer->Subject = 'Package Delivery';
-		$mailer->AddAddress("$consigneeemail");
-		if(!$mailer->Send())
-		{
-			echo "Message was not sent<br/ >";
-			echo "Mailer Error: " . $mailer->ErrorInfo;
-		}
-		else
-		{
-			echo "Message has been sent";
-		}
+		header('Location: createpackageform.php');
 	}
 	else{
 		echo mysql_error();
