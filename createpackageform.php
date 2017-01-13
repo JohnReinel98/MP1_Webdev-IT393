@@ -23,7 +23,7 @@ body{
 	position: absolute;
 	background:#429bf4;
 	width: 450px;
-	height: 610px;
+	height: 680px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 60px 0;
@@ -169,6 +169,8 @@ th {
 <option> KB Medium </option>
 <option> KB Large </option>
 <option> KB Extra Large </option></select><p>
+<p><font face="Helvetica" color="white">Declared Value:</font><br>
+<td><input type = "text" name = "txtDeclaredValue" id = "txtDeclaredValue"><p>
 <input type = "submit" value = "Submit Transaction">
 <input type = "reset" value = "Reset"></tr>
 </form>

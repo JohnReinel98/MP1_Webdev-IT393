@@ -105,16 +105,16 @@ th {
 	<?php
 	$tracksearch = $_POST['txtTrackOrder'];
 	$sql = mysql_query("select * from tblpackage_delivery where TrackNo = '$tracksearch'",$conn);
+	
 	while($rows=mysql_fetch_array($sql)){
 			$datedispatched = $rows['DateDelivered'];
 			$status = $rows['DeliveryStatus'];
 			$expected = $rows['DateReceived'];
 	
-	
 	echo "<tr><td align = 'center'> $datedispatched </td>";
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> $expected </td></tr>";
-	
+
 	}
 	?>
 </table>

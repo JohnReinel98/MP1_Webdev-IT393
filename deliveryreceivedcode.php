@@ -13,6 +13,7 @@
 		$consigneeemail = $rows['ConsigneeEmail'];
 		$notifyToday = $rows['NotifyToday'];
 		$notifyTmr = $rows['NotifyTmr'];
+		$dateDisp = $rows['DateDelivered'];
 		$dateDel = $rows['DateReceived'];
 		$status = $rows['DeliveryStatus'];
 		
@@ -25,8 +26,8 @@
 				if(strtotime($dateDel) <= time()){	
 					$update = mysql_query("update tblpackage_delivery set NotifyToday = 'true' where TrackNo = $trackid");
 					
-					$username = 'caluagjohnreinel1000@gmail.com'; 
-					$hash = 'Cyanomix10';
+					$username = 'convergelogistics2016@gmail.com'; 
+					$hash = 'Convergelogistics10';
 
 					$from = "Converge Logistics";
 					$message = "You have expected door-to-door delivery today. In case you are not around, please leave an autorization letter and a valid ID. \nThank you for using Converge Logistics Center.";
@@ -59,8 +60,8 @@
 				if(time() >= strtotime($dateDel . "-1 day")){
 					$update = mysql_query("update tblpackage_delivery set NotifyTmr = 'true' where TrackNo = $trackid");
 					
-					$username = 'caluagjohnreinel1000@gmail.com'; 
-					$hash = 'Cyanomix10';
+					$username = 'convergelogistics2016@gmail.com'; 
+					$hash = 'Convergelogistics10';
 
 					$from = "Converge Logistics";
 					$message = "Your package $trackid has been dispatched. Please check your email for expected delivery date.";
@@ -98,7 +99,7 @@
 					$mailer->FromName = 'Converge Logistics Center';
 					$mailer->Body = "Good day! Here are the details of the package $trackid.
 
-Date Dispatched: '$trackid'
+Date Dispatched: '$dateDisp'
 Status: '$status'
 Expected Delivery Date: '$dateDel'";
 					$mailer->Subject = 'Package Delivery';

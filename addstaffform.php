@@ -168,7 +168,7 @@ body{
 <p><font face="Helvetica" color="white">Username:</font><br>
 <td><input type = "text" name = "txtUsername" id = "txtUsername"><p>
 <p><font face="Helvetica" color="white">Password:</font><br>
-<td><input type = "text" name = "txtPassword" id = "txtPassword"><p>
+<td><input type = "password" name = "txtPassword" id = "txtPassword"><p>
 <td><input type = "submit" value= "Submit" class= "sub">
 </div>
 </form>

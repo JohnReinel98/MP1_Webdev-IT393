@@ -309,7 +309,7 @@ body{
 <p> How to Send Money Online </p>
 </div>
 <div class="p2">
-<p> SELECT COUNTRY AND AMOUNT </p>
+<p> SELECT LOCATION AND AMOUNT </p>
 <p> Choose from 5 destinations. Our exchange<br> rates are guaranteed so you know how much<br> your recipient will get. </p>
 </div>
 <div class="p3">

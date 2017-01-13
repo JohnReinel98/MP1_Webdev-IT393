@@ -51,6 +51,7 @@ a:hover{
 </body>
 </html>
 <?php
+session_start();
 $conn = @mysql_connect("localhost","root","");
 	if(!$conn)
 		die("Cannot to the database");
@@ -143,8 +144,11 @@ Consignor Information: '$consignor'";
 		}
 		else
 		{
+			
+        	$_SESSION['POST'] = $_POST;
+        	$_SESSION['date'] = $datereceived;
 			echo "Message has been sent";
-			header('Location: index.php');
+			header('Location: successmoneyremit.php');
 		}
 	}
 	else{
