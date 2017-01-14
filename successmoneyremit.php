@@ -7,9 +7,11 @@ $conn = @mysql_connect("localhost","root","");
 
 	$track = $_SESSION['POST']['txtTrack'];
 	$expected = $_SESSION['date'];
+	$_SESSION['recptsession'] = $track;
 	unset($_SESSION['POST']);
 	$result = mysql_query("select * from tblmoney_remit");
 	while($rows = mysql_fetch_array($result)){
+		$id = $rows['ID'];
 		$trackno = $rows['TrackNo'];
 	}
 ?>
@@ -104,8 +106,8 @@ body{
 }
 .btnBack{
 	position: absolute;
-	top: 490px;
-	left: 640px;
+	top: 500px;
+	left: 800px;
 }
 .back{
 	background-color: darkgray;
@@ -125,7 +127,29 @@ body{
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
+.btnPrint{
+	position: absolute;
+	top: 510px;
+	left: 485px;
+}
+.recpt{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.recpt:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 </style>
 </head>
 <body>
@@ -156,6 +180,11 @@ body{
 <div class= "btnBack">
 <form method="POST" action="index.php">
 <input type= "submit" value="Back to Home" class="back">
+</form>
+</div>
+<div class= "btnPrint">
+<form method="POST" action="receiptremit.php">
+<input type= "submit" value="Print Receipt" class="recpt">
 </form>
 </div>
 </body>

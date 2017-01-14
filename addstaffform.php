@@ -111,7 +111,7 @@ body{
 .btnCancel{
 	position: absolute;
 	top: 565px;
-	left: 610px;
+	left: 800px;
 }
 .cancel{
 	background-color: darkgray;

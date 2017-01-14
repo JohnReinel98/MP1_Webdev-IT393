@@ -70,7 +70,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background:rgba(66,155,244,0.5);
+    background:rgba(66,155,244,0.8);
 }
 
 li {
@@ -304,7 +304,7 @@ th {
       <a href="archivecodetablepackage.php">Archive/Unarchive Packages</a>
     </div>
   </li>
-  <li><a href="#news">View Rates</a></li>
+  <li><a href="viewallratesadmin.php">View Rates</a></li>
   <li class="dropdown_pdfs">
   <a href="#" class="dropbtn_pdfs">View Reports</a>
   <div class="dropdown-content_pdfs">
