@@ -9,7 +9,7 @@ $conn = @mysql_connect("localhost","root","");
 	$expected = $_SESSION['date'];
 	$_SESSION['recptsession'] = $track;
 	unset($_SESSION['POST']);
-	$result = mysql_query("select * from tblmoney_remit");
+	$result = mysql_query("select * from tblpackage_delivery");
 	while($rows = mysql_fetch_array($result)){
 		$id = $rows['ID'];
 		$trackno = $rows['TrackNo'];
@@ -183,7 +183,7 @@ body{
 </form>
 </div>
 <div class= "btnPrint">
-<form method="POST" action="receiptremit.php">
+<form method="POST" action="receiptpackage.php">
 <input type= "submit" value="Print Receipt" class="recpt">
 </form>
 </div>

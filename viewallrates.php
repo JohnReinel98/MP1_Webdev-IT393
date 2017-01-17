@@ -23,7 +23,7 @@ body{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
 	width: 1320px;
-	height: 700px;
+	height: 685px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 215px 10px 0;
@@ -65,22 +65,28 @@ th {
     background-color: gray;
     color: white;
 }
-.backmain{
+.btnBack{
 	position: absolute;
-	background-color: white;
-    color: #429bf4;
-    border: 2px solid #429bf4;
-    padding: 10px 10px;
+	top: 845px;
+	left: 1225px;
+}
+.back{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    top: 850px;
-	left: 1190px;
+    font-size: 12px;
+	cursor: pointer;
 }
-.backmain:hover{
-	background-color: darkgray;
-	color:white;
+.back:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .remitrates{
 	position: absolute;
@@ -191,7 +197,11 @@ th {
 	<td align = "center"> 1558 </td></tr>
 	</table>
 </div>
-<a href="index.php" class= "backmain"> Back to Main </a>
+<div class="btnBack">
+<form method="POST" action="index.php">
+<input type= "submit" value="Back" class="back">
+</form>
+</div>
 <p class="remitrates"> Remittance Rates </p>
 <p class="packagerates"> Package Rates </p>
 </body>

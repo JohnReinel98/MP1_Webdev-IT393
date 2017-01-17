@@ -105,7 +105,7 @@ body{
 }
 .btnBack{
 	position: absolute;
-	top: 380px;
+	top: 385px;
 	left: 740px;
 }
 .back{

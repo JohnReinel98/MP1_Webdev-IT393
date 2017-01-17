@@ -163,7 +163,7 @@ body{
 	position: absolute;
 	background:#429bf4;
 	width: 780px;
-	height: 560px;
+	height: 580px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 190px 270px 0;
@@ -215,6 +215,47 @@ body{
 }
 .cprovince{
 	width: 90px;
+}
+.create{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.create:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.btnCancel{
+	position: absolute;
+	top: 723px;
+	left: 500px;
+}
+.cancel{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.cancel:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 </style>
 </head>
@@ -270,13 +311,18 @@ body{
 <p><font face="Helvetica" color="white">Insurance:</font><br>
 <td><input type = "text" value="<?php echo "$insurance"?>" name = "txtInsurance" id = "txtInsurance" readonly><p>
 </div>
-<input type = "submit" value = "Submit Transaction">
+<input type = "submit" value = "Submit Transaction" class="create">
 </form>
 </div>
 <div class="logo">
 <a href="index.php">
 <img src="Assets/indexlogo.png"/>
 </a>
+</div>
+<div class="btnCancel">
+<form method="POST" action="createpackageform.php">
+<input type= "submit" value="Back" class="cancel">
+</form>
 </div>
 </body>
 </html>

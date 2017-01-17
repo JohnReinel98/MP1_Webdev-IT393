@@ -28,8 +28,8 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 230px;
-	height: 610px;
+	width: 215px;
+	height: 712px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 10px 0;
@@ -40,11 +40,11 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1290px;
-	height: 520px;
+	width: 1100px;
+	height: 610px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 240px 0;
+	margin: 200px 225px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -56,18 +56,18 @@ body{
 }
 .table1{
 	position: absolute;
-	top:240px;
-	left:260px;
+	top:220px;
+	left:240px;
 }
 table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width:100%;
+    width:97%;
 }
 th, td {
     text-align: left;
-    padding: 4px;
+    padding: 3px;
 }
 
 tr:nth-child(even){
@@ -106,6 +106,42 @@ th {
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.upd{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.upd:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.clr{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.clr:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 </style>
 </head>
 <body>
@@ -138,8 +174,8 @@ th {
 <td><input type = "password" name = "txtPassword" id = "txtPassword"><p>
 <p><font face="Helvetica" color="white">Status:</font><br>
 <td><input type = "text" name = "txtStatus" id = "txtStatus"><p>
-<input type = "submit" value = "Update Staff">
-<input type = "reset" value = "Clear All Fields">
+<input type = "submit" value = "Update Staff" class="upd"><p></p>
+<input type = "reset" value = "Clear All Fields" class="clr">
 </form>
 </div>
 <div class = "table1">
@@ -153,7 +189,6 @@ th {
 	<th> Address </th>
 	<th> Email </th>
 	<th> Username </th>
-	<th> Password </th>
 	<th> Status </th>
 	<th> Archive </th>
 	<th> Block Status </th>
@@ -170,7 +205,6 @@ th {
 			$address = $rows['Address'];
 			$email = $rows['Email'];
 			$username = $rows['Username'];
-			$passw = $rows['Password'];
 			$status = $rows['Status'];
 			$blockstatus = $rows['BlockStatus'];
 	
@@ -183,7 +217,6 @@ th {
 	echo "<td align = 'center'> $address </td>";
 	echo "<td align = 'center'> $email </td>";
 	echo "<td align = 'center'> $username </td>";
-	echo "<td align = 'center'> $passw </td>";
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> <a href= 'archiverecords.php?id=$id'> Archive </a> </td>";
 	echo "<td align = 'center'> $blockstatus </td>";

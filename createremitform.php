@@ -22,8 +22,8 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 500px;
-	height: 550px;
+	width: 510px;
+	height: 595px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 50px 0;
@@ -34,7 +34,7 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 710px;
+	width: 660px;
 	height: 380px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
@@ -50,8 +50,8 @@ body{
 }
 .table1{
 	position: absolute;
-	top:240px;
-	left:630px;
+	top:220px;
+	left:610px;
 }
 table{
 	border-collapse: collapse;
@@ -109,8 +109,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 700px;
-	left: 1200px;
+	top: 740px;
+	left: 440px;
 }
 .cancel{
 	background-color: darkgray;
@@ -126,6 +126,42 @@ th {
 	cursor: pointer;
 }
 .cancel:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.create{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.create:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.reset{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.reset:hover{
 	background-color: white;
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -176,8 +212,8 @@ th {
 <option> S. LUZON </option>
 <option> VISAYAS </option>
 <option> MINDANAO </option></select><p>
-<input type = "submit" value = "Submit Transaction">
-<input type = "reset" value = "Clear All Fields">
+<input type = "submit" value = "Submit Transaction" class="create">
+<input type = "reset" value = "Clear All Fields" class="reset">
 </form>
 </div>
 <input type="hidden" name="trackid" value="<?php echo "$trackid" ?>">

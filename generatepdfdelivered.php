@@ -15,7 +15,7 @@ include ("connect.php");
 		//Title
 		$this->Cell(250,10,'Converge Logistics',0,0,'C');
 		$this->Ln(10);
-		$this->Cell(450,10,'Staffs Records',0,0,'C');
+		$this->Cell(450,10,'Delivered Packages',0,0,'C');
 		//Line break
 		$this->Ln(20);
 	}
@@ -28,13 +28,13 @@ include ("connect.php");
 		//Arial italic 8
 		$this->SetFont('Arial','I',8);
 		//Page number
-		$this->Cell(0,10,'Page '.$this->PageNo().' '.'Staff Records',0,0,'C');
+		$this->Cell(0,10,'Page '.$this->PageNo().' '.' Delivered Packages',0,0,'C');
 	}
 	
 	
 		function LoadData()
 		{
-			$result=mysql_query("SELECT * from tblstaff");
+			$result=mysql_query("SELECT ID,TrackNo,Consignor,ConsignorNo,ConsignorCity,ConsignorProvince,ConsignorEmail,Consignee,ConsigneeNo,ConsigneeCity,ConsigneeProvince,ConsigneeEmail,Size,Amount,DeclaredValue,Insurance,DateDelivered,DateReceived,NotifyToday,NotifyTmr,Status,DeliveryStatus,Branch from tblpackage_delivery where DeliveryStatus = 'Delivered'");
 			while($row=mysql_fetch_row($result)) 
 			{ 
 				$data[] = $row;
@@ -53,7 +53,7 @@ include ("connect.php");
 			$this->SetFont('','B');
 			//Header
 			//$w=array(10,40,50,30);
-			$w=array(10,35,40,15,40,60,75,45,80,30,15);
+			$w=array(10,35,35,35,20,25,73,30,35,25,25,73,30,25,35,25,35,35,30,30,25,40,25);
 			for($i=0;$i<count($header);$i++)
 				$this->Cell($w[$i],7,$header[$i],1,0,'C',true);
 			$this->Ln();
@@ -76,6 +76,18 @@ include ("connect.php");
 				$this->Cell($w[8],6,$row[8],'LR',0,'L',$fill);
 				$this->Cell($w[9],6,$row[9],'LR',0,'L',$fill);
 				$this->Cell($w[10],6,$row[10],'LR',0,'L',$fill);
+				$this->Cell($w[11],6,$row[11],'LR',0,'L',$fill);
+				$this->Cell($w[12],6,$row[12],'LR',0,'L',$fill);
+				$this->Cell($w[13],6,$row[13],'LR',0,'L',$fill);
+				$this->Cell($w[14],6,$row[14],'LR',0,'L',$fill);
+				$this->Cell($w[15],6,$row[15],'LR',0,'L',$fill);
+				$this->Cell($w[16],6,$row[16],'LR',0,'L',$fill);
+				$this->Cell($w[17],6,$row[17],'LR',0,'L',$fill);
+				$this->Cell($w[18],6,$row[18],'LR',0,'L',$fill);
+				$this->Cell($w[19],6,$row[19],'LR',0,'L',$fill);
+				$this->Cell($w[20],6,$row[20],'LR',0,'L',$fill);
+				$this->Cell($w[21],6,$row[21],'LR',0,'L',$fill);
+				$this->Cell($w[22],6,$row[22],'LR',0,'L',$fill);
 				$this->Ln();
 				$fill=!$fill;
 			}
@@ -86,7 +98,7 @@ include ("connect.php");
 
 $pdf=new PDF();
 //Column titles
-$header=array('ID','Last Name','First Name','MI','Contact No.','Address','Email','Username','Password','Status','Tries');
+$header=array('ID','TrackNo','Consignor','ConsignorNo','City','Province','Email','Consignee','ConsigneeNo','City','Province','Email','Size','Amount','DeclaredValue','Insurance','DateDelivered','DateReceived','NotifyToday','NotifyTmr','Status','DeliveryStatus','Branch');
 //Data loading
 $data=$pdf->LoadData();
 $pdf->SetFont('Arial','',12);

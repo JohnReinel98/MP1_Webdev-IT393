@@ -30,10 +30,34 @@ body{
 	top: -45px;
 	left: 10px;
 }
+#panel{
+    position: absolute;
+    background: #429bf4;
+    width: 1320px;
+    height: 470px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 190px 6px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#panel1{
+    position: absolute;
+    background: rgba(128,128,128,1.0);
+    width: 1290px;
+    height: 445px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 202px 20px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
 .table1{
 	position: absolute;
-	top:240px;
-	left:10px;
+	top:220px;
+	left:35px;
 }
 table{
 	border-collapse: collapse;
@@ -43,7 +67,7 @@ table{
 }
 th, td {
     text-align: left;
-    padding: 9px;
+    padding: 7.5px;
 }
 
 tr:nth-child(even){
@@ -56,8 +80,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 620px;
-	left: 1250px;
+	top: 600px;
+	left: 1220px;
 }
 .cancel{
 	background-color: darkgray;
@@ -84,6 +108,8 @@ th {
 </div>
 <div id="panel">
 </div>
+<div id="panel1">
+</div>
 <div class="logo">
 <a href="index.php">
 <img src="Assets/indexlogo.png"/>
@@ -92,7 +118,6 @@ th {
 <div class = "table1">
 	<table>
 	<tr>
-	<th> ID </th>
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
@@ -125,9 +150,8 @@ th {
 			$branch = $rows['Branch'];
 			$status = $rows['Status'];
 			$remstatus = $rows['RemitStatus'];
-	
-	echo "<tr><td align = 'center'> $id </td>";
-	echo "<td align = 'center'> $trackid </td>";
+
+	echo "<tr><td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno </td>";
 	echo "<td align = 'center'> $consigneeno </td>";

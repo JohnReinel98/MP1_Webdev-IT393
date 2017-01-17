@@ -51,6 +51,7 @@ a:hover{
 </body>
 </html>
 <?php
+session_start();
 $conn = @mysql_connect("localhost","root","");
 	if(!$conn)
 		die("Cannot to the database");
@@ -74,10 +75,12 @@ $conn = @mysql_connect("localhost","root","");
 	$consigneeno = $_POST['txtConsigneeNo'];
 	$kilo = $_POST['txtSize'];
 	$pay = $_POST['txtPayment'];
+	$declaredval = $_POST['txtDeclaredValue'];
 	$dispatched = $_POST['txtDispatched'];
 	$expected = $_POST['txtExpected'];
 	$branch = $_POST['txtBranch'];
-	$remitstatus = 'Pending';
+	$delvstatus = 'Pending';
+	$status = 'Active';
 	$notiftod = 'false';
 	$notiftmr = 'false';
 	$insurance = $_POST['txtInsurance'];
@@ -85,12 +88,14 @@ $conn = @mysql_connect("localhost","root","");
 	$result = mysql_query("insert into tblpackage_delivery(TrackNo,Consignor,ConsignorNo,
 							ConsignorHouseNo,ConsignorStreet,ConsignorBarangay,ConsignorCity,ConsignorProvince,ConsignorEmail,
 							Consignee,ConsigneeNo,ConsigneeHouseNo,ConsigneeStreet,ConsigneeBarangay,ConsigneeCity,ConsigneeProvince,
-							ConsigneeEmail,Size,Amount,Insurance,DateDelivered,DateReceived,NotifyToday,NotifyTmr,DeliveryStatus,Branch)
+							ConsigneeEmail,Size,Amount,DeclaredValue,Insurance,DateDelivered,DateReceived,NotifyToday,NotifyTmr,Status,DeliveryStatus,Branch)
 							values('$trackid','$consignor','$consignorno','$house','$street','$barangay','$city','$province',
 							'$consignoremail','$consignee','$consigneeno','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
-							'$kilo','$pay','$insurance','$dispatched','$expected','$notiftod','$notiftmr','$remitstatus','$branch')");
+							'$kilo','$pay','$declaredval','$insurance','$dispatched','$expected','$notiftod','$notiftmr','$status','$delvstatus','$branch')");
 	if($result){
-		header('Location: createpackageform.php');
+		header('Location: successpackagedel.php');
+		$_SESSION['POST'] = $_POST;
+        $_SESSION['date'] = $expected;
 	}
 	else{
 		echo mysql_error();

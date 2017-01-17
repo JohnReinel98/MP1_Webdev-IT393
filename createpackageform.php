@@ -22,8 +22,8 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 450px;
-	height: 680px;
+	width: 460px;
+	height: 705px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 60px 0;
@@ -97,10 +97,46 @@ th {
 .province{
 	width: 90px;
 }
+.create{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.create:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.reset{
+	background-color: darkgray;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	cursor: pointer;
+}
+.reset:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 .btnCancel{
 	position: absolute;
-	top: 750px;
-	left: 1170px;
+	top: 852px;
+	left: 410px;
 }
 .cancel{
 	background-color: darkgray;
@@ -120,6 +156,7 @@ th {
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
 </style>
 </head>
 <body>
@@ -171,8 +208,8 @@ th {
 <option> KB Extra Large </option></select><p>
 <p><font face="Helvetica" color="white">Declared Value:</font><br>
 <td><input type = "text" name = "txtDeclaredValue" id = "txtDeclaredValue"><p>
-<input type = "submit" value = "Submit Transaction">
-<input type = "reset" value = "Reset"></tr>
+<input type = "submit" value = "Submit Transaction" class="create">
+<input type = "reset" value = "Reset" class="reset"></tr>
 </form>
 </div>
 <div class = "table1">

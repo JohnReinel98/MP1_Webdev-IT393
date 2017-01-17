@@ -55,9 +55,6 @@
 	$totalamount = $fee + $amount;
 ?>
 
-
-	
-
 <html>
 <head>
 <title> Remit Receipt </title>
@@ -83,7 +80,7 @@ body{
 	position: absolute;
 	background:#429bf4;
 	width: 730px;
-	height: 510px;
+	height: 530px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 190px 360px 0;
@@ -138,8 +135,8 @@ body{
 }
 .btnBack{
 	position: absolute;
-	top: 650px;
-	left: 600px;
+	top: 674px;
+	left: 585px;
 }
 .back{
 	background-color: darkgray;
@@ -158,6 +155,11 @@ body{
 	background-color: white;
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.btnSub{
+	position: absolute;
+	top: 25px;
+	left: -5px;
 }
 .sub{
 	position: absolute;
@@ -216,6 +218,7 @@ body{
 <td><input type = "text" value="<?php echo "$consigneemail"?>" name = "txtConsigneeEmail" id = "txtConsigneeEmail" readonly><p>
 <p><font face="Helvetica" color="white">Consignee Contact Number:</font><br>
 <td><input type = "text" value="<?php echo "$consigneeno"?>" name = "txtConsigneeNo" id = "txtConsigneeNo" readonly><p>
+
 <div class="fields2">
 <p><font face="Helvetica" color="white">Amount:</font><br>
 <td><input type = "text" value="<?php echo "$amount"?>" name = "txtAmount" id = "txtAmount" readonly><p>
@@ -228,7 +231,9 @@ body{
 <p><font face="Helvetica" color="white">Status:</font><br>
 <td><input type = "text" value="<?php echo "$remitstatus"?>" name = "txtStatus" id = "txtStatus" readonly><p>
 </div>
+<div class="btnSub">
 <input type = "submit" value = "Submit Transaction" class="sub">
+</div>
 </form>
 </div>
 <div class= "btnBack">

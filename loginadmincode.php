@@ -234,7 +234,7 @@ table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width: 127.1%;
+    width: 126.5%;
     height: 120%;
 }
 th, td {
@@ -309,12 +309,12 @@ th {
   <a href="#" class="dropbtn_pdfs">View Reports</a>
   <div class="dropdown-content_pdfs">
       <a href="generatepdfremits.php">Pending Remittances</a>
-      <a href="">Pending Packages</a>
+      <a href="generatepdfpkg.php">Pending Packages</a>
       <a href="generatepdfdelivered.php">Delivered Packages</a>
       <a href="generatepdfreceivedremits.php">Received Remittances</a>
     </div>
   </li>
-  <li><a href="#news">View Income</a></li>
+  <li><a href="generateincomecode.php">View Income</a></li>
   <li><a href="logoutsessioncode.php">Logout</a></li>
 </ul>
 </div>

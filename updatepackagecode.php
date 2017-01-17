@@ -25,14 +25,26 @@ body{
 	padding: 20px;
 	box-sizing:border-box;
 }
+#panel2{
+    position: absolute;
+    background: #429bf4;
+    width: 1360px;
+    height: 980px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 190px 6px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1350px;
-	height: 520px;
+	width: 1330px;
+	height: 960px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 2px 0;
+	margin: 200px 20px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -44,8 +56,8 @@ body{
 }
 .table1{
 	position: absolute;
-	top:240px;
-	left:25px;
+	top:210px;
+	left:35px;
 }
 table{
 	border-collapse: collapse;
@@ -55,7 +67,7 @@ table{
 }
 th, td {
     text-align: left;
-    padding: 4px;
+    padding: 4.5px;
 }
 
 tr:nth-child(even){
@@ -73,7 +85,7 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 650px;
+	top: 1100px;
 	left: 1250px;
 }
 .cancel{
@@ -101,12 +113,13 @@ th {
 </div>
 <div id="panel">
 </div>
+<div id="panel2">
+</div>
 <div id="panel1">
 </div>
 <div class = "table1">
 	<table>
 	<tr>
-	<th> ID </th>
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
@@ -140,11 +153,8 @@ th {
 			$status = $rows['Status'];
 			$deliverystatus = $rows['DeliveryStatus'];
 			$branch = $rows['Branch'];
-			
-	
-	
-	echo "<tr><td align = 'center'> $id </td>";
-	echo "<td align = 'center'> $trackid </td>";
+
+	echo "<tr><td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno</td>";
 	echo "<td align = 'center'> $consignee </td>";

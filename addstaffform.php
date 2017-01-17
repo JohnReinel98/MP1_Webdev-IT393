@@ -152,23 +152,23 @@ body{
 <div class = "fields">
 <tr>
 <td><font face="Helvetica" color="white">Last Name:</font><br>
-<td><input type = "text" name = "txtLname" id = "txtLname"><p>
+<td><input type = "text" name = "txtLname" id = "txtLname" autocomplete="off"><p>
 <p><font face="Helvetica" color="white">First Name:</font><br> 
-<td><input type = "text" name = "txtFname" id = "txtFname">
+<td><input type = "text" name = "txtFname" id = "txtFname" autocomplete="off">
 <p><font face="Helvetica" color="white">Middle Initial:</font><br> 
-<td><input type = "text" name = "txtMI" id = "txtMI"><p>
+<td><input type = "text" name = "txtMI" id = "txtMI" autocomplete="off"><p>
 <p><font face="Helvetica" color="white">Contact No.:</font><br>
-<td><input type = "text" name = "txtContact" id = "txtContact"><p>
+<td><input type = "text" name = "txtContact" id = "txtContact" autocomplete="off"><p>
 <p><font face="Helvetica" color="white">Address:</font><br> 
-<td><input type = "text" name = "txtAddress" id = "txtAddress">
+<td><input type = "text" name = "txtAddress" id = "txtAddress" autocomplete="off">
 <p><font face="Helvetica" color="white">Email:</font><br>
-<td><input type = "text" name = "txtEmail" id = "txtEmail"><p>
+<td><input type = "text" name = "txtEmail" id = "txtEmail" autocomplete="off"><p>
 </div>
 <div class="fields2">
 <p><font face="Helvetica" color="white">Username:</font><br>
-<td><input type = "text" name = "txtUsername" id = "txtUsername"><p>
+<td><input type = "text" name = "txtUsername" id = "txtUsername" autocomplete="off"><p>
 <p><font face="Helvetica" color="white">Password:</font><br>
-<td><input type = "password" name = "txtPassword" id = "txtPassword"><p>
+<td><input type = "password" name = "txtPassword" id = "txtPassword" autocomplete="off"><p>
 <td><input type = "submit" value= "Submit" class= "sub">
 </div>
 </form>

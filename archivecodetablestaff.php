@@ -30,16 +30,40 @@ body{
 	top: -45px;
 	left: 10px;
 }
+#panel{
+    position: absolute;
+    background: #429bf4;
+    width: 1320px;
+    height: 470px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 190px 6px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#panel1{
+    position: absolute;
+    background: rgba(128,128,128,1.0);
+    width: 1290px;
+    height: 445px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 202px 20px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
 .table1{
 	position: absolute;
-	top:240px;
-	left:10px;
+	top:220px;
+	left:35px;
 }
 table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width: 100%;
+    width: 105%;
 }
 th, td {
     text-align: left;
@@ -56,8 +80,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 550px;
-	left: 1230px;
+	top: 600px;
+	left: 1215px;
 }
 .cancel{
 	background-color: darkgray;
@@ -84,6 +108,10 @@ th {
 </div>
 <div id="panel">
 </div>
+<div id="panel1">
+</div>
+<div id="panel2">
+</div>
 <div class="logo">
 <a href="index.php">
 <img src="Assets/indexlogo.png"/>
@@ -100,8 +128,8 @@ th {
 	<th> Address </th>
 	<th> Email </th>
 	<th> Username </th>
-	<th> Password </th>
 	<th> Status </th>
+	<th> Archive/Unarchive </th>
 	<th> Block Status </th></tr>
 
 	<?php
@@ -115,7 +143,6 @@ th {
 			$address = $rows['Address'];
 			$email = $rows['Email'];
 			$username = $rows['Username'];
-			$passw = $rows['Password'];
 			$status = $rows['Status'];
 			$blockstatus = $rows['BlockStatus'];
 	
@@ -128,7 +155,6 @@ th {
 	echo "<td align = 'center'> $address </td>";
 	echo "<td align = 'center'> $email </td>";
 	echo "<td align = 'center'> $username </td>";
-	echo "<td align = 'center'> $passw </td>";
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> <a href= 'unarchiverecords.php?id=$id'> Unarchive </a> </td>";
 	echo "<td align = 'center'> $blockstatus </td></tr>";

@@ -25,18 +25,31 @@ body{
 	padding: 20px;
 	box-sizing:border-box;
 }
+#panel2{
+    position: absolute;
+    background: #429bf4;
+    width: 1360px;
+    height: 980px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 190px 6px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1430px;
-	height: 430px;
+	width: 1330px;
+	height: 960px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 10px 0;
+	margin: 200px 20px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
 }
+
 .fields{
 	position:absolute;
 	top:230px;
@@ -44,8 +57,8 @@ body{
 }
 .table1{
 	position: absolute;
-	top:240px;
-	left:30px;
+	top:210px;
+	left:35px;
 }
 table{
 	border-collapse: collapse;
@@ -73,8 +86,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 580px;
-	left: 1330px;
+	top: 1110px;
+	left: 1260px;
 }
 .cancel{
 	background-color: darkgray;
@@ -101,17 +114,18 @@ th {
 </div>
 <div id="panel">
 </div>
+<div id="panel2">
+</div>
 <div id="panel1">
 </div>
+
 <div class = "table1">
 	<table>
 	<tr>
-	<th> ID </th>
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
 	<th> Consignee </th>
-	<th> Consignee Email </th>
 	<th> Consignee No </th>
 	<th> Amount </th>
 	<th> Fee </th>
@@ -134,7 +148,6 @@ th {
 			$consignorno = $rows['ConsignorNo'];
 			$consigneeno = $rows['ConsigneeNo'];	
 			$consignee = $rows['Consignee'];
-			$consigneeemail = $rows['ConsigneeEmail'];
 			$amount = $rows['Amount'];
 			$fee = $rows['Fee'];
 			$total = $rows['TotalAmount'];
@@ -145,12 +158,10 @@ th {
 			$remitstatus = $rows['RemitStatus'];
 	
 	
-	echo "<tr><td align = 'center'> $id </td>";
-	echo "<td align = 'center'> $trackid </td>";
+	echo "<tr><td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno</td>";
 	echo "<td align = 'center'> $consignee </td>";
-	echo "<td align = 'center'> $consigneeemail </td>";
 	echo "<td align = 'center'> $consigneeno </td>";
 	echo "<td align = 'center'> $amount </td>";
 	echo "<td align = 'center'> $fee </td>";
