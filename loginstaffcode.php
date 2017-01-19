@@ -17,7 +17,7 @@
 ?>
 <html>
 <head>
-<title> Employee Panel </title>
+<title> Staff Panel </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -36,34 +36,121 @@ body{
 	padding: 20px;
 	box-sizing:border-box;
 }
+#panel{
+    position: absolute;
+    background: #429bf4;
+    width: 1320px;
+    height: 470px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 190px 6px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#panel1{
+    position: absolute;
+    background: rgba(128,128,128,1.0);
+    width: 1290px;
+    height: 445px;
+    border-radius: 15px 15px 15px 15px;
+    float: center;
+    margin: 202px 20px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.menubar{
+	position: absolute;
+	top: 2px;
+	left: 440px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background:rgba(66,155,244,0.8);
+}
 
-.btnCr8Pack{
-	position: absolute;
-	top: 60px;
-	left: 645px;
-	border: none;
-	background: transparent;
-	font-size: 25px;
-	color: white;
-	font-family:Verdana, Geneva, sans-serif;
-	cursor:pointer;
+li {
+    float: left;
 }
-.btnCr8Pack:hover{
-	color: darkgray;
+
+
+li a, .dropbtn_remits {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-.btnCr8Remit{
-	position: absolute;
-	top: 60px;
-	left: 905px;
-	border: none;
-	background: transparent;
-	font-size: 25px;
-	color: white;
-	font-family:Verdana, Geneva, sans-serif;
-	cursor:pointer;
+
+li a:hover, .dropdown_remits:hover .dropbtn_remits {
+    background-color: rgba(128,128,128,0.9);
 }
-.btnCr8Remit:hover{
-	color: darkgray;
+
+li.dropdown_remits {
+    display: inline-block;
+}
+
+.dropdown-content_remits {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content_remits a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content_remits a:hover {background-color: rgba(128,128,128,0.5);}
+
+.dropdown_remits:hover .dropdown-content_remits {
+    display: block;
+}
+li a, .dropbtn_packages {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown_packages:hover .dropbtn_packages {
+    background-color: rgba(128,128,128,0.9);
+}
+
+li.dropdown_packages {
+    display: inline-block;
+}
+
+.dropdown-content_packages {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content_packages a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content_packages a:hover {background-color: rgba(128,128,128,0.5);}
+
+.dropdown_packages:hover .dropdown-content_packages {
+    display: block;
 }
 .logo{
 	position: absolute;
@@ -73,109 +160,11 @@ body{
 .welcome{
 	position: absolute;
 	top: 140px;
-	left: 1030px;
+	left: 1100px;
 	font-size: 14px;
 	font-family: Verdana;
 	font-weight: bold;
 	color: white;
-}
-.btnLogout{
-	position: absolute;
-	top: 60px;
-	left: 1200px;
-	border: none;
-	background: transparent;
-	font-size: 25px;
-	color: white;
-	font-family:Verdana, Geneva, sans-serif;
-	cursor:pointer;
-}
-.btnLogout:hover{
-	color: darkgray;
-}
-#panel{
-	position: absolute;
-	background:#429bf4;
-	opacity: 0.8;
-	width: 180px;
-	height: 80px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 30px 1150px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
-#panel1{
-	position: absolute;
-	background:#429bf4;
-	opacity: 0.8;
-	width: 240px;
-	height: 80px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 30px 890px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
-#panel2{
-	position: absolute;
-	background:#429bf4;
-	opacity: 0.8;
-	width: 240px;
-	height: 80px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 30px 630px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
-.table1{
-	position: absolute;
-	top:240px;
-	left:25px;
-}
-table{
-	border-collapse: collapse;
-	background-color: gray;
-	font-weight: bold;
-    width: 100%;
-}
-th, td {
-    text-align: left;
-    padding: 9px;
-}
-
-tr:nth-child(even){
-	background-color: white;
-}
-
-th {
-    background-color: gray;
-    color: white;
-}
-.m{
-	position: absolute;
-	top: 20px;
-	left: 200px;
-}
-.welcome{
-	position: absolute;
-	top: 130px;
-	left: 1100px;
-}
-.hrf{
-	position: absolute;
-	top: 155px;
-	left: 500px;
-}
-a{
-	color: white;
-}
-a:hover{
-	color: darkgray;
 }
 </style>
 </head>
@@ -186,28 +175,33 @@ a:hover{
 </div>
 <div id="panel1">
 </div>
-<div id="panel2">
-</div>
 <div class="logo">
-<a href="index.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
-<form method="POST" action="logoutsessioncode.php">
-	<input type="submit" value="Logout" class="btnLogout">
-</form>
-<form method="POST" action="createremitform.php">
-	<input type="submit" value="Send Remittance" class="btnCr8Remit">
-</form>
-<form method="POST" action="createpackageform.php">
-	<input type="submit" value="Package Delivery" class="btnCr8Pack">
-</form>
-<div class="hrf">
-<a href="updatemoneyremitcode.php" style="text-decoration:none;"> Update Money Remit </a> |
-<a href="updatepackagecode.php" style="text-decoration:none;"> Update Package </a> |
-<a href="archivecodetablemonrem.php" style="text-decoration:none;"> Archived Money Remit </a> |
-<a href="archivecodetablepackage.php" style="text-decoration:none;"> Archived Package </a> |
+<div class="menubar">
+<ul>
+  <li class="dropdown_remits">
+  <a href="#" class="dropbtn_remits">Manage Remittances</a>
+  	<div class="dropdown-content_remits">
+      <a href="createremitform_staff.php">Create Remittance</a>
+      <a href="updatemoneyremitcode_staff.php">Update Remittance Informations</a>
+      <a href="archivecodetablemonrem_staff.php">Archive/Unarchive Remittances</a>
+    </div>
+  </li>
+  <li class="dropdown_packages">
+  <a href="#" class="dropbtn_packages">Manage Packages</a>
+  <div class="dropdown-content_packages">
+      <a href="createpackageform_staff.php">Create Package Delivery</a>
+      <a href="updatepackagecode_staff.php">Update Package Informations</a>
+      <a href="archivecodetablepackage_staff.php">Archive/Unarchive Packages</a>
+    </div>
+  </li>
+  <li><a href="viewallratesstaff.php">View Rates</a></li>
+  <li><a href="logoutsessioncode.php">Logout</a></li>
+</ul>
 </div>
 
 </body>
-</html>
+</html>	

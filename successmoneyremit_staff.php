@@ -9,7 +9,7 @@ $conn = @mysql_connect("localhost","root","");
 	$expected = $_SESSION['date'];
 	$_SESSION['recptsession'] = $track;
 	unset($_SESSION['POST']);
-	$result = mysql_query("select * from tblpackage_delivery");
+	$result = mysql_query("select * from tblmoney_remit");
 	while($rows = mysql_fetch_array($result)){
 		$id = $rows['ID'];
 		$trackno = $rows['TrackNo'];
@@ -156,7 +156,7 @@ body{
 <div id="header">
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
@@ -178,12 +178,12 @@ body{
 <p> <?php echo"$expected"?> </p>
 </div>
 <div class= "btnBack">
-<form method="POST" action="loginadmincode.php">
+<form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back to Admin Panel" class="back">
 </form>
 </div>
 <div class= "btnPrint">
-<form method="POST" action="receiptpackage.php">
+<form method="POST" action="receiptremit.php">
 <input type= "submit" value="Print Receipt" class="recpt">
 </form>
 </div>

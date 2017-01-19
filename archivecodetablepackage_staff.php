@@ -6,7 +6,7 @@
 ?>
 <html>
 <head>
-<title> Archived Money Remit Records </title>
+<title> Archived Package Records </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -56,14 +56,14 @@ body{
 }
 .table1{
 	position: absolute;
-	top:220px;
-	left:35px;
+	top:215px;
+	left:30px;
 }
 table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width: 100%;
+    width: 97.5%;
 }
 th, td {
     text-align: left;
@@ -111,7 +111,7 @@ th {
 <div id="panel1">
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
@@ -121,57 +121,56 @@ th {
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
-	<th> Consignee No </th>
 	<th> Consignee </th>
+	<th> Consignee No </th>
+	<th> Size </th>
 	<th> Amount </th>
-	<th> Fee </th>
 	<th> Total Amount </th>
 	<th> Date Remitted </th>
 	<th> Date Delivered </th>
-	<th> Branch	</th>
 	<th> Status </th>
 	<th> Unarchive </th>
-	<th> Remit Status </th></tr>
+	<th> Remit Status </th>
+	<th> Branch	</th></tr>
 
 	<?php
-	$sql = mysql_query("select * from tblmoney_remit where Status = 'Inactive'");
+	$sql = mysql_query("select * from tblpackage_delivery where Status = 'Inactive'");
 	while( $rows=mysql_fetch_array($sql)){
 			$id = $rows['ID'];
 			$trackid = $rows['TrackNo'];
 			$consignor = $rows['Consignor'];
 			$consignorno = $rows['ConsignorNo'];
-			$consigneeno = $rows['ConsigneeNo'];
 			$consignee = $rows['Consignee'];
+			$consigneeno = $rows['ConsigneeNo'];
+			$size = $rows['Size'];
 			$amount = $rows['Amount'];
-			$fee = $rows['Fee'];
-			$total = $rows['TotalAmount'];
-			$daterem = $rows['DateRemitted'];
-			$datedev = $rows['DateDelivered'];
-			$branch = $rows['Branch'];
+			$insurance = $rows['Insurance'];
+			$datedis = $rows['DateDelivered'];
+			$datedev = $rows['DateReceived'];
 			$status = $rows['Status'];
-			$remstatus = $rows['RemitStatus'];
+			$remstatus = $rows['DeliveryStatus'];
+			$branch = $rows['Branch'];
 
 	echo "<tr><td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno </td>";
-	echo "<td align = 'center'> $consigneeno </td>";
 	echo "<td align = 'center'> $consignee </td>";
+	echo "<td align = 'center'> $consigneeno </td>";
+	echo "<td align = 'center'> $size </td>";
 	echo "<td align = 'center'> $amount </td>";
-	echo "<td align = 'center'> $fee </td>";
-	echo "<td align = 'center'> $total </td>";
-	echo "<td align = 'center'> $daterem </td>";
+	echo "<td align = 'center'> $insurance </td>";
+	echo "<td align = 'center'> $datedis </td>";
 	echo "<td align = 'center'> $datedev </td>";
-	echo "<td align = 'center'> $branch </td>";
 	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> <a href= 'unarchivemoneyremit.php?id=$id'> Unarchive </a> </td>";
-	echo "<td align = 'center'> $remstatus </td></tr>";
+	echo "<td align = 'center'> <a href= 'unarchivepackage_staff.php?id=$id'> Unarchive </a> </td>";
+	echo "<td align = 'center'> $remstatus </td>";
+	echo "<td align = 'center'> $branch </td></tr>";
 	}
 	?>
-
 </table>
 </div>
 <div class="btnCancel">
-<form method="POST" action="loginadmincode.php">
+<form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>

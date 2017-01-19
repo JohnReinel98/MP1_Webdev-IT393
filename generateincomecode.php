@@ -43,15 +43,23 @@ return $data;
 //Colored table
 function FancyTable($header,$data)
 {
-$result = mysql_query("select avg(M.Fee) + avg(P.Amount),avg(M.Fee) + avg(P.Amount)*7,avg(M.Fee) + avg(P.Amount)*30,avg(M.Fee) + avg(P.Amount)*90,avg(M.Fee) + avg(P.Amount)*365 from tblmoney_remit M inner join tblpackage_delivery P 
-	where M.RemitStatus='Pending' or M.RemitStatus='Delivered' and P.DeliveryStatus='Pending' or P.DeliveryStatus='Delivered'");
+//$result = mysql_query("select avg(M.Fee) + avg(P.Amount),avg(M.Fee) + avg(P.Amount)*7,avg(M.Fee) + avg(P.Amount)*30,avg(M.Fee) + avg(P.Amount)*90,avg(M.Fee) + avg(P.Amount)*365 from tblmoney_remit M inner join tblpackage_delivery P 
+//	where M.RemitStatus='Pending' or M.RemitStatus='Delivered' and P.DeliveryStatus='Pending' or P.DeliveryStatus='Delivered'");
 
-while($row = mysql_fetch_array($result)){
-$daily = $row['avg(M.Fee) + avg(P.Amount)'];
-$weekly = $row['avg(M.Fee) + avg(P.Amount)*7'];
-$monthly = $row['avg(M.Fee) + avg(P.Amount)*30'];
-$quarterly = $row['avg(M.Fee) + avg(P.Amount)*90'];
-$annualy = $row['avg(M.Fee) + avg(P.Amount)*365'];
+//while($row = mysql_fetch_array($result)){
+//$daily = $row['avg(M.Fee) + avg(P.Amount)'];
+//$weekly = $row['avg(M.Fee) + avg(P.Amount)*7'];
+//$monthly = $row['avg(M.Fee) + avg(P.Amount)*30'];
+//$quarterly = $row['avg(M.Fee) + avg(P.Amount)*90'];
+//$annualy = $row['avg(M.Fee) + avg(P.Amount)*365'];
+//}
+$result = mysql_query("select SUM(M.Fee) from tblmoney_remit M ");
+	if($rows = mysql_fetch_array($result)){
+		$SUM = $rows['SUM(M.Fee)'];				
+}
+$result = mysql_query("select SUM(P.Amount) from tblpackage_delivery P ");
+	if($rows = mysql_fetch_array($result)){
+		$DEC = $rows['SUM(P.Amount)'];		
 }
 //Colors, line width and bold font
 $this->SetFillColor(66,155,244);
@@ -77,15 +85,15 @@ foreach($data as $row)
 {
 //$this->Cell($w[0],6,"",'LR',0,'C',$fill);
 $this->Ln();
-$this->Cell($w[0],6,"Daily Income : ".$daily);
+$this->Cell($w[0],6,"Daily Income : ".round((($SUM + $DEC)/52)/5,2));
 $this->Ln();
-$this->Cell($w[0],6,"Weekly Income : ".$weekly);
+$this->Cell($w[0],6,"Weekly Income : ".round(($SUM + $DEC)/52,2));
 $this->Ln();
-$this->Cell($w[0],6,"Monthly Income : ".$monthly);
+$this->Cell($w[0],6,"Monthly Income : ".round(($SUM + $DEC)/12,2));
 $this->Ln();
-$this->Cell($w[0],6,"Quarterly Income : ".$quarterly);
+$this->Cell($w[0],6,"Quarterly Income : ".round(($SUM + $DEC)/4,2));
 $this->Ln();
-$this->Cell($w[0],6,"Annualy Income : ".$annualy);
+$this->Cell($w[0],6,"Annualy Income : ".round($SUM + $DEC,2));
 $this->Ln();
 $fill=!$fill;
 }

@@ -44,7 +44,7 @@ a:hover{
 <div id="header">
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
@@ -148,7 +148,7 @@ Consignor Information: '$consignor'";
         	$_SESSION['POST'] = $_POST;
         	$_SESSION['date'] = $datereceived;
 			echo "Message has been sent";
-			header('Location: successmoneyremit.php');
+			header('Location: successmoneyremit_staff.php');
 		}
 	}
 	else{

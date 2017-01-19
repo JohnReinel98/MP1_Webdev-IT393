@@ -1,12 +1,12 @@
 <?php
-	$conn = @mysql_connect("localhost","root","");
+$conn = @mysql_connect("localhost","root","");
 	if(!$conn)
 		die("Cannot to the database");
 	mysql_select_db("dbmplogistics", $conn);
 ?>
 <html>
 <head>
-<title> Archived Money Remit Records </title>
+<title> Update Money Remit Information </title>
 <style>
 body{
 	background-image:url("Assets/wallpaper1.png");
@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1360px;
+	width: 1460px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -25,16 +25,11 @@ body{
 	padding: 20px;
 	box-sizing:border-box;
 }
-.logo{
-	position: absolute;
-	top: -45px;
-	left: 10px;
-}
-#panel{
+#panel2{
     position: absolute;
     background: #429bf4;
-    width: 1320px;
-    height: 470px;
+    width: 1360px;
+    height: 980px;
     border-radius: 15px 15px 15px 15px;
     float: center;
     margin: 190px 6px 0;
@@ -43,31 +38,37 @@ body{
     box-sizing: border-box;
 }
 #panel1{
-    position: absolute;
-    background: rgba(128,128,128,1.0);
-    width: 1290px;
-    height: 445px;
-    border-radius: 15px 15px 15px 15px;
-    float: center;
-    margin: 202px 20px 0;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
+	position: absolute;
+	background:rgba(128,128,128,1.0);
+	width: 1330px;
+	height: 960px;
+	border-radius: 15px 15px 15px 15px;
+	float: center;
+	margin: 200px 20px 0;
+	color: #fff;
+	padding: 20px;
+	box-sizing:border-box;
+}
+
+.fields{
+	position:absolute;
+	top:230px;
+	left:40px;
 }
 .table1{
 	position: absolute;
-	top:220px;
+	top:210px;
 	left:35px;
 }
 table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width: 100%;
+    width:100%;
 }
 th, td {
     text-align: left;
-    padding: 7.5px;
+    padding: 4px;
 }
 
 tr:nth-child(even){
@@ -78,10 +79,15 @@ th {
     background-color: gray;
     color: white;
 }
+.logo{
+	position: absolute;
+	top: -45px;
+	left: 10px;
+}
 .btnCancel{
 	position: absolute;
-	top: 600px;
-	left: 1220px;
+	top: 1110px;
+	left: 1260px;
 }
 .cancel{
 	background-color: darkgray;
@@ -108,70 +114,78 @@ th {
 </div>
 <div id="panel">
 </div>
+<div id="panel2">
+</div>
 <div id="panel1">
 </div>
-<div class="logo">
-<a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
-</a>
-</div>
+
 <div class = "table1">
 	<table>
 	<tr>
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
-	<th> Consignee No </th>
 	<th> Consignee </th>
+	<th> Consignee No </th>
 	<th> Amount </th>
 	<th> Fee </th>
-	<th> Total Amount </th>
+	<th> Total </th>
 	<th> Date Remitted </th>
-	<th> Date Delivered </th>
-	<th> Branch	</th>
+	<th> Expected Delivey Date </th>
+	<th> Branch </th>
 	<th> Status </th>
+	<th> Archive </th>
 	<th> Unarchive </th>
-	<th> Remit Status </th></tr>
-
+	<th> Remit Status </th>
+	<th> Delivered </th></tr>
+	
 	<?php
-	$sql = mysql_query("select * from tblmoney_remit where Status = 'Inactive'");
+	$sql = mysql_query("select * from tblmoney_remit");
 	while( $rows=mysql_fetch_array($sql)){
 			$id = $rows['ID'];
 			$trackid = $rows['TrackNo'];
 			$consignor = $rows['Consignor'];
 			$consignorno = $rows['ConsignorNo'];
-			$consigneeno = $rows['ConsigneeNo'];
+			$consigneeno = $rows['ConsigneeNo'];	
 			$consignee = $rows['Consignee'];
 			$amount = $rows['Amount'];
 			$fee = $rows['Fee'];
 			$total = $rows['TotalAmount'];
 			$daterem = $rows['DateRemitted'];
-			$datedev = $rows['DateDelivered'];
+			$datedel = $rows['DateDelivered'];
 			$branch = $rows['Branch'];
 			$status = $rows['Status'];
-			$remstatus = $rows['RemitStatus'];
-
+			$remitstatus = $rows['RemitStatus'];
+	
+	
 	echo "<tr><td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
-	echo "<td align = 'center'> $consignorno </td>";
-	echo "<td align = 'center'> $consigneeno </td>";
+	echo "<td align = 'center'> $consignorno</td>";
 	echo "<td align = 'center'> $consignee </td>";
+	echo "<td align = 'center'> $consigneeno </td>";
 	echo "<td align = 'center'> $amount </td>";
 	echo "<td align = 'center'> $fee </td>";
 	echo "<td align = 'center'> $total </td>";
 	echo "<td align = 'center'> $daterem </td>";
-	echo "<td align = 'center'> $datedev </td>";
+	echo "<td align = 'center'> $datedel </td>";
 	echo "<td align = 'center'> $branch </td>";
 	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> <a href= 'unarchivemoneyremit.php?id=$id'> Unarchive </a> </td>";
-	echo "<td align = 'center'> $remstatus </td></tr>";
+	echo "<td align = 'center'> <a href= 'archivemoneyremit_staff.php?id=$id'> Archive </a> </td>";	
+	echo "<td align = 'center'> <a href= 'unarchivemoneyremit_staff.php?id=$id'> Unarchive </a> </td>";
+	echo "<td align = 'center'> $remitstatus </td>";
+	echo "<td align = 'center'> <a href= 'deliveredmoneyremit_staff.php?id=$id&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td></tr>";
+	
 	}
 	?>
-
 </table>
 </div>
+<div class="logo">
+<a href="loginstaffcode.php">
+<img src="Assets/indexlogo.png"/>
+</a>
+</div>
 <div class="btnCancel">
-<form method="POST" action="loginadmincode.php">
+<form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>

@@ -274,7 +274,7 @@ th {
 <div id="panel1">
 </div>
 <div class="logo">
-<a href="index.php">
+<a href="loginadmincode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>

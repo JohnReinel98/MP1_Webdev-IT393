@@ -198,7 +198,7 @@ th {
 	</table>
 </div>
 <div class="btnBack">
-<form method="POST" action="loginadmincode.php">
+<form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back" class="back">
 </form>
 </div>

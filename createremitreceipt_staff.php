@@ -192,7 +192,7 @@ body{
 <div id="panel1">
 </div>
 <div class = "fields">
-<form name = "form" method = "post" action = "createremitcode.php">
+<form name = "form" method = "post" action = "createremitcode_staff.php">
 <tr>
 <td><font face="Helvetica" color="white">Track No: </font><br>
 <td><input type = "text" value="<?php echo "$trackid"?>" name="txtTrack" id="txtTrack" readonly><p>
@@ -237,12 +237,12 @@ body{
 </form>
 </div>
 <div class= "btnBack">
-<form method="POST" action="createremitform.php">
+<form method="POST" action="createremitform_staff.php">
 <input type= "submit" value="Back" class="back">
 </form>
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>

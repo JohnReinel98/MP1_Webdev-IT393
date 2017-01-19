@@ -111,7 +111,7 @@ th {
 <div id="panel1">
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
@@ -163,7 +163,7 @@ th {
 	echo "<td align = 'center'> $datedev </td>";
 	echo "<td align = 'center'> $branch </td>";
 	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> <a href= 'unarchivemoneyremit.php?id=$id'> Unarchive </a> </td>";
+	echo "<td align = 'center'> <a href= 'unarchivemoneyremit_staff.php?id=$id'> Unarchive </a> </td>";
 	echo "<td align = 'center'> $remstatus </td></tr>";
 	}
 	?>
@@ -171,7 +171,7 @@ th {
 </table>
 </div>
 <div class="btnCancel">
-<form method="POST" action="loginadmincode.php">
+<form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>

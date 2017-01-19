@@ -267,7 +267,7 @@ body{
 <div id="panel1">
 </div>
 <div class = "fields">
-<form name = "form" method = "POST" action = "createpackagecode.php">
+<form name = "form" method = "POST" action = "createpackagecode_staff.php">
 <tr>
 <td><font face="Helvetica" color="white">Track No: </font><br>
 <td><input type = "text" value="<?php echo "$trackid"?>" name="txtTrack" id="txtTrack" readonly><p>
@@ -315,12 +315,12 @@ body{
 </form>
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
 <div class="btnCancel">
-<form method="POST" action="createpackageform.php">
+<form method="POST" action="createpackageform_staff.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>

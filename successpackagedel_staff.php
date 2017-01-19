@@ -156,7 +156,7 @@ body{
 <div id="header">
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
@@ -178,7 +178,7 @@ body{
 <p> <?php echo"$expected"?> </p>
 </div>
 <div class= "btnBack">
-<form method="POST" action="loginadmincode.php">
+<form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back to Admin Panel" class="back">
 </form>
 </div>

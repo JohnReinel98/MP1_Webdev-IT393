@@ -167,7 +167,7 @@ th {
 <div id="panel1">
 </div>
 <div class = "fields">
-<form name = "form" method = "post" action = "createpackagereceipt.php">
+<form name = "form" method = "post" action = "createpackagereceipt_staff.php">
 <tr>
 <td><font face="Helvetica" color="white">Consignor:</font><br>
 <td><input type = "text" name = "txtConsignor" id = "txtConsignor"><p>
@@ -250,12 +250,12 @@ th {
 	</table>
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
 <div class="btnCancel">
-<form method="POST" action="loginadmincode.php">
+<form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>

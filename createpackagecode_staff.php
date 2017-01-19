@@ -44,7 +44,7 @@ a:hover{
 <div id="header">
 </div>
 <div class="logo">
-<a href="loginadmincode.php">
+<a href="loginstaffcode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>
@@ -93,7 +93,7 @@ $conn = @mysql_connect("localhost","root","");
 							'$consignoremail','$consignee','$consigneeno','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
 							'$kilo','$pay','$declaredval','$insurance','$dispatched','$expected','$notiftod','$notiftmr','$status','$delvstatus','$branch')");
 	if($result){
-		header('Location: successpackagedel.php');
+		header('Location: successpackagedel_staff.php');
 		$_SESSION['POST'] = $_POST;
         $_SESSION['date'] = $expected;
 	}
