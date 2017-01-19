@@ -1,3 +1,4 @@
+<?php include'deliveryreceivedcode.php'; ?>
 <html>
 <head>
 <title> View All Rates </title>
@@ -111,7 +112,7 @@ th {
 <div id="header">
 </div>
 <div class="logo">
-<a href="index.php">
+<a href="loginadmincode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
 </div>

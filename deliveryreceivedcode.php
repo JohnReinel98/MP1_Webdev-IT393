@@ -17,17 +17,17 @@
 		$dateDel = $rows['DateReceived'];
 		$status = $rows['DeliveryStatus'];
 		
-		echo time()."<br>";
-		echo strtotime($dateDel)."<br>";
-		echo strtotime($dateDel. "-1 day")."<br>";
+		//echo time()."<br>";
+		//echo strtotime($dateDel)."<br>";
+		//echo strtotime($dateDel. "-1 day")."<br>";
 		
 		if($status == "Pending"){
 			if($notifyToday != "true"){
 				if(strtotime($dateDel) <= time()){	
 					$update = mysql_query("update tblpackage_delivery set NotifyToday = 'true' where TrackNo = $trackid");
 					
-					$username = 'convergelogistics2016@gmail.com'; 
-					$hash = 'Convergelogistics10';
+					$username = 'convergelogistics2017@gmail.com'; 
+					$hash = 'Cyanomix10';
 
 					$from = "Converge Logistics";
 					$message = "You have expected door-to-door delivery today. In case you are not around, please leave an autorization letter and a valid ID. \nThank you for using Converge Logistics Center.";
@@ -50,7 +50,7 @@
 					else 
 						echo "Failed to send...";
 
-					echo $response;
+					//echo $response;
 
 					curl_close($ch);
 		
@@ -60,8 +60,8 @@
 				if(time() >= strtotime($dateDel . "-1 day")){
 					$update = mysql_query("update tblpackage_delivery set NotifyTmr = 'true' where TrackNo = $trackid");
 					
-					$username = 'convergelogistics2016@gmail.com'; 
-					$hash = 'Convergelogistics10';
+					$username = 'convergelogistics2017@gmail.com'; 
+					$hash = 'Cyanomix10';
 
 					$from = "Converge Logistics";
 					$message = "Your package $trackid has been dispatched. Please check your email for expected delivery date.";
@@ -84,7 +84,7 @@
 					else 
 						echo "Failed to send...";
 
-					echo $response;
+					//echo $response;
 
 					curl_close($ch);
 		

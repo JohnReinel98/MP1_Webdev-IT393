@@ -179,7 +179,7 @@ body{
 </div>
 <div class= "btnBack">
 <form method="POST" action="loginstaffcode.php">
-<input type= "submit" value="Back to Admin Panel" class="back">
+<input type= "submit" value="Back to Staff Panel" class="back">
 </form>
 </div>
 <div class= "btnPrint">

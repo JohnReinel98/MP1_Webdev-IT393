@@ -166,6 +166,30 @@ li.dropdown_packages {
 	font-weight: bold;
 	color: white;
 }
+.table1{
+    position: absolute;
+    top:213px;
+    left:35px;
+}
+table{
+    border-collapse: collapse;
+    background-color: gray;
+    font-weight: bold;
+    width:113%;
+}
+th, td {
+    text-align: left;
+    padding: 6px;
+}
+
+tr:nth-child(even){
+    background-color: white;
+}
+
+th {
+    background-color: gray;
+    color: white;
+}
 </style>
 </head>
 <body>
@@ -202,6 +226,59 @@ li.dropdown_packages {
   <li><a href="logoutsessioncode.php">Logout</a></li>
 </ul>
 </div>
-
+<div class = "table1">
+    <table>
+    <tr>
+    <th> Track No </th>
+    <th> Consignor </th>
+    <th> Consignor No </th>
+    <th> Consignee </th>
+    <th> Consignee No </th>
+    <th> Amount </th>
+    <th> Fee </th>
+    <th> Total </th>
+    <th> Date Remitted </th>
+    <th> Expected Delivey Date </th>
+    <th> Branch </th>
+    <th> Status </th>
+    <th> Remit Status </th></tr>
+    
+    <?php
+    $sql = mysql_query("select * from tblmoney_remit");
+    while( $rows=mysql_fetch_array($sql)){
+            $id = $rows['ID'];
+            $trackid = $rows['TrackNo'];
+            $consignor = $rows['Consignor'];
+            $consignorno = $rows['ConsignorNo'];
+            $consigneeno = $rows['ConsigneeNo'];    
+            $consignee = $rows['Consignee'];
+            $amount = $rows['Amount'];
+            $fee = $rows['Fee'];
+            $total = $rows['TotalAmount'];
+            $daterem = $rows['DateRemitted'];
+            $datedel = $rows['DateDelivered'];
+            $branch = $rows['Branch'];
+            $status = $rows['Status'];
+            $remitstatus = $rows['RemitStatus'];
+    
+    
+    echo "<tr><td align = 'center'> $trackid </td>";
+    echo "<td align = 'center'> $consignor </td>";
+    echo "<td align = 'center'> $consignorno</td>";
+    echo "<td align = 'center'> $consignee </td>";
+    echo "<td align = 'center'> $consigneeno </td>";
+    echo "<td align = 'center'> $amount </td>";
+    echo "<td align = 'center'> $fee </td>";
+    echo "<td align = 'center'> $total </td>";
+    echo "<td align = 'center'> $daterem </td>";
+    echo "<td align = 'center'> $datedel </td>";
+    echo "<td align = 'center'> $branch </td>";
+    echo "<td align = 'center'> $status </td>";
+    echo "<td align = 'center'> $remitstatus </td></tr>";
+    
+    }
+    ?>
+</table>
+</div>
 </body>
 </html>	

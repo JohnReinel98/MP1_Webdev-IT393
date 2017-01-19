@@ -138,7 +138,6 @@ body{
 <div id="header">
 </div>
 <div class="timecheck">
-<?php include'deliveryreceivedcode.php'; ?>
 </div>
 <div class = "login">
 	<form method = "POST" action = "loginsessioncode.php">

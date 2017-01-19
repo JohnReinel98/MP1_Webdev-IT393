@@ -155,6 +155,19 @@ body{
 	padding: 20px;
 	box-sizing:border-box;
 }
+#panel7{
+	position: absolute;
+	background:rgba(128,128,128,0.5);
+	width: 1346px;
+	height: 50px;
+	border-radius: 15px 15px 15px 15px;
+	float: left;
+	margin: 700px -5px 0;
+	color: #fff;
+	padding: 20px;
+	box-sizing:border-box;
+}
+
 .hidden{
 	position:absolute;
 	top:665px;
@@ -206,6 +219,15 @@ body{
 	font-size: 12px;
 	line-height: 20px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.p5{
+	position: absolute;
+	top: 709px;
+	left: 400px;
+	color: white;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;	
 }
 .img1{
 	position: absolute;
@@ -281,6 +303,8 @@ body{
 </div>
 <div id="panel6">
 </div>
+<div id="panel7">
+</div>
 <form method="POST" action="loginform.php">
 	<input type="submit" value="Login" class="btnLogin">
 </form>
@@ -319,6 +343,9 @@ body{
 <div class="p4">
 <p> FUND YOUR MONEY TRANSFER </p>
 <p> Enter your desired amount. Review and send your transaction. </p>
+</div>
+<div class="p5">
+<p> Converge Logistics™ Money Remittance and Package Delivery, All Rights Reserved 2016 </p>
 </div>
 <div class="img1">
 <img src="Assets/send-money.png"/>
