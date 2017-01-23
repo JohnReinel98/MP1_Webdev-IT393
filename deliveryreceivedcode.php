@@ -26,8 +26,8 @@
 				if(strtotime($dateDel) <= time()){	
 					$update = mysql_query("update tblpackage_delivery set NotifyToday = 'true' where TrackNo = $trackid");
 					
-					$username = 'convergelogistics2017@gmail.com'; 
-					$hash = 'Cyanomix10';
+					$username = 'convergelogistics2017a@gmail.com'; 
+					$hash = 'Convergelogistics_10';
 
 					$from = "Converge Logistics";
 					$message = "You have expected door-to-door delivery today. In case you are not around, please leave an autorization letter and a valid ID. \nThank you for using Converge Logistics Center.";
@@ -60,8 +60,8 @@
 				if(time() >= strtotime($dateDel . "-1 day")){
 					$update = mysql_query("update tblpackage_delivery set NotifyTmr = 'true' where TrackNo = $trackid");
 					
-					$username = 'convergelogistics2017@gmail.com'; 
-					$hash = 'Cyanomix10';
+					$username = 'convergelogistics2017a@gmail.com'; 
+					$hash = 'Convergelogistics_10';
 
 					$from = "Converge Logistics";
 					$message = "Your package $trackid has been dispatched. Please check your email for expected delivery date.";

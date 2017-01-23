@@ -19,14 +19,13 @@ function Footer()
 {
 $this->SetY(-15);
 $this->SetFont('Arial','I',8);
-$this->Cell(0,10,'Page '.$this->PageNo().' Income ',0,0,'C');
+$this->Cell(0,10,'Converge Logistics ',0,0,'C');
 }
 function LoadData()
 {
-$result = mysql_query("select avg(M.Fee) + avg(P.Amount),avg(M.Fee) + avg(P.Amount)*7,avg(M.Fee) + avg(P.Amount)*30,avg(M.Fee) + avg(P.Amount)*90,avg(M.Fee) + avg(P.Amount)*365 from tblmoney_remit M inner join tblpackage_delivery P 
-			where M.RemitStatus='Pending' or M.RemitStatus='Delivered' and P.DeliveryStatus='Pending' or P.DeliveryStatus='Delivered'");
+$sql = mysql_query("select SUM(M.Fee), SUM(P.Amount) from tblmoney_remit M inner join tblpackage_delivery P ");
 
-while($row=mysql_fetch_row($result))
+while($row=mysql_fetch_row($sql))
 {
 $data[] = $row;
 }
@@ -35,14 +34,12 @@ return $data;
 
 function FancyTable($header,$data)
 {
-$result = mysql_query("select SUM(M.Fee) from tblmoney_remit M ");
-	if($rows = mysql_fetch_array($result)){
-		$SUM = $rows['SUM(M.Fee)'];				
+$sql = mysql_query("select SUM(M.Fee), SUM(P.Amount) from tblmoney_remit M inner join tblpackage_delivery P ");
+	if($row = mysql_fetch_array($sql)){
+		$sum1 = $row['SUM(M.Fee)'];
+		$sum2 = $row['SUM(P.Amount)'];
 }
-$result = mysql_query("select SUM(P.Amount) from tblpackage_delivery P ");
-	if($rows = mysql_fetch_array($result)){
-		$DEC = $rows['SUM(P.Amount)'];		
-}
+
 $this->SetFillColor(66,155,244);
 $this->SetTextColor(255);
 $this->SetLineWidth(.3);
@@ -64,15 +61,15 @@ $fill=false;
 foreach($data as $row)
 {
 $this->Ln();
-$this->Cell($w[0],6,"Daily Income : ".round((($SUM + $DEC)/52)/5,2));
+$this->Cell($w[0],6,"Daily Income : ".round((($sum1 + $sum2)/52)/5,2));
 $this->Ln();
-$this->Cell($w[0],6,"Weekly Income : ".round(($SUM + $DEC)/52,2));
+$this->Cell($w[0],6,"Weekly Income : ".round(($sum1 + $sum2)/52,2));
 $this->Ln();
-$this->Cell($w[0],6,"Monthly Income : ".round(($SUM + $DEC)/12,2));
+$this->Cell($w[0],6,"Monthly Income : ".round(($sum1 + $sum2)/12,2));
 $this->Ln();
-$this->Cell($w[0],6,"Quarterly Income : ".round(($SUM + $DEC)/4,2));
+$this->Cell($w[0],6,"Quarterly Income : ".round(($sum1 + $sum2)/4,2));
 $this->Ln();
-$this->Cell($w[0],6,"Annualy Income : ".round($SUM + $DEC,2));
+$this->Cell($w[0],6,"Annualy Income : ".round($sum1 + $sum2,2));
 $this->Ln();
 $fill=!$fill;
 }

@@ -84,8 +84,6 @@ foreach($data as $row)
 $this->Ln();
 $this->Cell($w[0],6,"Consignor : ".$consignor);
 $this->Ln();
-$this->Cell($w[0],6,"Consignor's Contact Number: ".$consignorNo);
-$this->Ln();
 $this->Cell($w[0],6,"Consignee's Name: ".$consignee);
 $this->Ln();
 $this->Cell($w[0],6,"Consignee's Email: ".$consigneeEmail);

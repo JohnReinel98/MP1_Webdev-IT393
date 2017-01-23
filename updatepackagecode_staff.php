@@ -167,7 +167,7 @@ th {
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> <a href= 'archivepackage_staff.php?id=$id'> Archive </a> </td>";
 	echo "<td align = 'center'> $deliverystatus </td>";
-	echo "<td align = 'center'> <a href= 'deliveredpackage_staff.php?id=$id&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td>";
+	echo "<td align = 'center'> <a href= 'deliveredpackage_staff.php?id=$id&trackid=$trackid&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td>";
 	echo "<td align = 'center'> $branch </td></tr>";
 	
 	}

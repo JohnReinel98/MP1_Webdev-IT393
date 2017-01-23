@@ -8,8 +8,8 @@ $conn = @mysql_connect("localhost","root","");
 	$consignee = $_GET['consignee'];
 	
 	$result = mysql_query("Update tblmoney_remit set RemitStatus = 'Delivered' , Status = 'Inactive' where ID = '$id'");
-	$username = 'caluagjohnreinel1000@gmail.com'; 
-		$hash = 'Cyanomix10';
+	$username = 'convergelogistics2017a@gmail.com'; 
+		$hash = 'Convergelogistics_10';
 
 		$from = "Converge Logistics";
 		$message = "$consignee has received and picked up your money remittance. \nThank you for using Converge Logistics Center money remittance.";

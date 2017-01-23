@@ -175,7 +175,7 @@ table{
     border-collapse: collapse;
     background-color: gray;
     font-weight: bold;
-    width:113%;
+    width:110.5%;
 }
 th, td {
     text-align: left;
@@ -244,7 +244,7 @@ th {
     <th> Remit Status </th></tr>
     
     <?php
-    $sql = mysql_query("select * from tblmoney_remit");
+    $sql = mysql_query("select * from tblmoney_remit where Status = 'Active' ");
     while( $rows=mysql_fetch_array($sql)){
             $id = $rows['ID'];
             $trackid = $rows['TrackNo'];

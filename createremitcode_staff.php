@@ -91,8 +91,8 @@ $conn = @mysql_connect("localhost","root","");
 							'$consignee','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
 							'$amount','$fee','$totalamount','$dateremitted','$datereceived','$branch','Active','$remitstatus')");
 	if($result){
-		$username = 'convergelogistics2017@gmail.com'; 
-		$hash = 'Cyanomix10';
+		$username = 'convergelogistics2017a@gmail.com'; 
+		$hash = 'Convergelogistics_10';
 
 		$from = "Converge Logistics";
 		$message = "You have money remittance ready to be picked up. Check your email for more details about the tracking no. and the pick-up branch. \nDo not reply, This is a computer-generated message.";
