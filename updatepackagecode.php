@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1370px;
+	width: 1340px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -28,8 +28,8 @@ body{
 #panel2{
     position: absolute;
     background: #429bf4;
-    width: 1360px;
-    height: 980px;
+    width: 1330px;
+    height: 530px;
     border-radius: 15px 15px 15px 15px;
     float: center;
     margin: 190px 6px 0;
@@ -40,8 +40,8 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1330px;
-	height: 960px;
+	width: 1300px;
+	height: 500px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 20px 0;
@@ -58,6 +58,9 @@ body{
 	position: absolute;
 	top:210px;
 	left:35px;
+	width: 1280px;
+	height: 400px;
+	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
@@ -67,7 +70,7 @@ table{
 }
 th, td {
     text-align: left;
-    padding: 4.5px;
+    padding: 2px;
 }
 
 tr:nth-child(even){
@@ -85,8 +88,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 1100px;
-	left: 1250px;
+	top: 645px;
+	left: 1230px;
 }
 .cancel{
 	background-color: darkgray;
@@ -120,6 +123,8 @@ th {
 <div class = "table1">
 	<table>
 	<tr>
+	<th> Date Dispatched </th>
+	<th> Expected Delivey Date </th>
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
@@ -128,13 +133,11 @@ th {
 	<th> Size </th>
 	<th> Amount </th>
 	<th> Insurance </th>
-	<th> Date Dispatched </th>
-	<th> Expected Delivey Date </th>
+	<th> Branch </th>
 	<th> Status </th>
 	<th> Archive </th>
 	<th> Delivey Status </th>
-	<th> Delivered </th>
-	<th> Branch </th></tr>
+	<th> Delivered </th></tr>
 	
 	<?php
 	$sql = mysql_query("select * from tblpackage_delivery where Status = 'Active'");
@@ -154,7 +157,9 @@ th {
 			$deliverystatus = $rows['DeliveryStatus'];
 			$branch = $rows['Branch'];
 
-	echo "<tr><td align = 'center'> $trackid </td>";
+	echo "<tr><td align = 'center'> $datedis </td>";
+	echo "<td align = 'center'> $dateexp </td>";
+	echo "<td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno</td>";
 	echo "<td align = 'center'> $consignee </td>";
@@ -162,13 +167,11 @@ th {
 	echo "<td align = 'center'> $size </td>";
 	echo "<td align = 'center'> $amount </td>";
 	echo "<td align = 'center'> $insurance </td>";
-	echo "<td align = 'center'> $datedis </td>";
-	echo "<td align = 'center'> $dateexp </td>";
+	echo "<td align = 'center'> $branch </td>";
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> <a href= 'archivepackage.php?id=$id'> Archive </a> </td>";
 	echo "<td align = 'center'> $deliverystatus </td>";
-	echo "<td align = 'center'> <a href= 'deliveredpackage.php?id=$id&trackid=$trackid&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td>";
-	echo "<td align = 'center'> $branch </td></tr>";
+	echo "<td align = 'center'> <a href= 'deliveredpackage.php?id=$id&trackid=$trackid&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td></tr>";
 	
 	}
 	?>

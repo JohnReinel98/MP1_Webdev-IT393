@@ -63,7 +63,7 @@ body{
 .menubar{
 	position: absolute;
 	top: 2px;
-	left: 300px;
+	left: 240px;
 }
 ul {
     list-style-type: none;
@@ -229,17 +229,19 @@ li.dropdown_pdfs {
 	position: absolute;
 	top:215px;
 	left:31px;
+  width: 1280px;
+  height: 425px;
+  overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width: 126.5%;
-    height: 120%;
+  width: 98%;
 }
 th, td {
     text-align: left;
-    padding: 7px;
+    padding: 3px;
 }
 
 tr:nth-child(even){
@@ -264,6 +266,7 @@ th {
 	font-weight: bold;
 	color: white;
 }
+
 </style>
 </head>
 <body>
@@ -281,7 +284,7 @@ th {
 <div class="menubar">
 <ul>
   <li class="dropdown_staff">
-  <a href="#" class="dropbtn_staff">Manage Staffs</a>
+  <a href="#" class="dropbtn_staff"><img src="Assets/staff.png" height="24" width="24" />&nbsp;&nbsp;Manage Staffs</a>
 	<div class="dropdown-content_staff">
       <a href="addstaffform.php">Add Staff</a>
       <a href="updateuserform.php">Update Staff Informations</a>
@@ -289,7 +292,7 @@ th {
     </div>
   </li>
   <li class="dropdown_remits">
-  <a href="#" class="dropbtn_remits">Manage Remittances</a>
+  <a href="#" class="dropbtn_remits"><img src="Assets/moneyrem.png" height="24" width="24"/>&nbsp;&nbsp;Manage Remittances</a>
   	<div class="dropdown-content_remits">
       <a href="createremitform.php">Create Remittance</a>
       <a href="updatemoneyremitcode.php">Update Remittance Informations</a>
@@ -297,25 +300,25 @@ th {
     </div>
   </li>
   <li class="dropdown_packages">
-  <a href="#" class="dropbtn_packages">Manage Packages</a>
+  <a href="#" class="dropbtn_packages"><img src="Assets/package.png" height="24" width="24"/>&nbsp;&nbsp;Manage Packages</a>
   <div class="dropdown-content_packages">
       <a href="createpackageform.php">Create Package Delivery</a>
       <a href="updatepackagecode.php">Update Package Informations</a>
       <a href="archivecodetablepackage.php">Archive/Unarchive Packages</a>
     </div>
   </li>
-  <li><a href="viewallratesadmin.php">View Rates</a></li>
+  <li><a href="viewallratesadmin.php"><img src="Assets/rates.png" height="24" width="24"/>&nbsp;&nbsp;View Rates</a></li>
   <li class="dropdown_pdfs">
-  <a href="#" class="dropbtn_pdfs">View Reports</a>
+  <a href="#" class="dropbtn_pdfs"><img src="Assets/reports.png" height="24" width="24"/>&nbsp;&nbsp;View Reports</a>
   <div class="dropdown-content_pdfs">
-      <a href="generatepdfremits.php">Pending Remittances</a>
-      <a href="generatepdfpkg.php">Pending Packages</a>
-      <a href="generatepdfdelivered.php">Delivered Packages</a>
-      <a href="generatepdfreceivedremits.php">Received Remittances</a>
+      <a href="generatepdfremits.php" target="_blank">Pending Remittances</a>
+      <a href="generatepdfpkg.php" target="_blank">Pending Packages</a>
+      <a href="generatepdfdelivered.php" target="_blank">Delivered Packages</a>
+      <a href="generatepdfreceivedremits.php" target="_blank">Received Remittances</a>
     </div>
   </li>
-  <li><a href="generateincomecode.php">View Income</a></li>
-  <li><a href="logoutsessioncode.php">Logout</a></li>
+  <li><a href="incomeform.php"><img src="Assets/income.png" height="24" width="24"/>&nbsp;&nbsp;View Income</a></li>
+  <li><a href="logoutsessioncode.php"><img src="Assets/logout.png" height="24" width="24"/>&nbsp;&nbsp;Logout</a></li>
 </ul>
 </div>
 <div class = "table1">
@@ -357,6 +360,5 @@ th {
 	
 </table>
 </div>
-
 </body>
 </html>	

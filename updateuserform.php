@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1540px;
+	width: 1340px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -58,6 +58,9 @@ body{
 	position: absolute;
 	top:220px;
 	left:240px;
+	height: 500px; 
+	width: 1080px;
+	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;

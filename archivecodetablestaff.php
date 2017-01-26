@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1360px;
+	width: 1340px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -58,16 +58,19 @@ body{
 	position: absolute;
 	top:220px;
 	left:35px;
+	height: 360px; 
+	width: 1280px;
+	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
 	background-color: gray;
 	font-weight: bold;
-    width: 105%;
+    width: 100%;
 }
 th, td {
     text-align: left;
-    padding: 9px;
+    padding: 5px;
 }
 
 tr:nth-child(even){

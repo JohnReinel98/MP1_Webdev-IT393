@@ -23,30 +23,29 @@ $this->Cell(0,10,'Converge Logistics ',0,0,'C');
 }
 function LoadData()
 {
-$end=$_SESSION['ending'];
-$sta=$_SESSION['start'];
+$sql = mysql_query("select SUM(M.Fee), SUM(P.Amount) from tblmoney_remit M inner join tblpackage_delivery P ");
 
-$result=mysql_query("select TrackNo,DateRemitted,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
-	while($row=mysql_fetch_row($result)) { 
-		$data[] = $row;
-	}
-	$result2=mysql_query("select TrackNo,DateDelivered,Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
-		while($row2=mysql_fetch_row($result2)) { 
-			$data[] = $row2;
-		}
-		return $data;
+while($row=mysql_fetch_row($sql))
+{
+$data[] = $row;
+}
+return $data;
 }
 
 function FancyTable($header,$data)
 {
+$sql = mysql_query("select SUM(M.Fee), SUM(P.Amount) from tblmoney_remit M inner join tblpackage_delivery P ");
+	if($row = mysql_fetch_array($sql)){
+		$sum1 = $row['SUM(M.Fee)'];
+		$sum2 = $row['SUM(P.Amount)'];
+}
 
-$total=$_SESSION['total'];
 $this->SetFillColor(66,155,244);
 $this->SetTextColor(255);
 $this->SetLineWidth(.3);
 $this->SetFont('','B');
 $this->SetY(50);
-$this->SetX(18);
+$this->SetX(20);
 
 //Header
 $w=array(120);
@@ -58,15 +57,22 @@ $this->SetFillColor(224,235,255);
 $this->SetTextColor(0);
 $this->SetFont('');
 //Data
-foreach($header as $col)
-		
-			foreach($data as $row)
-			{
-				foreach($row as $col)
-					$this->Cell(40,6,$col,1);
-				$this->Ln();
-			}
-			$this->Cell(120,10,'Total Income: P'.$total.'.00',1,1,'C');
+$fill=false;
+foreach($data as $row)
+{
+$this->Ln();
+$this->Cell($w[0],6,"Daily Income : ".round((($sum1 + $sum2)/5)/52,2));
+$this->Ln();
+$this->Cell($w[0],6,"Weekly Income : ".round(($sum1 + $sum2)/52,2));
+$this->Ln();
+$this->Cell($w[0],6,"Monthly Income : ".round(($sum1 + $sum2)/12,2));
+$this->Ln();
+$this->Cell($w[0],6,"Quarterly Income : ".round(($sum1 + $sum2)/4,2));
+$this->Ln();
+$this->Cell($w[0],6,"Annualy Income : ".round($sum1 + $sum2,2));
+$this->Ln();
+$fill=!$fill;
+}
 }
 }
 $pdf=new PDF();
