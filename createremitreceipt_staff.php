@@ -67,7 +67,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1360px;
+	width: 1340px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -80,7 +80,7 @@ body{
 	position: absolute;
 	background:#429bf4;
 	width: 730px;
-	height: 530px;
+	height: 540px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 190px 360px 0;
@@ -96,7 +96,8 @@ body{
 .fields2{
 	position: absolute;
 	top: -10px;
-	left: 480px;
+	left: 400px;
+	width: 1150px;
 }
 .logo{
 	position: absolute;
@@ -182,6 +183,34 @@ body{
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+input[type=text] {
+    width: 20%;
+    padding: 12px 5px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=password]:focus {
+    border: 3px solid #555;
+}
 </style>
 </head>
 <body>
@@ -199,27 +228,26 @@ body{
 <td><font face="Helvetica" color="white">Consignor:</font><br>
 <td><input type = "text" value="<?php echo "$consignor"?>" name = "txtConsignor" id = "txtConsignor" readonly><p>
 <p><font face="Helvetica" color="white">Consignor Address:</font><br> 
-<td><input type = "text" value="<?php echo "$house" ?>" name = "txtConsignorHouse" id = "txtConsignorHouse" class="house">
-<input type = "text" value="<?php echo "$street" ?>" name = "txtConsignorStreet" id = "txtConsignorStreet" class="street">
-<input type = "text" value="<?php echo "$barangay" ?>" name = "txtConsignorBarangay" id = "txtConsignorBarangay" class="barangay">
-<input type = "text" value="<?php echo "$city" ?>" name = "txtConsignorCity" id = "txtConsignorCity" class="city">
-<input type = "text" value="<?php echo "$province" ?>" name = "txtConsignorProvince" id = "txtConsignorProvince" class="province"><p>
+<td><input type = "text" value="<?php echo "$house" ?>" name = "txtConsignorHouse" id = "txtConsignorHouse" class="house" readonly>
+<input type = "text" value="<?php echo "$street" ?>" name = "txtConsignorStreet" id = "txtConsignorStreet" class="street" readonly>
+<input type = "text" value="<?php echo "$barangay" ?>" name = "txtConsignorBarangay" id = "txtConsignorBarangay" class="barangay" readonly><br>
+<input type = "text" value="<?php echo "$city" ?>" name = "txtConsignorCity" id = "txtConsignorCity" class="city" readonly>
+<input type = "text" value="<?php echo "$province" ?>" name = "txtConsignorProvince" id = "txtConsignorProvince" class="province" readonly><p>
 <p><font face="Helvetica" color="white">Consignor Contact Number:</font><br> 
 <td><input type = "text" value="<?php echo "$consignorno"?>" name = "txtConsignorNo" id = "txtConsignorNo" readonly><p>
 <p><font face="Helvetica" color="white">Consignee:</font><br>
 <td><input type = "text" value="<?php echo "$consignee"?>" name = "txtConsignee" id = "txtConsignee" readonly><p>
-<p><font face="Helvetica" color="white">Consignor Address:</font><br> 
-<td><input type = "text" value="<?php echo "$chouse" ?>" name = "txtConsigneeHouse" id = "txtConsigneeHouse" class="chouse">
-<input type = "text" value="<?php echo "$cstreet" ?>" name = "txtConsigneeStreet" id = "txtConsigneeStreet" class="cstreet">
-<input type = "text" value="<?php echo "$cbarangay" ?>" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" class="cbarangay">
-<input type = "text" value="<?php echo "$ccity" ?>" name = "txtConsigneeCity" id = "txtConsigneeCity" class="ccity">
-<input type = "text" value="<?php echo "$cprovince" ?>" name = "txtConsigneeProvince" id = "txtConsigneeProvince" class="cprovince"><p>
+<p><font face="Helvetica" color="white">Consignee Address:</font><br> 
+<td><input type = "text" value="<?php echo "$chouse" ?>" name = "txtConsigneeHouse" id = "txtConsigneeHouse" class="chouse" readonly>
+<input type = "text" value="<?php echo "$cstreet" ?>" name = "txtConsigneeStreet" id = "txtConsigneeStreet" class="cstreet" readonly>
+<input type = "text" value="<?php echo "$cbarangay" ?>" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" class="cbarangay" readonly><br>
+<input type = "text" value="<?php echo "$ccity" ?>" name = "txtConsigneeCity" id = "txtConsigneeCity" class="ccity" readonly>
+<input type = "text" value="<?php echo "$cprovince" ?>" name = "txtConsigneeProvince" id = "txtConsigneeProvince" class="cprovince" readonly><p>
+<div class="fields2">
 <p><font face="Helvetica" color="white">Consignee Email:</font><br>
 <td><input type = "text" value="<?php echo "$consigneemail"?>" name = "txtConsigneeEmail" id = "txtConsigneeEmail" readonly><p>
 <p><font face="Helvetica" color="white">Consignee Contact Number:</font><br>
 <td><input type = "text" value="<?php echo "$consigneeno"?>" name = "txtConsigneeNo" id = "txtConsigneeNo" readonly><p>
-
-<div class="fields2">
 <p><font face="Helvetica" color="white">Amount:</font><br>
 <td><input type = "text" value="<?php echo "$amount"?>" name = "txtAmount" id = "txtAmount" readonly><p>
 <p><font face="Helvetica" color="white">Fee:</font><br>

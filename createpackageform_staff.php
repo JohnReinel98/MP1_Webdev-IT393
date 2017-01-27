@@ -22,8 +22,8 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 460px;
-	height: 705px;
+	width: 510px;
+	height: 865px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 60px 0;
@@ -38,7 +38,7 @@ body{
 	height: 300px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 550px 0;
+	margin: 200px 570px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -51,7 +51,7 @@ body{
 .table1{
 	position: absolute;
 	top:240px;
-	left:580px;
+	left:600px;
 }
 table{
 	border-collapse: collapse;
@@ -135,8 +135,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 852px;
-	left: 410px;
+	top: 1015px;
+	left: 460px;
 }
 .cancel{
 	background-color: darkgray;
@@ -156,6 +156,19 @@ th {
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+input[type=text] {
+    width: 25%;
+    padding: 12px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
 
 </style>
 </head>
@@ -174,7 +187,7 @@ th {
 <p><font face="Helvetica" color="white">Consignor Address:</font><br> 
 <td><input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" placeholder="House" class="house">
 <input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder="Street" class="street">
-<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder="Barangay" class="barangay">
+<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder="Barangay" class="barangay"><br>
 <input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" placeholder="City" class="city">
 <input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder="Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignor Email:</font><br> 
@@ -186,7 +199,7 @@ th {
 <p><font face="Helvetica" color="white">Consignee Address:</font><br> 
 <td><input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" placeholder="House" class="house">
 <input type = "text" name = "txtConsigneeStreet" id = "txtConsignorStreet" placeholder="Street" class="street">
-<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder="Barangay" class="barangay">
+<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder="Barangay" class="barangay"><br>
 <input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" placeholder="City" class="city">
 <input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder="Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignee Email:</font><br>

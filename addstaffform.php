@@ -10,7 +10,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1360px;
+	width: 1340px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: center;
@@ -28,10 +28,22 @@ body{
 	position: absolute;
 	background:#429bf4;
 	width: 450px;
-	height: 435px;
+	height: 500px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 455px 0;
+	margin: 180px 60px 0;
+	color: #fff;
+	padding: 20px;
+	box-sizing:border-box;
+}
+#panel1{
+	position: absolute;
+	background:rgba(128,128,128,0.9);
+	width: 820px;
+	height: 500px;
+	border-radius: 15px 15px 15px 15px;
+	float: center;
+	margin: 180px 510px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -89,7 +101,7 @@ body{
 }
 .sub{
 	position: absolute;
-	top: 350px;
+	top: 435px;
 	left: -200px;
 	background-color: darkgray;
     border: none;
@@ -110,10 +122,11 @@ body{
 }
 .btnCancel{
 	position: absolute;
-	top: 565px;
-	left: 800px;
+	top: 620px;
+	left: 410px;
 }
 .cancel{
+
 	background-color: darkgray;
     border: none;
 	border-color: darkgray;
@@ -133,13 +146,46 @@ body{
 }
 .fields{
 	position:absolute;
-	top:230px;
-	left:500px;
+	top:200px;
+	left:100px;
 }
 .fields2{
 	position: absolute;
-	top: 215px;
-	left: 700px;
+	top: 185px;
+	left: 300px;
+}
+input[type=text] {
+    width: 90%;
+    padding: 12px 15px;
+    margin: 3.5px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=password]:focus {
+    border: 3px solid #555;
+}
+.gif{
+	position: absolute;
+	top: 220px;
+	left: 530px;
 }
 </style>
 </head>
@@ -147,6 +193,8 @@ body{
 <div id="header">
 </div>
 <div id="panel">
+</div>
+<div id="panel1">
 </div>
 <form name = "form" method = "post" action = "addstaffcode.php">
 <div class = "fields">
@@ -182,6 +230,9 @@ body{
 <a href="loginadmincode.php">
 <img src="Assets/indexlogo.png"/>
 </a>
+</div>
+<div class="gif">
+<img src="Assets/index.gif"/>
 </div>
 </body>
 </html>

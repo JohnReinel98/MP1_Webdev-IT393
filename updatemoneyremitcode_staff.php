@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1460px;
+	width: 1340px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -28,11 +28,11 @@ body{
 #panel2{
     position: absolute;
     background: #429bf4;
-    width: 1360px;
-    height: 980px;
+    width: 1340px;
+    height: 500px;
     border-radius: 15px 15px 15px 15px;
     float: center;
-    margin: 190px 6px 0;
+    margin: 190px -5px 0;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -40,11 +40,11 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 1330px;
-	height: 960px;
+	width: 1320px;
+	height: 480px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 20px 0;
+	margin: 200px 5px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -58,7 +58,10 @@ body{
 .table1{
 	position: absolute;
 	top:210px;
-	left:35px;
+	left:20px;
+	width: 1305px;
+	height: 370px;
+	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
@@ -86,8 +89,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 1110px;
-	left: 1260px;
+	top: 630px;
+	left: 1230px;
 }
 .cancel{
 	background-color: darkgray;
@@ -122,17 +125,17 @@ th {
 <div class = "table1">
 	<table>
 	<tr>
+	<th> Date Remitted </th>
+	<th> Date Delivered </th>
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
 	<th> Consignee </th>
 	<th> Consignee No </th>
+	<th> Branch </th>
 	<th> Amount </th>
 	<th> Fee </th>
 	<th> Total </th>
-	<th> Date Remitted </th>
-	<th> Expected Delivey Date </th>
-	<th> Branch </th>
 	<th> Status </th>
 	<th> Archive </th>
 	<th> Unarchive </th>
@@ -158,17 +161,17 @@ th {
 			$remitstatus = $rows['RemitStatus'];
 	
 	
-	echo "<tr><td align = 'center'> $trackid </td>";
+	echo "<tr><td align = 'center'> $daterem </td>";
+	echo "<td align = 'center'> $datedel</td>";
+	echo "<td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno</td>";
 	echo "<td align = 'center'> $consignee </td>";
 	echo "<td align = 'center'> $consigneeno </td>";
+	echo "<td align = 'center'> $branch </td>";
 	echo "<td align = 'center'> $amount </td>";
 	echo "<td align = 'center'> $fee </td>";
 	echo "<td align = 'center'> $total </td>";
-	echo "<td align = 'center'> $daterem </td>";
-	echo "<td align = 'center'> $datedel </td>";
-	echo "<td align = 'center'> $branch </td>";
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> <a href= 'archivemoneyremit_staff.php?id=$id'> Archive </a> </td>";	
 	echo "<td align = 'center'> <a href= 'unarchivemoneyremit_staff.php?id=$id'> Unarchive </a> </td>";

@@ -183,7 +183,7 @@ body{
 </form>
 </div>
 <div class= "btnPrint">
-<form method="POST" action="receiptpackage.php">
+<form method="POST" action="receiptpackage.php" target="_blank">
 <input type= "submit" value="Print Receipt" class="recpt">
 </form>
 </div>

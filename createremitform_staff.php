@@ -22,8 +22,8 @@ body{
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 510px;
-	height: 595px;
+	width: 530px;
+	height: 740px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 50px 0;
@@ -34,7 +34,7 @@ body{
 #panel1{
 	position: absolute;
 	background:rgba(128,128,128,1.0);
-	width: 660px;
+	width: 680px;
 	height: 380px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
@@ -109,8 +109,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 740px;
-	left: 440px;
+	top: 894px;
+	left: 460px;
 }
 .cancel{
 	background-color: darkgray;
@@ -166,6 +166,34 @@ th {
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+input[type=text] {
+    width: 25%;
+    padding: 12px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=password]:focus {
+    border: 3px solid #555;
+}
 </style>
 </head>
 <?php 
@@ -186,7 +214,7 @@ th {
 <p><font face="Helvetica" color="white">Consignee Address:</font><br>
 <input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" placeholder=" House" class="house">
 <input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder=" Street" class="street">
-<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder=" Barangay" class="barangay">
+<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder=" Barangay" class="barangay"><br>
 <input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" placeholder=" City" class="city">
 <input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder=" Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignor Contact Number:</font><br> 
@@ -196,7 +224,7 @@ th {
 <p><font face="Helvetica" color="white">Consignee Address:</font><br>
 <input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" placeholder=" House" class="house">
 <input type = "text" name = "txtConsigneeStreet" id = "txtConsigneeStreet" placeholder=" Street" class="street">
-<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder=" Barangay" class="barangay">
+<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder=" Barangay" class="barangay"><br>
 <input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" placeholder=" City" class="city">
 <input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder=" Province" class="province"><p>
 <p><font face="Helvetica" color="white">Consignee Email:</font><br>

@@ -29,7 +29,7 @@ body{
 	position: absolute;
 	background:#429bf4;
 	width: 215px;
-	height: 712px;
+	height: 800px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 10px 0;
@@ -144,6 +144,34 @@ th {
 	background-color: white;
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input[type=text] {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 1px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+input[type=password] {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 1px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=password]:focus {
+    border: 3px solid #555;
 }
 </style>
 </head>

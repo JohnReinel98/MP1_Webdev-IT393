@@ -63,7 +63,7 @@ body{
 .menubar{
 	position: absolute;
 	top: 2px;
-	left: 440px;
+	left: 400px;
 }
 ul {
     list-style-type: none;
@@ -168,18 +168,21 @@ li.dropdown_packages {
 }
 .table1{
     position: absolute;
-    top:213px;
-    left:35px;
+    top:215px;
+    left:31px;
+width: 1280px;
+  height: 425px;
+  overflow-y: scroll;
 }
 table{
     border-collapse: collapse;
     background-color: gray;
     font-weight: bold;
-    width:110.5%;
+    width:98%;
 }
 th, td {
     text-align: left;
-    padding: 6px;
+    padding: 5px;
 }
 
 tr:nth-child(even){
@@ -207,7 +210,7 @@ th {
 <div class="menubar">
 <ul>
   <li class="dropdown_remits">
-  <a href="#" class="dropbtn_remits">Manage Remittances</a>
+  <a href="#" class="dropbtn_remits"><img src="Assets/moneyrem.png" height="24" width="24"/>&nbsp;&nbsp;Manage Remittances</a>
   	<div class="dropdown-content_remits">
       <a href="createremitform_staff.php">Create Remittance</a>
       <a href="updatemoneyremitcode_staff.php">Update Remittance Informations</a>
@@ -215,31 +218,31 @@ th {
     </div>
   </li>
   <li class="dropdown_packages">
-  <a href="#" class="dropbtn_packages">Manage Packages</a>
+  <a href="#" class="dropbtn_packages"><img src="Assets/package.png" height="24" width="24"/>&nbsp;&nbsp;Manage Packages</a>
   <div class="dropdown-content_packages">
       <a href="createpackageform_staff.php">Create Package Delivery</a>
       <a href="updatepackagecode_staff.php">Update Package Informations</a>
       <a href="archivecodetablepackage_staff.php">Archive/Unarchive Packages</a>
     </div>
   </li>
-  <li><a href="viewallratesstaff.php">View Rates</a></li>
-  <li><a href="logoutsessioncode.php">Logout</a></li>
+  <li><a href="viewallratesstaff.php"><img src="Assets/rates.png" height="24" width="24"/>&nbsp;&nbsp;View Rates</a></li>
+  <li><a href="logoutsessioncode.php"><img src="Assets/logout.png" height="24" width="24"/>&nbsp;&nbsp;Logout</a></li>
 </ul>
 </div>
 <div class = "table1">
     <table>
     <tr>
+    <th> Date Remitted </th>
+    <th> Expected Delivey Date </th>
     <th> Track No </th>
     <th> Consignor </th>
     <th> Consignor No </th>
     <th> Consignee </th>
     <th> Consignee No </th>
+    <th> Branch </th>
     <th> Amount </th>
     <th> Fee </th>
     <th> Total </th>
-    <th> Date Remitted </th>
-    <th> Expected Delivey Date </th>
-    <th> Branch </th>
     <th> Status </th>
     <th> Remit Status </th></tr>
     
@@ -261,18 +264,17 @@ th {
             $status = $rows['Status'];
             $remitstatus = $rows['RemitStatus'];
     
-    
-    echo "<tr><td align = 'center'> $trackid </td>";
+    echo "<tr><td align = 'center'> $daterem </td>";
+    echo "<td align = 'center'> $datedel </td>";
+    echo "<td align = 'center'> $trackid </td>";
     echo "<td align = 'center'> $consignor </td>";
     echo "<td align = 'center'> $consignorno</td>";
     echo "<td align = 'center'> $consignee </td>";
     echo "<td align = 'center'> $consigneeno </td>";
+    echo "<td align = 'center'> $branch </td>";
     echo "<td align = 'center'> $amount </td>";
     echo "<td align = 'center'> $fee </td>";
     echo "<td align = 'center'> $total </td>";
-    echo "<td align = 'center'> $daterem </td>";
-    echo "<td align = 'center'> $datedel </td>";
-    echo "<td align = 'center'> $branch </td>";
     echo "<td align = 'center'> $status </td>";
     echo "<td align = 'center'> $remitstatus </td></tr>";
     

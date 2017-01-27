@@ -28,7 +28,7 @@
 				$sql2="Update tblstaff set Tries = 0 where ID = '$id'";
 				$result2=mysql_query($sql2);
 			
-				if($user==$username && $passw == $password){
+				if($user==$username && $passw == $password ){
 					if($blockstatus!=='Blocked'){
 							if($position == 'Admin'){
 							header('Location: loginadmincode.php');
@@ -40,9 +40,10 @@
 							}
 					}
 					else if($blockstatus == 'Blocked'){						
-						echo "<p class = 'err'>User is blocked!!</p>";
+						header('Location: userblocked.php');
 					}
 				}
+
 				else{
 					if ($tries<2){
 						$tries+=1;

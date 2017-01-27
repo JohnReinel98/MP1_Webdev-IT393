@@ -16,7 +16,7 @@ body{
 #header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
-	width: 1360px;
+	width: 1340px;
 	height: 180px;
 	border-radius: 0 0 15px 15px;
 	float: left;
@@ -58,6 +58,9 @@ body{
 	position: absolute;
 	top:220px;
 	left:35px;
+	height: 360px; 
+	width: 1280px;
+	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
@@ -67,7 +70,7 @@ table{
 }
 th, td {
     text-align: left;
-    padding: 7.5px;
+    padding: 5px;
 }
 
 tr:nth-child(even){
@@ -118,17 +121,17 @@ th {
 <div class = "table1">
 	<table>
 	<tr>
+	<th> Date Remitted </th>
+	<th> Date Delivered </th>
 	<th> Track No </th>
 	<th> Consignor </th>
 	<th> Consignor No </th>
-	<th> Consignee No </th>
 	<th> Consignee </th>
+	<th> Consignee No </th>
+	<th> Branch	</th>
 	<th> Amount </th>
 	<th> Fee </th>
 	<th> Total Amount </th>
-	<th> Date Remitted </th>
-	<th> Date Delivered </th>
-	<th> Branch	</th>
 	<th> Status </th>
 	<th> Unarchive </th>
 	<th> Remit Status </th></tr>
@@ -150,18 +153,19 @@ th {
 			$branch = $rows['Branch'];
 			$status = $rows['Status'];
 			$remstatus = $rows['RemitStatus'];
-
-	echo "<tr><td align = 'center'> $trackid </td>";
+	echo "<tr><td align = 'center'> $daterem </td>";
+	echo "<td align = 'center'> $datedev </td>";
+	echo "<td align = 'center'> $trackid </td>";
 	echo "<td align = 'center'> $consignor </td>";
 	echo "<td align = 'center'> $consignorno </td>";
-	echo "<td align = 'center'> $consigneeno </td>";
 	echo "<td align = 'center'> $consignee </td>";
+	echo "<td align = 'center'> $consigneeno </td>";
+	echo "<td align = 'center'> $branch </td>";
 	echo "<td align = 'center'> $amount </td>";
 	echo "<td align = 'center'> $fee </td>";
 	echo "<td align = 'center'> $total </td>";
-	echo "<td align = 'center'> $daterem </td>";
-	echo "<td align = 'center'> $datedev </td>";
-	echo "<td align = 'center'> $branch </td>";
+	
+	
 	echo "<td align = 'center'> $status </td>";
 	echo "<td align = 'center'> <a href= 'unarchivemoneyremit_staff.php?id=$id'> Unarchive </a> </td>";
 	echo "<td align = 'center'> $remstatus </td></tr>";
