@@ -20,11 +20,12 @@
 <title> Admin Panel </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
-	background-repeat: no-repeat;
+	/*background-image:url("Assets/wallpaper1.png");*/
+    background-color: white;
+	  background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
+/*#header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
 	width: 1360px;
@@ -35,8 +36,8 @@ body{
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
-}
-#panel{
+}*/
+/*#panel{
     position: absolute;
     background: #429bf4;
     width: 1320px;
@@ -56,6 +57,17 @@ body{
     border-radius: 15px 15px 15px 15px;
     float: center;
     margin: 202px 20px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}*/
+#panel{
+    position: absolute;
+    background: #edeff1;
+    width: 1343px;
+    height: 470px;
+    float: center;
+    margin: 130px -10px 0;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -227,17 +239,17 @@ li.dropdown_pdfs {
 }
 .table1{
 	position: absolute;
-	top:215px;
-	left:31px;
-  width: 1280px;
-  height: 425px;
+	top:140px;
+	left:5px;
+  width: 1343px;
+  height: 465px;
   overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
-	background-color: gray;
+	background-color: lightgray;
 	font-weight: bold;
-  width: 98%;
+  width: 100%;
 }
 th, td {
     text-align: left;
@@ -249,24 +261,136 @@ tr:nth-child(even){
 }
 
 th {
-    background-color: gray;
+    background-color: lightgray;
     color: white;
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .welcome{
 	position: absolute;
-	top: 140px;
+	top: 80px;
 	left: 1100px;
 	font-size: 14px;
 	font-family: Verdana;
 	font-weight: bold;
-	color: white;
+	color: #429bf4;
 }
-
+.line2{
+  position: absolute;
+  top: 11px;
+  left: 180px;
+  height: 110px;
+    border-left: thin solid #C7D2D6;
+}
+#panel8{
+  position: absolute;
+  background:rgba(128,128,128,0.9);
+  width: 1349px;
+  height: 113px;
+  float: left;
+  margin: 1465px -8px 0;
+  color: #fff;
+  padding: 20px;
+  box-sizing:border-box;
+}
+.p5{
+  position: absolute;
+  top: 620px;
+  left: 550px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+.p6{
+  position: absolute;
+  top: 640px;
+  left: 45px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+.p7{
+  position: absolute;
+  top: 610px;
+  left: 45px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+.p8{
+  position: absolute;
+  top: 670px;
+  left: 45px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+.p9{
+  position: absolute;
+  top: 620px;
+  left: 1020px;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+.panel2{
+  position: absolute;
+  background:rgba(128,128,128,0.9);
+  width: 1349px;
+  height: 113px;
+  float: left;
+  margin: 600px -8px 0;
+  color: #fff;
+  padding: 20px;
+  box-sizing:border-box;
+}
+.img4{
+  position: absolute;
+  top: 620px;
+  left: 14px;
+}
+.img5{
+  position: absolute;
+  top: 650px;
+  left: 14px;
+}
+.img6{
+  position: absolute;
+  top: 680px;
+  left: 14px;
+}
+.img7{
+  position: absolute;
+  top: -20px;
+  left: 990px;
+}
+.img8{
+  position: absolute;
+  top: -10px;
+  left: 1050px;
+}
+.line{
+  position: absolute;
+  top: -50px;
+  left: 470px;
+  height: 80px;
+    border-left: thin solid #616464;
+}
+.line1{
+  position: absolute;
+  top: -50px;
+  left: 980px;
+  height: 80px;
+    border-left: thin solid #616464;
+}
 </style>
 </head>
 <body>
@@ -278,8 +402,47 @@ th {
 </div>
 <div class="logo">
 <a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
+</div>
+<div class = "table1">
+  <table>
+  <tr>
+  <th> ID </th>
+  <th> Last Name </th>
+  <th> First Name </th>
+  <th> Middle Initial </th>
+  <th> Contact No </th>
+  <th> Address </th>
+  <th> Email </th>
+  <th> Status </th>
+  <th> Block Status </th></tr>
+<?php
+  $sql = mysql_query("select * from tblstaff where Status = 'Active'");
+  while( $rows=mysql_fetch_array($sql)){
+      $id = $rows['ID'];
+      $lname = $rows['Lname'];
+      $name = $rows['Fname'];
+      $mname = $rows['MI'];
+      $contact = $rows['ContactNo'];
+      $address = $rows['Address'];
+      $email = $rows['Email'];
+      $status = $rows['Status'];
+      $blockstatus = $rows['BlockStatus'];
+  
+  echo "<tr><td align = 'center'> $id </td>";
+  echo "<td align = 'center'> $lname </td>";
+  echo "<td align = 'center'> $name </td>";
+  echo "<td align = 'center'> $mname </td>";
+  echo "<td align = 'center'> $contact </td>";
+  echo "<td align = 'center'> $address </td>";
+  echo "<td align = 'center'> $email </td>";
+  echo "<td align = 'center'> $status </td>";
+  echo "<td align = 'center'> $blockstatus </td></tr>";
+  }
+  ?>
+
+</table>
 </div>
 <div class="menubar">
 <ul>
@@ -321,44 +484,50 @@ th {
   <li><a href="logoutsessioncode.php"><img src="Assets/logout.png" height="24" width="24"/>&nbsp;&nbsp;Logout</a></li>
 </ul>
 </div>
-<div class = "table1">
-	<table>
-	<tr>
-	<th> ID </th>
-	<th> Last Name </th>
-	<th> First Name </th>
-	<th> Middle Initial </th>
-	<th> Contact No </th>
-	<th> Address </th>
-	<th> Email </th>
-	<th> Status </th>
-	<th> Block Status </th></tr>
-<?php
-	$sql = mysql_query("select * from tblstaff where Status = 'Active'");
-	while( $rows=mysql_fetch_array($sql)){
-			$id = $rows['ID'];
-			$lname = $rows['Lname'];
-			$name = $rows['Fname'];
-			$mname = $rows['MI'];
-			$contact = $rows['ContactNo'];
-			$address = $rows['Address'];
-			$email = $rows['Email'];
-			$status = $rows['Status'];
-			$blockstatus = $rows['BlockStatus'];
-	
-	echo "<tr><td align = 'center'> $id </td>";
-	echo "<td align = 'center'> $lname </td>";
-	echo "<td align = 'center'> $name </td>";
-	echo "<td align = 'center'> $mname </td>";
-	echo "<td align = 'center'> $contact </td>";
-	echo "<td align = 'center'> $address </td>";
-	echo "<td align = 'center'> $email </td>";
-	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> $blockstatus </td></tr>";
-	}
-	?>
-	
-</table>
+
+<div class="line2">
+&nbsp;
+</div>
+
+
+<div class="panel2">
+</div>
+<div class="p5">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converge Logistics™ <br>Money Remittance and Package Delivery<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved 2016 </p>
+</div>
+<div class="p6">
+<p> Contact No.: <span style="color:#5DADE2;">+639354675163</span> </p>
+</div>
+<div class="p7">
+<p> Email Address: <span style="color:#5DADE2;">convergelogistics2016@gmail.com</span> </p>
+</div>
+<div class="p8">
+<p> Developer Address: Caniogan, City of Malolos, Bulacan </p>
+</div>
+<div class="p9">
+<p> Follow Us: </p>
+</div>
+<div class="img4">
+<img src="Assets/email.png" height="24" width="24" />
+</div>
+<div class="img5">
+<img src="Assets/contact.png" height="24" width="24" />
+</div>
+<div class="img6">
+<img src="Assets/address.png" height="24" width="24" />
+<div class="img7">
+<a href="https://www.facebook.com/johnreinel98" target="_blank">
+<img src="Assets/fb.png" height="56" width="56" /></a>
+</div>
+<div class="img8">
+<a href="https://twitter.com/Unt1tledDotA" target="_blank">
+<img src="Assets/twitter.png" height="42" width="42" /></a>
+</div>
+<div class="line">
+&nbsp;
+</div>
+<div class="line1">
+&nbsp;
 </div>
 </body>
 </html>	

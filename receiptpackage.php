@@ -6,6 +6,7 @@ class PDF extends FPDF
 {
 function Header()
 {
+date_default_timezone_set("Asia/Manila");
 //Logo
 $this->Image('Assets/pdflogo.jpg',5,0,50,50);
 //Arial bold 15
@@ -26,7 +27,7 @@ $this->SetY(-15);
 //Arial italic 8
 $this->SetFont('Arial','I',8);
 //Page number
-$this->Cell(0,10,'Page '.$this->PageNo().' Package Delivery Receipt',0,0,'C');
+$this->Cell(0,10,' Package Delivery Receipt',0,0,'C');
 }
 function LoadData()
 {
@@ -81,6 +82,9 @@ $fill=false;
 foreach($data as $row)
 {
 //$this->Cell($w[0],6,"",'LR',0,'C',$fill);
+$this->Cell($w[0],6,"Date:".date("M/d/Y"),0,0,'C');
+$this->Ln();
+$this->Cell($w[0],6,"Time:".date("h:i"),0,0,'C');
 $this->Ln();
 $this->Cell($w[0],6,"Consignor : ".$consignor);
 $this->Ln();
@@ -98,6 +102,7 @@ $this->Cell($w[0],6,"Fee: ".$fee);
 $this->Ln();
 $this->Cell($w[0],6,"Branch: ".$branch);
 $this->Ln();
+
 $fill=!$fill;
 }
 //$this->Cell(array_sum($w),0,'','T');
@@ -108,7 +113,7 @@ $pdf=new PDF();
 $header=array(' RECEIPT');
 //Data loading
 $data=$pdf->LoadData();
-$pdf->SetFont('Arial','',12);
+$pdf->SetFont('Courier','',12);
 $pdf->AddPage();
 $pdf->FancyTable($header,$data);
 $pdf->Output();

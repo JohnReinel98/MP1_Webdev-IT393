@@ -3,11 +3,12 @@
 <title> Add Employee/Staff </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	/*background-image:url("Assets/wallpaper1.png");*/
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
+/*#header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
 	width: 1340px;
@@ -18,7 +19,7 @@ body{
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
-}
+}*/
 .login{
 	position: absolute;
 	top:250px;
@@ -31,19 +32,17 @@ body{
 	height: 500px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 180px 60px 0;
+	margin: 170px 60px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
 }
 #panel1{
 	position: absolute;
-	background:rgba(128,128,128,0.9);
-	width: 820px;
-	height: 500px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 180px 510px 0;
+	background: #edeff1;
+	width: 1350px;
+	height: 620px;
+	margin: 130px -10px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -68,7 +67,7 @@ body{
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .username{
@@ -182,19 +181,36 @@ input[type=password] {
 input[type=password]:focus {
     border: 3px solid #555;
 }
-.gif{
+.officestaffs{
 	position: absolute;
-	top: 220px;
-	left: 530px;
+	top: 180px;
+	left: 570px;
 }
 </style>
 </head>
 <body>
 <div id="header">
 </div>
+
+<div id="panel1">
+</div>
+
+<div>
+<div class="officestaffs">
+<img src="Assets/officestaffs.jpg" width="740" height="500" />
+</div>
+<div class="logo">
+<a href="loginadmincode.php">
+<img src="Assets/indexlogo.png" width="180" height="180" />
+</a>
+</div>
+
 <div id="panel">
 </div>
-<div id="panel1">
+<div class="btnCancel">
+<form method="POST" action="loginadmincode.php">
+<input type= "submit" value="Back" class="cancel">
+</form>
 </div>
 <form name = "form" method = "post" action = "addstaffcode.php">
 <div class = "fields">
@@ -220,19 +236,6 @@ input[type=password]:focus {
 <td><input type = "submit" value= "Submit" class= "sub">
 </div>
 </form>
-<div class="btnCancel">
-<form method="POST" action="loginadmincode.php">
-<input type= "submit" value="Back" class="cancel">
-</form>
-</div>
-<div>
-<div class="logo">
-<a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
-</a>
-</div>
-<div class="gif">
-<img src="Assets/index.gif"/>
-</div>
+
 </body>
 </html>

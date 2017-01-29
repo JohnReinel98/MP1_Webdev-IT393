@@ -26,11 +26,11 @@ function LoadData()
 $end=$_SESSION['ending'];
 $sta=$_SESSION['start'];
 
-$result=mysql_query("select TrackNo,DateRemitted,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
+$result=mysql_query("select DateRemitted,TrackNo,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
 	while($row=mysql_fetch_row($result)) { 
 		$data[] = $row;
 	}
-	$result2=mysql_query("select TrackNo,DateDelivered,Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
+	$result2=mysql_query("select DateDelivered,TrackNo,Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
 		while($row2=mysql_fetch_row($result2)) { 
 			$data[] = $row2;
 		}
@@ -49,7 +49,7 @@ $this->SetY(50);
 $this->SetX(18);
 
 //Header
-$w=array(120);
+$w=array(40,40,40);
 for($i=0;$i<count($header);$i++)
 $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
 $this->Ln();
@@ -58,6 +58,7 @@ $this->SetFillColor(224,235,255);
 $this->SetTextColor(0);
 $this->SetFont('');
 //Data
+$fill=false;
 foreach($header as $col)
 		
 			foreach($data as $row)
@@ -71,7 +72,7 @@ foreach($header as $col)
 }
 $pdf=new PDF();
 //Column titles
-$header=array(' INCOME');
+$header=array('Date','Tracking No.','Income');
 //Data loading
 $data=$pdf->LoadData();
 $pdf->SetFont('Arial','',12);

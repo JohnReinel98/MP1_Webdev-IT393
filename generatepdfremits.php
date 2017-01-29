@@ -103,7 +103,6 @@ $header=array('ID','Track No','Consignor','Consignor No','Consignor City','Consi
 $data=$pdf->LoadData();
 $pdf->SetFont('Arial','',12);
 $pdf->AddPage();
-$pdf->Image("Assets/pdflogo.jpg",387,1,24,0,"","loginadmincode.php");
 $pdf->FancyTable($header,$data);
 $pdf->Output();
 ?>

@@ -57,7 +57,7 @@ body{
 }
 select{
     width: 10%;
-    padding: 16px 20px;
+    padding: 10px 10px;
     border: none;
     border-radius: 4px;
     background-color: #f1f1f1;
@@ -65,43 +65,43 @@ select{
 .opt1{
 	position: absolute;
 	top: -200px;
-	left: 30px;
+	left: 100px;
 	width: 70%;
 }
 .opt2{
 	position: absolute;
 	top: -200px;
-	left: 180px;
+	left: 220px;
 	width: 70%;
 }
 .opt3{
 	position: absolute;
 	top: -100px;
-	left: 30px;
+	left: 100px;
 	width: 70%;
 }
 .opt4{
 	position: absolute;
 	top: -100px;
-	left: 180px;
+	left: 220px;
 	width: 70%;
 }
 .opt5{
 	position: absolute;
 	top: -100px;
-	left: 330px;
+	left: 340px;
 	width: 70%;
 }
 .opt25{
 	position: absolute;
 	top: -200px;
-	left: 330px;
+	left: 340px;
 	width: 70%;
 }
 .btnSub{
 	position: absolute; 
 	top: 500px;
-	left: 500px;
+	left: 550px;
 }
 .sub{
 	background-color: darkgray;
@@ -124,7 +124,7 @@ select{
 .btnCancel{
 	position: absolute;
 	top: 500px;
-	left: 830px;
+	left: 720px;
 }
 .cancel{
 	background-color: darkgray;
@@ -147,22 +147,27 @@ select{
 .p1{
 	position: absolute;
 	top: 270px;
-	left: 320px;
+	left: 515px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 300;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 30px;
 }
 .p2{
 	position: absolute;
 	top: 370px;
-	left: 320px;
+	left: 525px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 300;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 30px;
+}
+.incomebig{
+	position: absolute;
+	top: 290px;
+	left: 280px;
 }
 </style>
 </head>
@@ -241,6 +246,9 @@ select{
 </div>
 <div class="p2">
 <p> Ending </p>
+</div>
+<div class="incomebig">
+<img src="Assets/incomebig.png" width="200" height="200"/>
 </div>
 </body>
 </html>

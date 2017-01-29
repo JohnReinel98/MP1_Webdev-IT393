@@ -1,4 +1,4 @@
-<?php include'deliveryreceivedcode.php'; ?>
+<?php //include'deliveryreceivedcode.php'; ?>
 <html>
 <head>
 <title> View All Rates </title>

@@ -9,11 +9,12 @@
 <title> Archived Staff Records </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	/*background-image:url("Assets/wallpaper1.png");*/
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
+/*#header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
 	width: 1340px;
@@ -24,47 +25,34 @@ body{
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
-}
+}*/
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 #panel{
     position: absolute;
-    background: #429bf4;
-    width: 1320px;
+    background: #edeff1;
+    width: 1364px;
     height: 470px;
-    border-radius: 15px 15px 15px 15px;
     float: center;
-    margin: 190px 6px 0;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-}
-#panel1{
-    position: absolute;
-    background: rgba(128,128,128,1.0);
-    width: 1290px;
-    height: 445px;
-    border-radius: 15px 15px 15px 15px;
-    float: center;
-    margin: 202px 20px 0;
+    margin: 135px -10px 0;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
 }
 .table1{
 	position: absolute;
-	top:220px;
-	left:35px;
+	top:155px;
+	left: 10px;
 	height: 360px; 
-	width: 1280px;
+	width: 1345px;
 	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
-	background-color: gray;
+	background-color: lightgray;
 	font-weight: bold;
     width: 100%;
 }
@@ -83,8 +71,8 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 600px;
-	left: 1215px;
+	top: 550px;
+	left: 1260px;
 }
 .cancel{
 	background-color: darkgray;
@@ -117,7 +105,7 @@ th {
 </div>
 <div class="logo">
 <a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
 </div>
 <div class = "table1">

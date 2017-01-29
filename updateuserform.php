@@ -9,11 +9,12 @@ $conn = @mysql_connect("localhost","root","");
 <title> Update Staff Information </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	/*background-image:url("Assets/wallpaper1.png");*/
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
+/*#header{
 	position: absolute;
 	background:rgba(128,128,128,0.5);
 	width: 1340px;
@@ -24,7 +25,7 @@ body{
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
-}
+}*/
 #panel{
 	position: absolute;
 	background:#429bf4;
@@ -32,41 +33,41 @@ body{
 	height: 800px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 10px 0;
+	margin: 160px 10px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
 }
 #panel1{
 	position: absolute;
-	background:rgba(128,128,128,1.0);
+	background: lightgray;
 	width: 1100px;
-	height: 610px;
+	height: 630px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 200px 225px 0;
+	margin: 160px 225px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
 }
 .fields{
 	position:absolute;
-	top:230px;
+	top:190px;
 	left:40px;
 }
 .table1{
 	position: absolute;
-	top:220px;
+	top:185px;
 	left:240px;
-	height: 500px; 
+	height: 550px; 
 	width: 1080px;
 	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
-	background-color: gray;
+	background-color: lightgray;
 	font-weight: bold;
-    width:97%;
+    width:100%;
 }
 th, td {
     text-align: left;
@@ -78,17 +79,17 @@ tr:nth-child(even){
 }
 
 th {
-    background-color: gray;
+    background-color: lightgray;
     color: white;
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .btnCancel{
 	position: absolute;
-	top: 750px;
+	top: 740px;
 	left: 1230px;
 }
 .cancel{
@@ -173,15 +174,30 @@ input[type=password] {
 input[type=password]:focus {
     border: 3px solid #555;
 }
+#panel2{
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	background: #edeff1;
+	width: 1358px;
+	height: 850px;
+	margin: 130px -10px 0;
+	color: #fff;
+	padding: 20px;
+	box-sizing:border-box;
+}
 </style>
 </head>
 <body>
 <div id="header">
 </div>
+<div id="panel2">
+</div>
 <div id="panel">
 </div>
 <div id="panel1">
 </div>
+
 <div class = "fields">
 <form name = "form" method = "post" action = "updateusercode.php">
 <tr>
@@ -209,6 +225,7 @@ input[type=password]:focus {
 <input type = "reset" value = "Clear All Fields" class="clr">
 </form>
 </div>
+
 <div class = "table1">
 	<table>
 	<tr>
@@ -259,7 +276,7 @@ input[type=password]:focus {
 </div>
 <div class="logo">
 <a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
 </div>
 <div class="btnCancel">
@@ -267,5 +284,6 @@ input[type=password]:focus {
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>
+
 </body>
 </html>

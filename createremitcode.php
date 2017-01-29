@@ -91,65 +91,9 @@ $conn = @mysql_connect("localhost","root","");
 							'$consignee','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
 							'$amount','$fee','$totalamount','$dateremitted','$datereceived','$branch','Active','$remitstatus')");
 	if($result){
-		$username = 'convergelogistics2017a@gmail.com'; 
-		$hash = 'Convergelogistics_10';
-
-		$from = "Converge Logistics";
-		$message = "You have money remittance ready to be picked up. Check your email for more details about the tracking no. and the pick-up branch. \nDo not reply, This is a computer-generated message.";
-		$aftermessage = "You have an expected door-to-door delivery today. In case you are not around, please leave an authorization letter and a valid ID. Thank you for using Converge Logistics.";
-
-		$sender = urlencode($from); 
-		$message = rawurlencode($message);
-
-		$numbers = $_POST['txtConsigneeNo'];
-
-		$data=array('username'=> $username, 'hash'=> $hash, 'numbers' => $numbers, "sender"=>$sender,"message"=>$message);
-
-		$ch = curl_init('http://api.txtlocal.com/send/'); 
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$response = curl_exec($ch);
-
-		if($response)
-			echo "Message Sent!"."<br>";
-		else 
-			echo "Failed to send...";
-
-		echo $response;
-
-		curl_close($ch);
-		
-		require("PHPMailer\class.phpmailer.php");
-		$mailer = new PHPMailer();
-		$mailer->IsSMTP();
-		$mailer->Host = 'ssl://smtp.gmail.com:465';
-		$mailer->SMTPAuth = TRUE;
-		$mailer->Username = 'convergelogistics2016@gmail.com';
-		$mailer->Password = 'cyanomix10';
-		$mailer->From = 'convergelogistics2016@gmail';
-		$mailer->FromName = 'Converge Logistics Center';
-		$mailer->Body = "Good day! Here are the details of the money remittance.
-
-Tracking No: '$trackid'
-Amount: '$amount'
-Pick-up Branch: '$branch'
-Consignor Information: '$consignor'";
-		$mailer->Subject = 'Money Remittance';
-		$mailer->AddAddress("$consigneeemail");
-		if(!$mailer->Send())
-		{
-			echo "Message was not sent<br/ >";
-			echo "Mailer Error: " . $mailer->ErrorInfo;
-		}
-		else
-		{
-			
-        	$_SESSION['POST'] = $_POST;
-        	$_SESSION['date'] = $datereceived;
-			echo "Message has been sent";
-			header('Location: successmoneyremit.php');
-		}
+		$_SESSION['POST'] = $_POST;
+        $_SESSION['date'] = $datereceived;
+		header('Location: successmoneyremit.php');
 	}
 	else{
 		echo mysql_error();

@@ -9,45 +9,21 @@ $conn = @mysql_connect("localhost","root","");
 <title> Update Money Remit Information </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1340px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
 #panel2{
-    position: absolute;
-    background: #429bf4;
-    width: 1340px;
-    height: 500px;
-    border-radius: 15px 15px 15px 15px;
-    float: center;
-    margin: 190px -5px 0;
+	position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #edeff1;
+    width: 1358px;
+    height: 620px;
+    margin: 130px -10px 0;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
-}
-#panel1{
-	position: absolute;
-	background:rgba(128,128,128,1.0);
-	width: 1320px;
-	height: 480px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 200px 5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
 }
 
 .fields{
@@ -57,15 +33,15 @@ body{
 }
 .table1{
 	position: absolute;
-	top:210px;
-	left:20px;
-	width: 1305px;
+	top:150px;
+	left:0px;
+	width: 1345px;
 	height: 370px;
 	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
-	background-color: gray;
+	background-color: lightgray;
 	font-weight: bold;
     width:100%;
 }
@@ -84,7 +60,7 @@ th {
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .btnCancel{
@@ -115,11 +91,7 @@ th {
 <body>
 <div id="header">
 </div>
-<div id="panel">
-</div>
 <div id="panel2">
-</div>
-<div id="panel1">
 </div>
 
 <div class = "table1">
@@ -184,7 +156,7 @@ th {
 </div>
 <div class="logo">
 <a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
 </div>
 <div class="btnCancel">
