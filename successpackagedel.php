@@ -20,26 +20,27 @@ $conn = @mysql_connect("localhost","root","");
 <title> Success! </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1360px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
+
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
+}
+#panel3{
+	position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #edeff1;
+    width: 1358px;
+    height: 520px;
+    margin: 130px -10px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
 }
 #panel1{
 	position:absolute;
@@ -150,6 +151,16 @@ body{
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <body>
@@ -157,8 +168,10 @@ body{
 </div>
 <div class="logo">
 <a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
+</div>
+<div id="panel3">
 </div>
 <div id="panel1">
 </div>
@@ -186,6 +199,9 @@ body{
 <form method="POST" action="receiptpackage.php" target="_blank">
 <input type= "submit" value="Print Receipt" class="recpt">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Transaction Status</h1></strong>
 </div>
 </body>
 </html>

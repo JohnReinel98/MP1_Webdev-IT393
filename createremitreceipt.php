@@ -211,6 +211,16 @@ input[type=password]:focus {
     padding: 20px;
     box-sizing: border-box;
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <body>
@@ -277,6 +287,9 @@ input[type=password]:focus {
 <a href="loginadmincode.php">
 <img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Confirm Money Remittance</h1></strong>
 </div>
 </body>
 </html>

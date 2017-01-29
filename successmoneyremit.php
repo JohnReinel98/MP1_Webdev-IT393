@@ -150,6 +150,16 @@ body{
     padding: 20px;
     box-sizing: border-box;
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <body>
@@ -188,6 +198,9 @@ body{
 <form method="POST" action="receiptremit.php" target="_blank">
 <input type= "submit" value="Print Receipt" class="recpt">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Transaction Status</h1></strong>
 </div>
 </body>
 </html>

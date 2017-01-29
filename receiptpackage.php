@@ -14,8 +14,7 @@ $this->SetFont('Arial','B',15);
 //Move to the right
 $this->Cell(80);
 //Title
-$this->Cell(-20,15,'Converge Logistics',0,0,'C');
-$this->Cell(25,30,'Package Delivery Receipt',0,0,'C');
+$this->Cell(-20,20,'Package Delivery Receipt',0,0,'C');
 //Line break
 $this->Ln(20);
 }
@@ -82,6 +81,7 @@ $fill=false;
 foreach($data as $row)
 {
 //$this->Cell($w[0],6,"",'LR',0,'C',$fill);
+$this->Ln();
 $this->Cell($w[0],6,"Date:".date("M/d/Y"),0,0,'C');
 $this->Ln();
 $this->Cell($w[0],6,"Time:".date("h:i"),0,0,'C');

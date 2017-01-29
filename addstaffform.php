@@ -186,6 +186,17 @@ input[type=password]:focus {
 	top: 180px;
 	left: 570px;
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
+
 </style>
 </head>
 <body>
@@ -236,6 +247,8 @@ input[type=password]:focus {
 <td><input type = "submit" value= "Submit" class= "sub">
 </div>
 </form>
-
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Add Staff</h1></strong>
+</div>
 </body>
 </html>

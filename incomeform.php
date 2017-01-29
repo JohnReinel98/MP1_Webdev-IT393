@@ -10,51 +10,16 @@
 <title> View Income </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1340px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
-#panel{
-    position: absolute;
-    background: #429bf4;
-    width: 860px;
-    height: 470px;
-    border-radius: 15px 15px 15px 15px;
-    float: center;
-    margin: 190px 220px 0;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-}
-#panel1{
-    position: absolute;
-    background: rgba(128,128,128,1.0);
-    width: 830px;
-    height: 445px;
-    border-radius: 15px 15px 15px 15px;
-    float: center;
-    margin: 202px 235px 0;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-}
+
 select{
     width: 10%;
     padding: 10px 10px;
@@ -65,43 +30,43 @@ select{
 .opt1{
 	position: absolute;
 	top: -200px;
-	left: 100px;
+	left: 80px;
 	width: 70%;
 }
 .opt2{
 	position: absolute;
 	top: -200px;
-	left: 220px;
+	left: 200px;
 	width: 70%;
 }
 .opt3{
 	position: absolute;
 	top: -100px;
-	left: 100px;
+	left: 80px;
 	width: 70%;
 }
 .opt4{
 	position: absolute;
 	top: -100px;
-	left: 220px;
+	left: 200px;
 	width: 70%;
 }
 .opt5{
 	position: absolute;
 	top: -100px;
-	left: 340px;
+	left: 320px;
 	width: 70%;
 }
 .opt25{
 	position: absolute;
 	top: -200px;
-	left: 340px;
+	left: 320px;
 	width: 70%;
 }
 .btnSub{
 	position: absolute; 
 	top: 500px;
-	left: 550px;
+	left: 880px;
 }
 .sub{
 	background-color: darkgray;
@@ -124,7 +89,7 @@ select{
 .btnCancel{
 	position: absolute;
 	top: 500px;
-	left: 720px;
+	left: 1050px;
 }
 .cancel{
 	background-color: darkgray;
@@ -147,7 +112,7 @@ select{
 .p1{
 	position: absolute;
 	top: 270px;
-	left: 515px;
+	left: 830px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 300;
     color: white;
@@ -157,30 +122,68 @@ select{
 .p2{
 	position: absolute;
 	top: 370px;
-	left: 525px;
+	left: 840px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 300;
     color: white;
     font-size: 30px;
     line-height: 30px;
 }
-.incomebig{
+.income{
 	position: absolute;
-	top: 290px;
-	left: 280px;
+	top: 240px;
+	left: 60px;
+}
+#panel{
+	position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #edeff1;
+    width: 1358px;
+    height: 615px;
+    margin: 130px -10px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#panel2{
+	position: absolute;
+	background:#429bf4;
+	width: 520px;
+	height: 430px;
+	border-radius: 15px 15px 15px 15px;
+	float: center;
+	margin: 200px 800px 0;
+	color: #fff;
+	padding: 20px;
+	box-sizing:border-box;
+}
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
 }
 </style>
 </head>
 <body>
-<div id="header">
-</div>
+
 <div id="panel">
 </div>
 <div id="panel1">
 </div>
+<div id="panel2">
+</div>
+<div class="income">
+<img src="Assets/income.jpg" width="720" height="360" />
+</div>
 <div class="logo">
 <a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
 </div>
 <div class="btnSub">
@@ -236,6 +239,7 @@ select{
 	<option value="2018">2018</option></select>
 </form>
 </div>
+
 <div class="btnCancel">
 <form method ="POST" action="loginadmincode.php">
 <input type="submit" value ="Back" class="cancel">
@@ -247,8 +251,8 @@ select{
 <div class="p2">
 <p> Ending </p>
 </div>
-<div class="incomebig">
-<img src="Assets/incomebig.png" width="200" height="200"/>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Calculate Income</h1></strong>
 </div>
 </body>
 </html>

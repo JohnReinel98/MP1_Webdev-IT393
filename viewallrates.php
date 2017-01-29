@@ -1,27 +1,27 @@
 <html>
 <head>
-<title> View All Remittance Rates </title>
+<title> View All Rates </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
+#panel3{
 	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1340px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
+    top: 10px;
+    left: 0px;
+    background: #edeff1;
+    width: 1358px;
+    height: 805px;
+    margin: 130px -10px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
 }
 #panel1{
 	position: absolute;
-	background:rgba(128,128,128,1.0);
+	background:lightgray;
 	width: 1320px;
 	height: 685px;
 	border-radius: 15px 15px 15px 15px;
@@ -33,7 +33,7 @@ body{
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .table1{
@@ -48,7 +48,7 @@ body{
 }
 table{
 	border-collapse: collapse;
-	background-color: gray;
+	background-color: lightgray;
 	font-weight: bold;
     width: 205%;
 }
@@ -106,14 +106,26 @@ th {
 	font-weight: bold;
 	color:white;
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 <body>
 <div id="header">
 </div>
 <div class="logo">
 <a href="index.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180"/>
 </a>
+</div>
+<div id="panel3">
 </div>
 <div id="panel1">
 </div>
@@ -204,5 +216,8 @@ th {
 </div>
 <p class="remitrates"> Remittance Rates </p>
 <p class="packagerates"> Package Rates </p>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Table of Rates</h1></strong>
+</div>
 </body>
 </html>	

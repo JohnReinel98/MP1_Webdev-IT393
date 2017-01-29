@@ -3,21 +3,9 @@
 <title> Create Remittance </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
-}
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1360px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
 }
 #panel{
 	position: absolute;
@@ -33,7 +21,7 @@ body{
 }
 #panel1{
 	position: absolute;
-	background:rgba(128,128,128,1.0);
+	background:lightgray;
 	width: 680px;
 	height: 380px;
 	border-radius: 15px 15px 15px 15px;
@@ -55,7 +43,7 @@ body{
 }
 table{
 	border-collapse: collapse;
-	background-color: gray;
+	background-color: lightgray;
 	font-weight: bold;
     width: 100%;
 }
@@ -69,12 +57,12 @@ tr:nth-child(even){
 }
 
 th {
-    background-color: gray;
+    background-color: lightgray;
     color: white;
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .house{
@@ -194,6 +182,28 @@ input[type=password] {
 input[type=password]:focus {
     border: 3px solid #555;
 }
+.panel3{
+	position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #edeff1;
+    width: 1358px;
+    height: 850px;
+    margin: 130px -10px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <?php 
@@ -202,9 +212,13 @@ input[type=password]:focus {
 <body>
 <div id="header">
 </div>
+<div class="panel3">
+</div>
 <div id="panel">
 </div>
 <div id="panel1">
+</div>
+<div id="panel2">
 </div>
 <div class = "fields">
 <form name = "form" method = "post" action = "createremitreceipt_staff.php">
@@ -288,13 +302,16 @@ input[type=password]:focus {
 </div>
 <div class="logo">
 <a href="loginstaffcode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180"/>
 </a>
 </div>
 <div class="btnCancel">
 <form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Create Money Remittance</h1></strong>
 </div>
 </body>
 </html>

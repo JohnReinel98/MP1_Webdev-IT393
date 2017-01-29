@@ -3,23 +3,10 @@
 <title> Create Remittance </title>
 <style>
 body{
-	/*background-image:url("Assets/wallpaper1.png");*/
 	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-/*#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1360px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}*/
 #panel{
 	position: absolute;
 	background:#429bf4;
@@ -207,6 +194,16 @@ input[type=password]:focus {
     padding: 20px;
     box-sizing: border-box;
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <?php 
@@ -313,6 +310,9 @@ input[type=password]:focus {
 <form method="POST" action="loginadmincode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Create Money Remittance</h1></strong>
 </div>
 </body>
 </html>

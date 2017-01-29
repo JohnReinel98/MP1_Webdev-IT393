@@ -60,21 +60,9 @@
 <title> Remit Receipt </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
-}
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1340px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
 }
 #panel{
 	position: absolute;
@@ -101,7 +89,7 @@ body{
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .house{
@@ -211,10 +199,34 @@ input[type=password] {
 input[type=password]:focus {
     border: 3px solid #555;
 }
+#panel2{
+	position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #edeff1;
+    width: 1358px;
+    height: 620px;
+    margin: 130px -10px 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <body>
 <div id="header">
+</div>
+<div id="panel2">
 </div>
 <div id="panel">
 </div>
@@ -271,8 +283,11 @@ input[type=password]:focus {
 </div>
 <div class="logo">
 <a href="loginstaffcode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180"/>
 </a>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Confirm Money Remittance</h1></strong>
 </div>
 </body>
 </html>

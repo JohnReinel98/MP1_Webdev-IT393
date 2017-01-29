@@ -9,56 +9,31 @@
 <title> Archived Package Records </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1340px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 #panel{
     position: absolute;
-    background: #429bf4;
-    width: 1320px;
-    height: 470px;
-    border-radius: 15px 15px 15px 15px;
+    background: #edeff1;
+    width: 1350px;
+    height: 510px;
     float: center;
-    margin: 190px 6px 0;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-}
-#panel1{
-    position: absolute;
-    background: rgba(128,128,128,1.0);
-    width: 1290px;
-    height: 445px;
-    border-radius: 15px 15px 15px 15px;
-    float: center;
-    margin: 202px 20px 0;
+    margin: 135px -10px 0;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
 }
 .table1{
 	position: absolute;
-	top:215px;
-	left:30px;
-	width: 1280px;
+	top:150px;
+	left:0px;
+	width: 1345px;
 	height: 365px;
 	overflow-y: scroll;
 }
@@ -83,7 +58,7 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 600px;
+	top: 580px;
 	left: 1220px;
 }
 .cancel{
@@ -104,6 +79,16 @@ th {
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <body>
@@ -115,7 +100,7 @@ th {
 </div>
 <div class="logo">
 <a href="loginstaffcode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
 </div>
 <div class = "table1">
@@ -178,6 +163,9 @@ th {
 <form method="POST" action="loginstaffcode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Archived Package Deliveries</h1></strong>
 </div>
 </body>
 </html>

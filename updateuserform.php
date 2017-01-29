@@ -79,7 +79,7 @@ tr:nth-child(even){
 }
 
 th {
-    background-color: lightgray;
+    background-color: gray;
     color: white;
 }
 .logo{
@@ -186,6 +186,16 @@ input[type=password]:focus {
 	padding: 20px;
 	box-sizing:border-box;
 }
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
+}
 </style>
 </head>
 <body>
@@ -284,6 +294,8 @@ input[type=password]:focus {
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>
-
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Update User Information</h1></strong>
+</div>
 </body>
 </html>

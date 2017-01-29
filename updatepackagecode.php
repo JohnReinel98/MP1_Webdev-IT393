@@ -9,45 +9,21 @@ $conn = @mysql_connect("localhost","root","");
 <title> Update Package Information </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1340px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
 #panel2{
-    position: absolute;
-    background: #429bf4;
-    width: 1330px;
-    height: 530px;
-    border-radius: 15px 15px 15px 15px;
-    float: center;
-    margin: 190px 6px 0;
+	position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #edeff1;
+    width: 1358px;
+    height: 510px;
+    margin: 130px -10px 0;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
-}
-#panel1{
-	position: absolute;
-	background:rgba(128,128,128,1.0);
-	width: 1300px;
-	height: 500px;
-	border-radius: 15px 15px 15px 15px;
-	float: center;
-	margin: 200px 20px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
 }
 .fields{
 	position:absolute;
@@ -56,15 +32,15 @@ body{
 }
 .table1{
 	position: absolute;
-	top:210px;
-	left:35px;
-	width: 1280px;
+	top:150px;
+	left:0px;
+	width: 1347px;
 	height: 400px;
 	overflow-y: scroll;
 }
 table{
 	border-collapse: collapse;
-	background-color: gray;
+	background-color: lightgray;
 	font-weight: bold;
     width:100%;
 }
@@ -83,12 +59,12 @@ th {
 }
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 .btnCancel{
 	position: absolute;
-	top: 645px;
+	top: 580px;
 	left: 1230px;
 }
 .cancel{
@@ -108,6 +84,16 @@ th {
 	background-color: white;
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
 }
 </style>
 </head>
@@ -179,13 +165,16 @@ th {
 </div>
 <div class="logo">
 <a href="loginadmincode.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180" />
 </a>
 </div>
 <div class="btnCancel">
 <form method="POST" action="loginadmincode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Package Delivery Transactions</h1></strong>
 </div>
 </body>
 </html>

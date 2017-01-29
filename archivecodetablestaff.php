@@ -34,8 +34,8 @@ body{
 #panel{
     position: absolute;
     background: #edeff1;
-    width: 1364px;
-    height: 470px;
+    width: 1350px;
+    height: 530px;
     float: center;
     margin: 135px -10px 0;
     color: #fff;
@@ -45,9 +45,9 @@ body{
 .table1{
 	position: absolute;
 	top:155px;
-	left: 10px;
+	left: 0px;
 	height: 360px; 
-	width: 1345px;
+	width: 1348px;
 	overflow-y: scroll;
 }
 table{
@@ -91,6 +91,16 @@ th {
 	background-color: white;
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
 }
 </style>
 </head>
@@ -157,6 +167,9 @@ th {
 <form method="POST" action="loginadmincode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Archived Staff Records</h1></strong>
 </div>
 </body>
 </html>

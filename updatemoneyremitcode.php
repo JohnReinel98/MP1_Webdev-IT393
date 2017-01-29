@@ -19,7 +19,7 @@ body{
     left: 0px;
     background: #edeff1;
     width: 1358px;
-    height: 620px;
+    height: 550px;
     margin: 130px -10px 0;
     color: #fff;
     padding: 20px;
@@ -85,6 +85,16 @@ th {
 	background-color: white;
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
 }
 </style>
 </head>
@@ -163,6 +173,9 @@ th {
 <form method="POST" action="loginadmincode.php">
 <input type= "submit" value="Back" class="cancel">
 </form>
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Money Remittances Information</h1></strong>
 </div>
 </body>
 </html>

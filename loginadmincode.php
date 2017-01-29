@@ -261,7 +261,7 @@ tr:nth-child(even){
 }
 
 th {
-    background-color: lightgray;
+    background-color: gray;
     color: white;
 }
 .logo{

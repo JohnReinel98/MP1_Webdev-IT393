@@ -14,8 +14,7 @@ $this->SetFont('Arial','B',15);
 //Move to the right
 $this->Cell(80);
 //Title
-$this->Cell(-20,15,'Converge Logistics',0,0,'C');
-$this->Cell(25,30,'Money Remmitance Receipt',0,0,'C');
+$this->Cell(-20,20,'Money Remmitance Receipt',0,0,'C');
 //Line break
 $this->Ln(20);
 }

@@ -498,6 +498,11 @@ body{
     text-align: center;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+.searchic{
+	position: absolute;
+	top: 57px;
+	left: 205px;
+}
 </style>
 </head>
 <body>
@@ -670,6 +675,9 @@ body{
 </div>
 <div class="img6">
 <img src="Assets/address.png" height="24" width="24" />
+</div>
+<div class="searchic">
+<img src="Assets/searchicon.png"/>
 </div>
 </body>
 </html>
