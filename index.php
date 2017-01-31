@@ -44,6 +44,30 @@ body{
 .btnCr8Remit:hover {
     color: darkgray;
 	text-shadow: 2px 2px 5px #6E6E6E;
+}.btnAbout{
+	position: absolute;
+	top: 35px;
+	left: 900px;
+	border: 2px solid #429bf4;
+	border-radius: 10px;
+	background: #429bf4;
+	font-size: 25px;
+	color: white;
+	font-family:Verdana, Geneva, sans-serif;
+	transition-duration: 0.4s;
+	padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	cursor:pointer;
+}
+/*.btnCr8Remit:hover{
+	color:darkgray;
+	text-shadow: 5px 5px 5px #6E6E6E;
+}*/
+.btnAbout:hover {
+    color: darkgray;
+	text-shadow: 2px 2px 5px #6E6E6E;
 }
 .btnTrack{
 	position: absolute;
@@ -528,6 +552,9 @@ body{
 
 <form method="POST" action="viewallrates.php">
 	<input type="submit" value="View Rates" class="btnCr8Remit">
+</form>
+<form method="POST" action="aboutus.php">
+	<input type="submit" value="About Us" class="btnAbout">
 </form>
 <div class="track1">
 <form method="POST" action="trackordercode.php">

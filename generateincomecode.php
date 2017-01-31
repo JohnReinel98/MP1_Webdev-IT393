@@ -6,12 +6,17 @@ class PDF extends FPDF
 {
 function Header()
 {
+$mon=$_SESSION['month'];
+$day=$_SESSION['day'];
+$yea=$_SESSION['year'];
+$mon1=$_SESSION['month1'];
+$day1=$_SESSION['day1'];
+$yea1=$_SESSION['year1'];
 $this->Image('Assets/pdflogo.jpg',5,0,50,50);
 $this->SetFont('Arial','B',15);
 $this->Cell(80);
-$this->Cell(-20,15,'Converge Logistics',0,0,'C');
-$this->Cell(25,30,'Income Computation',0,0,'C');
-
+$this->Cell(-20,20,'Income Computation',0,0,'C');
+$this->Cell(-20,50,'                            '.$mon.'/'.$day.'/'.$yea.' - '.$mon1.'/'.$day1.'/'.$yea1.'',0,0,'C');
 $this->Ln(20);
 }
 
@@ -26,11 +31,11 @@ function LoadData()
 $end=$_SESSION['ending'];
 $sta=$_SESSION['start'];
 
-$result=mysql_query("select DateRemitted,TrackNo,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
+$result=mysql_query("select date_format(DateRemitted,'%M %d, %Y'),TrackNo,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
 	while($row=mysql_fetch_row($result)) { 
 		$data[] = $row;
 	}
-	$result2=mysql_query("select DateDelivered,TrackNo,Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
+	$result2=mysql_query("select date_format(DateDelivered,'%M %d, %Y'),TrackNo,Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
 		while($row2=mysql_fetch_row($result2)) { 
 			$data[] = $row2;
 		}

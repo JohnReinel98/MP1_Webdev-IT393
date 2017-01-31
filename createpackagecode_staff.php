@@ -84,14 +84,21 @@ $conn = @mysql_connect("localhost","root","");
 	$notiftod = 'false';
 	$notiftmr = 'false';
 	$insurance = $_POST['txtInsurance'];
-
+	if($branch = "NCR"){
+		$expected2="+1 days";
+		
+	}else{
+		$expected2="+3 days";
+	}
+	
+	$expected1 = date("Y-m-d", strtotime($expected2));
 	$result = mysql_query("insert into tblpackage_delivery(TrackNo,Consignor,ConsignorNo,
 							ConsignorHouseNo,ConsignorStreet,ConsignorBarangay,ConsignorCity,ConsignorProvince,ConsignorEmail,
 							Consignee,ConsigneeNo,ConsigneeHouseNo,ConsigneeStreet,ConsigneeBarangay,ConsigneeCity,ConsigneeProvince,
 							ConsigneeEmail,Size,Amount,DeclaredValue,Insurance,DateDelivered,DateReceived,NotifyToday,NotifyTmr,Status,DeliveryStatus,Branch)
 							values('$trackid','$consignor','$consignorno','$house','$street','$barangay','$city','$province',
 							'$consignoremail','$consignee','$consigneeno','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
-							'$kilo','$pay','$declaredval','$insurance','$dispatched','$expected','$notiftod','$notiftmr','$status','$delvstatus','$branch')");
+							'$kilo','$pay','$declaredval','$insurance','$dispatched','$expected1','$notiftod','$notiftmr','$status','$delvstatus','$branch')");
 	if($result){
 		header('Location: successpackagedel_staff.php');
 		$_SESSION['POST'] = $_POST;

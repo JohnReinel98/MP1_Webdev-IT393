@@ -32,12 +32,12 @@ function LoadData()
 				$end=$_SESSION['ending'];
 $sta=$_SESSION['start'];
 
-	$result=mysql_query("select TrackNo,DateRemitted,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
+	$result=mysql_query("select TrackNo,date_format(DateRemitted,'%M %d, %Y'),Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
 			while($row=mysql_fetch_row($result)) 
 			{ 
 				$data[] = $row;
 			}
-			$result2=mysql_query("select TrackNo,DateDelivered,Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
+			$result2=mysql_query("select TrackNo,date_format(DateDelivered,'%M %d, %Y'),Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
 			while($row2=mysql_fetch_row($result2)) 
 			{ 
 				$data[] = $row2;

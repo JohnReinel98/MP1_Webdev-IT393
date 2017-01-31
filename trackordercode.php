@@ -9,35 +9,22 @@ $conn = @mysql_connect("localhost","root","");
 <title> Track Order </title>
 <style>
 body{
-	background-image:url("Assets/wallpaper1.png");
+	background-color: white;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#header{
-	position: absolute;
-	background:rgba(128,128,128,0.5);
-	width: 1360px;
-	height: 180px;
-	border-radius: 0 0 15px 15px;
-	float: left;
-	margin: -5px -5px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
-}
 .logo{
 	position: absolute;
-	top: -45px;
+	top: -40px;
 	left: 10px;
 }
 #panel1{
 	position: absolute;
-	background:rgba(128,128,128,1.0);
-	width: 430px;
-	height: 150px;
-	border-radius: 15px 15px 15px 15px;
+	background:lightgray;
+	width: 1367px;
+	height: 500px;
 	float: center;
-	margin: 220px 450px 0;
+	margin: 140px -10px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -66,22 +53,38 @@ th {
     background-color: gray;
     color: white;
 }
-.backmain{
+.btnBack{
 	position: absolute;
-	background-color: white;
-    color: #429bf4;
-    border: 2px solid #429bf4;
-    padding: 10px 10px;
+	top: 400px;
+	left: 500px;
+}
+.sub{
+	background-color: #429bf4;
+    border: none;
+	border-color: darkgray;
+    color: white;
+    padding: 15px 30px;
+	border-radius: 5px;
+	width: 350px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    top: 420px;
-	left: 1050px;
+    font-size: 12px;
+	cursor: pointer;
 }
-.backmain:hover{
+.sub:hover{
 	background-color: darkgray;
-	color:white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.viewinc{
+	position: absolute;
+	top: 3%;
+	left: 15%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+    color: #429bf4;
+    font-size: 30px;
+    line-height: 30px;
 }
 </style>
 </head>
@@ -92,7 +95,7 @@ th {
 </div>
 <div class="logo">
 <a href="index.php">
-<img src="Assets/indexlogo.png"/>
+<img src="Assets/indexlogo.png" width="180" height="180"/>
 </a>
 </div>
 <div class = "table1">
@@ -119,6 +122,13 @@ th {
 	?>
 </table>
 </div>
-<a href="index.php" class= "backmain"> Back to Main </a>
+<!--<a href="index.php" class= "backmain"> Back to Main </a>-->
+<div class="btnBack">
+<form method="POST" action="index.php">
+<input type="submit" value="Back" class="sub" />
+</div>
+<div class="viewinc">
+	<strong><h1 style="font-size:25pt;">Track Your Order</h1></strong>
+</div>
 </body>
 </html>

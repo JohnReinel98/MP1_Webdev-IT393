@@ -14,6 +14,14 @@ $conn = @mysql_connect("localhost","root","");
 		$id = $rows['ID'];
 		$trackno = $rows['TrackNo'];
 	}
+	$username = $_SESSION['user'];
+	$password = $_SESSION['password'];
+	
+	$show = mysql_query("Select Lname,Fname from tblstaff where Username ='$username'");
+	$rows = mysql_fetch_array($show);
+	$lname1 = $rows['Lname'];
+	$fname = $rows['Fname'];
+	echo "<p class=welcome> Welcome: $fname $lname1 </p>";
 ?>
 <html>
 <head>
@@ -29,6 +37,15 @@ body{
 	top: -40px;
 	left: 10px;
 }
+.welcome{
+	position: absolute;
+	top: 80px;
+	left: 1100px;
+	font-size: 14px;
+	font-family: Verdana;
+	font-weight: bold;
+	color: #429bf4;
+}
 #panel1{
 	position:absolute;
 	background:#429bf4;
@@ -36,7 +53,7 @@ body{
 	height: 390px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
-	margin: 190px 455px 0;
+	margin: 190px 160px 0;
 	color: #fff;
 	padding: 20px;
 	box-sizing:border-box;
@@ -57,24 +74,24 @@ body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: white;
 	font-size: 35px;
-    top: 250px;
-	left: 530px;
+    top: 200px;
+	left: 225px;
 }
 .trackno1{
 	position: absolute;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: white;
 	font-size: 20px;
-    top: 360px;
-	left: 540px;
+    top: 330px;
+	left: 230px;
 }
 .trackno2{
 	position: absolute;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: white;
 	font-size: 20px;
-    top: 360px;
-	left: 690px;
+    top: 330px;
+	left: 380px;
 }
 .deldate1{
 	position: absolute;
@@ -82,7 +99,7 @@ body{
 	color: white;
 	font-size: 20px;
     top: 410px;
-	left: 540px;
+	left: 230px;
 }
 .deldate2{
 	position: absolute;
@@ -90,12 +107,12 @@ body{
 	color: white;
 	font-size: 20px;
     top: 410px;
-	left: 765px;
+	left: 470px;
 }
 .btnBack{
 	position: absolute;
 	top: 509px;
-	left: 770px;
+	left: 450px;
 }
 .back{
 	background-color: darkgray;
@@ -118,7 +135,7 @@ body{
 .btnPrint{
 	position: absolute;
 	top: 510px;
-	left: 485px;
+	left: 220px;
 }
 .recpt{
 	background-color: darkgray;
@@ -152,13 +169,110 @@ body{
 }
 .viewinc{
 	position: absolute;
-	top: 3%;
-	left: 15%;
+	top: 20%;
+	left: 20%;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 300;
     color: #429bf4;
     font-size: 30px;
     line-height: 30px;
+}
+.menubar{
+  position: absolute;
+  top: 2px;
+  left: 350px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background:rgba(66,155,244,0.8);
+}
+
+li {
+    float: left;
+}
+
+
+li a, .dropbtn_remits {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown_remits:hover .dropbtn_remits {
+    background-color: rgba(128,128,128,0.9);
+}
+
+li.dropdown_remits {
+    display: inline-block;
+}
+
+.dropdown-content_remits {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content_remits a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content_remits a:hover {background-color: rgba(128,128,128,0.5);}
+
+.dropdown_remits:hover .dropdown-content_remits {
+    display: block;
+}
+li a, .dropbtn_packages {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown_packages:hover .dropbtn_packages {
+    background-color: rgba(128,128,128,0.9);
+}
+
+li.dropdown_packages {
+    display: inline-block;
+}
+
+.dropdown-content_packages {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content_packages a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content_packages a:hover {background-color: rgba(128,128,128,0.5);}
+
+.dropdown_packages:hover .dropdown-content_packages {
+    display: block;
+}
+.transacsuc{
+	position: absolute;
+	top: 200px;
+	left: 850px;
 }
 </style>
 </head>
@@ -201,6 +315,31 @@ body{
 </div>
 <div class="viewinc">
 	<strong><h1 style="font-size:25pt;">Transaction Status</h1></strong>
+</div>
+<div class="menubar">
+<ul>
+  <li class="dropdown_remits">
+  <a href="#" class="dropbtn_remits"><img src="Assets/moneyrem.png" height="24" width="24"/>&nbsp;&nbsp;Manage Remittances</a>
+    <div class="dropdown-content_remits">
+      <a href="createremitform_staff.php">Create Remittance</a>
+      <a href="updatemoneyremitcode_staff.php">Update Remittance Informations</a>
+      <a href="archivecodetablemonrem_staff.php">Archive/Unarchive Remittances</a>
+    </div>
+  </li>
+  <li class="dropdown_packages">
+  <a href="#" class="dropbtn_packages"><img src="Assets/package.png" height="24" width="24"/>&nbsp;&nbsp;Manage Packages</a>
+  <div class="dropdown-content_packages">
+      <a href="createpackageform_staff.php">Create Package Delivery</a>
+      <a href="updatepackagecode_staff.php">Update Package Informations</a>
+      <a href="archivecodetablepackage_staff.php">Archive/Unarchive Packages</a>
+    </div>
+  </li>
+  <li><a href="viewallratesstaff.php"><img src="Assets/rates.png" height="24" width="24"/>&nbsp;&nbsp;View Rates</a></li>
+  <li><a href="logoutsessioncode.php"><img src="Assets/logout.png" height="24" width="24"/>&nbsp;&nbsp;Logout</a></li>
+</ul>
+</div>
+<div class="transacsuc">
+<img src="Assets/transacsuc.png" width="360" height="360" />
 </div>
 </body>
 </html>

@@ -82,14 +82,21 @@ $conn = @mysql_connect("localhost","root","");
 	$addday = $day +2;
 	$datereceived = "$date[year]-$date[mon]-$addday";
 	$remitstatus = $_POST['txtStatus'];
-
+	if($branch = "NCR"){
+		$expected="+1 days";
+		
+	}else{
+		$expected="+3 days";
+	}
+	
+	$expected1 = date("Y-m-d", strtotime($expected));
 	$result = mysql_query("insert into tblmoney_remit(TrackNo,Consignor,ConsignorNo,
 							ConsignorHouseNo,ConsignorStreet,ConsignorBarangay,ConsignorCity,ConsignorProvince,
 							ConsigneeNo,Consignee,ConsigneeHouseNo,ConsigneeStreet,ConsigneeBarangay,ConsigneeCity,ConsigneeProvince,
 							ConsigneeEmail,Amount,Fee,TotalAmount,DateRemitted,DateDelivered,Branch,Status,RemitStatus)
 							values('$trackid','$consignor','$consignorno','$house','$street','$barangay','$city','$province','$consigneeno',
 							'$consignee','$chouse','$cstreet','$cbarangay','$ccity','$cprovince','$consigneeemail',
-							'$amount','$fee','$totalamount','$dateremitted','$datereceived','$branch','Active','$remitstatus')");
+							'$amount','$fee','$totalamount','$dateremitted','$expected1','$branch','Active','$remitstatus')");
 	if($result){
 		$username = 'convergelogistics2017a@gmail.com'; 
 		$hash = 'Convergelogistics_10';
@@ -146,7 +153,7 @@ Consignor Information: '$consignor'";
 		{
 			
         	$_SESSION['POST'] = $_POST;
-        	$_SESSION['date'] = $datereceived;
+        	$_SESSION['date'] = $expected1;
 			echo "Message has been sent";
 			header('Location: successmoneyremit_staff.php');
 		}
