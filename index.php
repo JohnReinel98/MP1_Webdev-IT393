@@ -23,7 +23,7 @@ body{
 .btnCr8Remit{
 	position: absolute;
 	top: 35px;
-	left: 1100px;
+	left: 1080px;
 	border: 2px solid #429bf4;
 	border-radius: 10px;
 	background: #429bf4;
@@ -47,7 +47,7 @@ body{
 }.btnAbout{
 	position: absolute;
 	top: 35px;
-	left: 900px;
+	left: 870px;
 	border: 2px solid #429bf4;
 	border-radius: 10px;
 	background: #429bf4;
@@ -82,19 +82,6 @@ body{
 }
 .btnTrack:hover{
 	color:darkgray;
-}
-#panel{
-	position: absolute;
-	background: rgba(0, 0, 0, 0.5);
-	opacity: 0.7;
-	width: 385px;
-	height: 300px;
-	border-radius: 0px 15px 0px 15px;
-	float: center;
-	margin: 235px 930px 0;
-	color: #fff;
-	padding: 20px;
-	box-sizing:border-box;
 }
 
 #panel5{
@@ -449,7 +436,7 @@ body{
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .username{
-	padding: 10px 8px 10px 44px;
+	padding: 10px 8px 10px 10px;
     width: 300px;
     height: 42px;
     border: 1px solid #393f46;
@@ -459,7 +446,7 @@ body{
     outline: none;
 }
 .passw{
-	padding: 10px 8px 10px 44px;
+	padding: 10px 8px 10px 10px;
     width: 300px;
     height: 42px;
     border: 1px solid #393f46;
@@ -527,10 +514,45 @@ body{
 	top: 57px;
 	left: 205px;
 }
+.p100{
+	position: absolute;
+	top: -5%;
+	left: 480px;
+	color: lightgray;
+	font-size: 40;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.p101{
+	position: absolute;
+	top: 5%;
+	left: 480px;
+	color: lightgray;
+	font-size: 30;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 </style>
 </head>
+<link rel="stylesheet" href="jquery/login/login.css" type="text/css" />
+<script src="jquery/login/jquery-1.3.2.min.js" type="text/javascript" ></script>
+<script type="text/javascript" src="jquery/login/jquery-ui-1.7.3.custom.min.js"></script>
+<script type="text/javascript" src="jquery/login/script.js"></script>
 <body>
-
+<!--<div id="login">
+        <a href="#">Log in</a>
+        <form action="">
+          <div>
+            <label for="username">Username:</label>
+            <input name="username" id="username" type="text"/>
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input name="password" id="password" type="password"/>
+          </div>
+          <div>
+          	<input type="submit" value="Log in!" />
+        	</div>
+        </form>
+      </div>-->
 
 <div id="panel1">
 </div>
@@ -607,26 +629,33 @@ body{
 </div>
 <div class="gray1">
 </div>
-<div id="panel">
-</div>
-<div class="p1">
+<!--<div class="p1">
 <p> Login </p>
-</div>
-<div class = "login">
+</div>-->
+
+<div id = "login">
+	<a href="#"> Login </a>
 	<form method = "POST" action = "loginsessioncode.php">
-	<tr>
+	<!--<tr>
 	<td><input type = "text" class="username" name = "txtUsername" id = "txtUsername" placeholder="Username" autocomplete="off" />
 	<td><p><br></td>
 	<input type = "password" class="passw" name = "txtPassword" id = "txtPassword" placeholder="Password"></td><br><br/>
-	<tr><input type = "submit" value = "Login" class="sub"></tr>
+	<tr><input type = "submit" value = "Login" class="sub"></tr>-->
+	<div>
+        <label for="username"><font face="verdana" color="white">Username:</font></label>
+        <input class="username" name="txtUsername" id="txtUsername" placeholder="Username" type="text" autocomplete="off"/>
+    </div>
+    <div>
+        <label for="password"><font face="verdana" color="white">Password:</font></label>
+        <input class="passw" name="txtPassword" id="txtPassword" placeholder="Password" type="password"/>
+    </div>
+    <div>
+        <input type="submit" value="Login" class="sub" />
+    </div>
 	</form>
 </div>
-<div class="usernamelogo">
-<img src="Assets/username.png" height="32" width="32" />
-</div>
-<div class="passlogo">
-<img src="Assets/password.png" height="28" width="28" />
-</div>
+
+
 <div class="line2">
 &nbsp;
 </div>
@@ -706,5 +735,11 @@ body{
 <div class="searchic">
 <img src="Assets/searchicon.png"/>
 </div>
+<!--<div class="p100">
+<h3> Easy and Fast </h3>
+</div>
+<div class="p101">
+<h4> Package and Money Transfer </h4>
+</div>-->
 </body>
 </html>

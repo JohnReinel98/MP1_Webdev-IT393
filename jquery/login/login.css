@@ -1,0 +1,48 @@
+#container {
+  position: relative;
+}
+
+#login {
+  position: absolute;
+  top: 245px;
+  right: 30px; 
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0px 15px 0px 15px;
+  padding: 5px;
+  -moz-border-radius: 4px;
+  width: 370px;
+}
+
+#login form {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+#login form label, #login form input {
+  margin-top: 10px;
+  display: block;
+}
+
+#login form button {
+  float: right;
+  margin-top: 50px;
+}
+
+#login a {
+  display: block;
+  text-decoration: none;
+  font-size: 135%;
+  font-family: verdana;
+  color:white;
+  font-weight: bold;
+  height: 24.3px;
+  padding: 0 20px 0 5px;
+  background: url(links.png);
+  background-position: right -22px;
+  background-repeat: no-repeat;
+}
+
+#login a.active {
+  background-position: right 0;
+}
+

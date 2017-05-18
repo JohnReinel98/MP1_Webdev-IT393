@@ -31,7 +31,7 @@ body{
     left: 0px;
     background: #edeff1;
     width: 1358px;
-    height: 950px;
+    height: 900px;
     margin: 130px -10px 0;
     color: #fff;
     padding: 20px;
@@ -41,7 +41,7 @@ body{
 	position: absolute;
 	background:#429bf4;
 	width: 510px;
-	height: 865px;
+	height: 760px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 60px 0;
@@ -171,7 +171,7 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 1015px;
+	top: 895px;
 	left: 460px;
 }
 .cancel{
@@ -406,45 +406,47 @@ li.dropdown_pdfs {
 <div class = "fields">
 <form name = "form" method = "post" action = "createpackagereceipt.php">
 <tr>
-<td><font face="Helvetica" color="white">Consignor:</font><br>
-<td><input type = "text" name = "txtConsignor" id = "txtConsignor"><p>
-<p><font face="Helvetica" color="white">Consignor Address:</font><br> 
-<td><input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" placeholder="House" class="house">
-<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder="Street" class="street">
-<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder="Barangay" class="barangay"><br>
+<font face="Helvetica" color="white"><b>Consignor</b></font><br><br>
+<font face="Helvetica" color="white">Name:</font>
+<input type = "text" name = "txtConsignor" id = "txtConsignor"><br><br>
+<font face="Helvetica" color="white">Address:</font>
+<input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" placeholder="House" class="house">
+<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder="Street" class="street"><br>
+<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder="Barangay" class="barangay">
 <input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" placeholder="City" class="city">
-<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder="Province" class="province"><p>
-<p><font face="Helvetica" color="white">Consignor Email:</font><br> 
-<td><input type = "text" name = "txtConsignorEmail" id = "txtConsignorEmail"><p>
-<p><font face="Helvetica" color="white">Consignor Contact No.:</font><br> 
-<td><input type = "text" name = "txtConsignorNo" id = "txtConsignorNo"><p>
-<p><font face="Helvetica" color="white">Consignee:</font><br>
-<td><input type = "text" name = "txtConsignee" id = "txtConsignee"><p>
-<p><font face="Helvetica" color="white">Consignee Address:</font><br> 
-<td><input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" placeholder="House" class="house">
-<input type = "text" name = "txtConsigneeStreet" id = "txtConsignorStreet" placeholder="Street" class="street">
-<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder="Barangay" class="barangay"><br>
+<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder="Province" class="province"><br><br>
+<font face="Helvetica" color="white">Email:</font>
+<input type = "text" name = "txtConsignorEmail" id = "txtConsignorEmail"><br><br>
+<font face="Helvetica" color="white">Contact No.:</font> 
+<input type = "text" name = "txtConsignorNo" id = "txtConsignorNo"><p>
+<font face="Helvetica" color="white"><b>Consignee</b></font><br><br>
+<font face="Helvetica" color="white">Name:</font>
+<input type = "text" name = "txtConsignee" id = "txtConsignee"><br><br>
+<font face="Helvetica" color="white">Address:</font> 
+<input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" placeholder="House" class="house">
+<input type = "text" name = "txtConsigneeStreet" id = "txtConsignorStreet" placeholder="Street" class="street"><br>
+<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder="Barangay" class="barangay">
 <input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" placeholder="City" class="city">
-<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder="Province" class="province"><p>
-<p><font face="Helvetica" color="white">Consignee Email:</font><br>
-<td><input type = "text" name = "txtConsigneeEmail" id = "txtConsigneeEmail"><p>
-<p><font face="Helvetica" color="white">Consignee Contact No.:</font><br>
-<td><input type = "text" name = "txtConsigneeNo" id = "txtConsigneeNo"><p>
-<p><font face="Helvetica" color="white">Branch:</font><br>
-<td><select type = "choice" name = "txtBranch" id = "txtBranch"><p>
+<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder="Province" class="province"><br><br>
+<font face="Helvetica" color="white">Email:</font>
+<input type = "text" name = "txtConsigneeEmail" id = "txtConsigneeEmail"><p>
+<font face="Helvetica" color="white">Contact No.:</font>
+<input type = "text" name = "txtConsigneeNo" id = "txtConsigneeNo"><p>
+<font face="Helvetica" color="white">Branch:</font>
+<select type = "choice" name = "txtBranch" id = "txtBranch"><p>
 <option> NCR </option>
 <option> N. LUZON </option>
 <option> S. LUZON </option>
 <option> VISAYAS </option>
 <option> MINDANAO </option></select><p>
-<p><font face="Helvetica" color="white">Size:</font><br>
-<td><select type = "choice" name = "txtKilo" id = "txtKilo"><p>
+<font face="Helvetica" color="white">Size:</font>
+<select type = "choice" name = "txtKilo" id = "txtKilo"><p>
 <option> KB Small </option>
 <option> KB Medium </option>
 <option> KB Large </option>
 <option> KB Extra Large </option></select><p>
-<p><font face="Helvetica" color="white">Declared Value:</font><br>
-<td><input type = "text" name = "txtDeclaredValue" id = "txtDeclaredValue"><p>
+<font face="Helvetica" color="white">Declared Value:</font>
+<input type = "text" name = "txtDeclaredValue" id = "txtDeclaredValue"><p>
 <input type = "submit" value = "Submit Transaction" class="create">
 <input type = "reset" value = "Reset" class="reset"></tr>
 </form>
@@ -460,7 +462,7 @@ li.dropdown_pdfs {
 	
 	<tr><td align = "center"> Origin: NCR </td>
 	<tr><td align = "center"> NCR </td>
-	<td align = "center"> 200 </td>
+	<td align = "center"> 200 </td>>
 	<td align = "center"> 325 </td>
 	<td align = "center"> 600 </td>
 	<td align = "center"> 1235 </td></tr>

@@ -166,6 +166,25 @@ select{
 	padding: 20px;
 	box-sizing:border-box;
 }
+table{
+	border-collapse: collapse;
+	background-color: lightgray;
+	font-weight: bold;
+    width:100%;
+}
+th, td {
+    text-align: left;
+    padding: 7px;
+}
+
+tr:nth-child(even){
+	background-color: white;
+}
+
+th {
+    background-color: gray;
+    color: white;
+}
 .viewinc{
 	position: absolute;
 	top: 24%;
@@ -350,8 +369,39 @@ li.dropdown_pdfs {
 .dropdown_pdfs:hover .dropdown-content_pdfs {
     display: block;
 }
+input[type=text] {
+    width: 200px;
+    padding: 12px 15px;
+    margin: 3.5px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    height: 30px;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+.starting{
+	position:absolute;
+	top: -200px;
+	left: 90px;
+}
+.ending{
+	position: absolute;
+	top: -100px;
+	left: 90px;
+}
 </style>
 </head>
+<link rel="stylesheet" href="jquery/datepicker/jquery-ui-1.7.3.custom.css" type="text/css" media="screen" charset="utf-8"/>
+<link rel="stylesheet" href="jquery/datepicker/style.css" type="text/css" media="screen" charset="utf-8"/>
+	
+<script src="jquery/datepicker/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="jquery/datepicker/jquery-ui-1.7.3.custom.min.js"></script>
+	
+<script type="text/javascript" src="jquery/datepicker/script.js"></script>
 <body>
 
 <div id="panel">
@@ -370,55 +420,10 @@ li.dropdown_pdfs {
 </div>
 <div class="btnSub">
 <form method ="POST" action="incomecomp.php">
-<input type="submit" value ="Compute Income" class="sub">
 
-    <select name="month" class="opt1">
-	<option value="">Months</option><option value="1">January</option><option value="2">February</option>
-	<option value="3">March</option><option value="4">April</option><option value="5">May</option>
-    <option value="6">June</option><option value="7">July</option><option value="8">August</option>
-	<option value="9">September</option><option value="10">October</option>	<option value="11">November</option>
-	<option value="12">December</option>
-	</select>
-	<select name="day" class="opt2">
-	<option value="">Days</option><option value="1">1</option><option value="2">2</option>
-	<option value="3">3</option><option value="4">4</option><option value="5">5</option>
-    <option value="6">6</option><option value="7">7</option><option value="8">8</option>
-	<option value="9">9</option><option value="10">10</option>	<option value="11">11</option>
-	<option value="12">12</option><option value="13">13</option><option value="14">14</option>
-	<option value="15">15</option><option value="16">16</option><option value="17">17</option>
-	<option value="18">18</option><option value="19">19</option><option value="20">20</option>
-	<option value="21">21</option><option value="22">22</option><option value="23">23</option>
-	<option value="24">24</option><option value="25">25</option><option value="26">26</option>
-	<option value="27">27</option><option value="28">28</option><option value="29">29</option>
-	<option value="30">30</option><option value="31">31</option>
-	</select>
-	<select name="year" class="opt25">
-	<option value="">Years</option><option value="2016">2016</option><option value="2017">2017</option>
-	<option value="2018">2018</option></select>
-
-	<select name="month2" class="opt3"> 
-	<option value="">Months</option><option value="1">January</option><option value="2">February</option>
-	<option value="3">March</option><option value="4">April</option><option value="5">May</option>
-    <option value="6">June</option><option value="7">July</option><option value="8">August</option>
-	<option value="9">September</option><option value="10">October</option>	<option value="11">November</option>
-	<option value="12">December</option>
-	</select>
-	<select name="day2" class="opt4">
-	<option value="">Days</option><option value="1">1</option><option value="2">2</option>
-	<option value="3">3</option><option value="4">4</option><option value="5">5</option>
-    <option value="6">6</option><option value="7">7</option><option value="8">8</option>
-	<option value="9">9</option><option value="10">10</option>	<option value="11">11</option>
-	<option value="12">12</option><option value="13">13</option><option value="14">14</option>
-	<option value="15">15</option><option value="16">16</option><option value="17">17</option>
-	<option value="18">18</option><option value="19">19</option><option value="20">20</option>
-	<option value="21">21</option><option value="22">22</option><option value="23">23</option>
-	<option value="24">24</option><option value="25">25</option><option value="26">26</option>
-	<option value="27">27</option><option value="28">28</option><option value="29">29</option>
-	<option value="30">30</option><option value="31">31</option>
-	</select>
-	<select name="year2" class="opt5">
-	<option value="">Years</option><option value="2016">2016</option><option value="2017">2017</option>
-	<option value="2018">2018</option></select>
+	<input type="text" class="starting" id="date" name = "start"  />
+	<input type="text" class="ending" id="date1" name = "ending"  />
+	<input type="submit" value ="Compute Income" class="sub">
 </form>
 </div>
 
@@ -428,10 +433,10 @@ li.dropdown_pdfs {
 </form>
 </div>
 <div class="p1">
-<p> Starting </p>
+<p> Starting: </p>
 </div>
 <div class="p2">
-<p> Ending </p>
+<p> Ending: </p>
 </div>
 <div class="viewinc">
 	<strong><h1 style="font-size:25pt;">Calculate Income</h1></strong>

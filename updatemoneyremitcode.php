@@ -18,6 +18,14 @@
 <html>
 <head>
 <title> Update Money Remit Information </title>
+<link rel="stylesheet" href="jquery/upnotif/jquery-ui-1.8.16.custom.css" type="text/css"/>
+<link rel="stylesheet" href="jquery/upnotif/style.css" type="text/css"/>
+
+<script src="jquery/upnotif/jquery-1.3.2.min.js" type="text/javascript" ></script>
+<script type="text/javascript" src="jquery/upnotif/jquery-ui-1.7.3.custom.min.js"></script>
+<script type="text/javascript" src="jquery/upnotif/script.js"></script>
+<script type="text/javascript" src="jquery/upnotif/script1.js"></script>
+<script type="text/javascript" src="jquery/upnotif/script2.js"></script>
 <style>
 body{
 	background-color: white;
@@ -339,10 +347,10 @@ li.dropdown_pdfs {
 	echo "<td align = 'center'> $fee </td>";
 	echo "<td align = 'center'> $total </td>";
 	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> <a href= 'archivemoneyremit.php?id=$id'> Archive </a> </td>";	
-	echo "<td align = 'center'> <a href= 'unarchivemoneyremit.php?id=$id'> Unarchive </a> </td>";
+	echo "<td align = 'center'> <a class='archive' href= 'archivemoneyremit.php?id=$id'> Archive </a> </td>";	
+	echo "<td align = 'center'> <a class='unarchive' href= 'unarchivemoneyremit.php?id=$id'> Unarchive </a> </td>";
 	echo "<td align = 'center'> $remitstatus </td>";
-	echo "<td align = 'center'> <a href= 'deliveredmoneyremit.php?id=$id&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td></tr>";
+	echo "<td align = 'center'> <a class='delivered' href= 'deliveredmoneyremit.php?id=$id&consignorno=$consignorno&consignee=$consignee'> Delivered </a> </td></tr>";
 	
 	}
 	?>

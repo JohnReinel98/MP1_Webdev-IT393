@@ -37,7 +37,7 @@ body{
     position: absolute;
     background:lightgray;
     width: 680px;
-    height: 360px;
+    height: 305px;
     border-radius: 15px 15px 15px 15px;
     float: center;
     margin: 580px 580px 0;
@@ -214,7 +214,7 @@ li.dropdown_pdfs {
 	position: absolute;
 	background:#429bf4;
 	width: 530px;
-	height: 740px;
+	height: 685px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 200px 50px 0;
@@ -307,7 +307,7 @@ th {
 }
 .btnCancel{
 	position: absolute;
-	top: 894px;
+	top: 823px;
 	left: 460px;
 }
 .cancel{
@@ -436,37 +436,39 @@ input[type=password]:focus {
 <div class = "fields">
 <form name = "form" method = "post" action = "createremitreceipt.php">
 <tr>
-<td><font face="Helvetica" color="white">Consignor:</font><br>
-<td><input type = "text" name = "txtConsignor" id = "txtConsignor"><p>
-<p><font face="Helvetica" color="white">Consignee Address:</font><br>
+<font face="Helvetica" color="white" size="4.5"><b> Consignor</b></font><br><br>
+<font face="Helvetica" color="white">Name:</font>
+<input type = "text" name = "txtConsignor" id = "txtConsignor"><br><br>
+<font face="Helvetica" color="white">Address:</font>
 <input type = "text" name = "txtConsignorHouse" id = "txtConsignorHouse" placeholder=" House" class="house">
-<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder=" Street" class="street">
-<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder=" Barangay" class="barangay"><br>
+<input type = "text" name = "txtConsignorStreet" id = "txtConsignorStreet" placeholder=" Street" class="street"><br>
+<input type = "text" name = "txtConsignorBarangay" id = "txtConsignorBarangay" placeholder=" Barangay" class="barangay">
 <input type = "text" name = "txtConsignorCity" id = "txtConsignorCity" placeholder=" City" class="city">
-<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder=" Province" class="province"><p>
-<p><font face="Helvetica" color="white">Consignor Contact Number:</font><br> 
-<td><input type = "text" name = "txtConsignorNo" id = "txtConsignorNo"><p>
-<p><font face="Helvetica" color="white">Consignee:</font><br>
-<td><input type = "text" name = "txtConsignee" id = "txtConsignee"><p>
-<p><font face="Helvetica" color="white">Consignee Address:</font><br>
+<input type = "text" name = "txtConsignorProvince" id = "txtConsignorProvince" placeholder=" Province" class="province"><br><br>
+<font face="Helvetica" color="white">Contact Number:</font> 
+<input type = "text" name = "txtConsignorNo" id = "txtConsignorNo"><br><br>
+<font face="Helvetica" color="white" ><b> Consignee</b></font><br><br>
+<font face="Helvetica" color="white">Name:</font>
+<input type = "text" name = "txtConsignee" id = "txtConsignee"><br><br>
+<font face="Helvetica" color="white">Address:</font>
 <input type = "text" name = "txtConsigneeHouse" id = "txtConsigneeHouse" placeholder=" House" class="house">
-<input type = "text" name = "txtConsigneeStreet" id = "txtConsigneeStreet" placeholder=" Street" class="street">
-<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder=" Barangay" class="barangay"><br>
+<input type = "text" name = "txtConsigneeStreet" id = "txtConsigneeStreet" placeholder=" Street" class="street"><br>
+<input type = "text" name = "txtConsigneeBarangay" id = "txtConsigneeBarangay" placeholder=" Barangay" class="barangay">
 <input type = "text" name = "txtConsigneeCity" id = "txtConsigneeCity" placeholder=" City" class="city">
-<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder=" Province" class="province"><p>
-<p><font face="Helvetica" color="white">Consignee Email:</font><br>
-<td><input type = "text" name = "txtConsigneeEmail" id = "txtConsigneeEmail"><p>
-<p><font face="Helvetica" color="white">Consignee Contact Number:</font><br>
-<td><input type = "text" name = "txtConsigneeNo" id = "txtConsigneeNo"><p>
-<p><font face="Helvetica" color="white">Amount:</font><br>
-<td><input type = "text" name = "txtAmount" id = "txtAmount"><p>
-<p><font face="Helvetica" color="white">Branch:</font><br>
-<td><select type = "choice" name = "txtBranch" id = "txtBranch"><p>
+<input type = "text" name = "txtConsigneeProvince" id = "txtConsigneeProvince" placeholder=" Province" class="province"><br><br>
+<font face="Helvetica" color="white">Email:</font>
+<input type = "text" name = "txtConsigneeEmail" id = "txtConsigneeEmail"><br><br>
+<font face="Helvetica" color="white">Contact Number:</font>
+<input type = "text" name = "txtConsigneeNo" id = "txtConsigneeNo"><br><br>
+<font face="Helvetica" color="white">Amount:</font>
+<input type = "text" name = "txtAmount" id = "txtAmount"><br><br>
+<font face="Helvetica" color="white">Branch:</font>
+<select type = "choice" name = "txtBranch" id = "txtBranch"><br><br>
 <option> NCR </option>
 <option> N. LUZON </option>
 <option> S. LUZON </option>
 <option> VISAYAS </option>
-<option> MINDANAO </option></select><p>
+<option> MINDANAO </option></select><br><br>
 <input type = "submit" value = "Submit Transaction" class="create">
 <input type = "reset" value = "Clear All Fields" class="reset">
 </form>

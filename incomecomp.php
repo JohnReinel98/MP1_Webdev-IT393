@@ -2,20 +2,15 @@
 session_start();
 $con = @mysql_connect("localhost","root","")or die("Cannot Connect");
 mysql_select_db("dbmplogistics",$con);
-$mon=$_POST['month'];
-$day=$_POST['day'];
-$yea=$_POST['year'];
-$mon2=$_POST['month2'];
-$day2=$_POST['day2'];
-$yea2=$_POST['year2'];
-$sta=$_SESSION['start']=$yea."-".$mon."-".$day;
-$end=$_SESSION['ending']=$yea2."-".$mon2."-".$day2;
-$_SESSION['month'] = $mon;
-$_SESSION['day'] = $day;
-$_SESSION['year'] = $yea;
-$_SESSION['month1'] = $mon2;
-$_SESSION['day1'] = $day2;
-$_SESSION['year1'] = $yea2;
+$start1=$_POST['start'];
+$ending1=$_POST['ending'];
+$newstart = date('Y/m/d',strtotime($start1));
+$newend = date('Y/m/d',strtotime($ending1));
+
+
+$sta=$_SESSION['start']=$newstart;
+$end=$_SESSION['ending']=$newend;
+
 $inco=0;
 $sql=mysql_query("select * from tblmoney_remit where DateRemitted between '$sta' and '$end'");
 		if($sql){

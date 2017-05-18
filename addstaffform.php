@@ -18,6 +18,13 @@
 <html>
 <head>
 <title> Add Employee/Staff </title>
+
+<link rel="stylesheet" href="jquery/validation/form.css" type="text/css" />
+  
+<script src="jquery/validation/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery/validation/jquery-ui-1.7.3.custom.min.js"></script>
+<script src="jquery/validation/jquery.validate.min.js" type="text/javascript" ></script>
+<script type="text/javascript" src="jquery/validation/script.js"></script>
 <style>
 body{
 	/*background-image:url("Assets/wallpaper1.png");*/
@@ -207,8 +214,8 @@ li.dropdown_pdfs {
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 450px;
-	height: 500px;
+	width: 385px;
+	height: 700px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;
 	margin: 190px 60px 0;
@@ -220,7 +227,7 @@ li.dropdown_pdfs {
 	position: absolute;
 	background: #edeff1;
 	width: 1350px;
-	height: 620px;
+	height: 780px;
 	margin: 130px -10px 0;
 	color: #fff;
 	padding: 20px;
@@ -300,8 +307,8 @@ li.dropdown_pdfs {
 }
 .btnCancel{
 	position: absolute;
-	top: 635px;
-	left: 410px;
+	top: 835px;
+	left: 340px;
 }
 .cancel{
 
@@ -322,18 +329,19 @@ li.dropdown_pdfs {
 	color: black;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.fields{
+#fields{
 	position:absolute;
 	top:220px;
 	left:100px;
+	width: 700px;
 }
 .fields2{
 	position: absolute;
-	top: 203px;
+	top: 400px;
 	left: 300px;
 }
 input[type=text] {
-    width: 90%;
+    width: 230px;
     padding: 12px 15px;
     margin: 3.5px 0;
     box-sizing: border-box;
@@ -347,7 +355,7 @@ input[type=text]:focus {
     border: 3px solid #555;
 }
 input[type=password] {
-    width: 90%;
+    width: 230px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -363,7 +371,7 @@ input[type=password]:focus {
 .officestaffs{
 	position: absolute;
 	top: 200px;
-	left: 570px;
+	left: 470px;
 }
 .viewinc{
 	position: absolute;
@@ -387,7 +395,7 @@ input[type=password]:focus {
 
 <div>
 <div class="officestaffs">
-<img src="Assets/officestaffs.jpg" width="740" height="500" />
+<img src="Assets/officestaffs.jpg" width="820" height="530" />
 </div>
 <div class="logo">
 <a href="loginadmincode.php">
@@ -402,28 +410,48 @@ input[type=password]:focus {
 <input type= "submit" value="Back" class="cancel">
 </form>
 </div>
+<div id = "fields">
 <form name = "form" method = "post" action = "addstaffcode.php">
-<div class = "fields">
-<tr>
-<td><font face="Helvetica" color="white">Last Name:</font><br>
-<td><input type = "text" name = "txtLname" id = "txtLname" autocomplete="off"><p>
-<p><font face="Helvetica" color="white">First Name:</font><br> 
-<td><input type = "text" name = "txtFname" id = "txtFname" autocomplete="off">
-<p><font face="Helvetica" color="white">Middle Initial:</font><br> 
-<td><input type = "text" name = "txtMI" id = "txtMI" autocomplete="off"><p>
-<p><font face="Helvetica" color="white">Contact No.:</font><br>
-<td><input type = "text" name = "txtContact" id = "txtContact" autocomplete="off"><p>
-<p><font face="Helvetica" color="white">Address:</font><br> 
-<td><input type = "text" name = "txtAddress" id = "txtAddress" autocomplete="off">
-<p><font face="Helvetica" color="white">Email:</font><br>
-<td><input type = "text" name = "txtEmail" id = "txtEmail" autocomplete="off"><p>
+
+<div>
+<label style="color:white;font-family:verdana;" for="name">Last Name:</label>
+<input type = "text" name = "txtLname" id = "txtLname" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">First Name:</label>
+<input type = "text" name = "txtFname" id = "txtFname" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">Middle Initial:</label> 
+<input type = "text" name = "txtMI" id = "txtMI" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">Contact:</label>
+<input type = "text" name = "txtContact" id = "txtContact" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">Address:</label>
+<input type = "text" name = "txtAddress" id = "txtAddress" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">Email:</label>
+<input type = "text" name = "txtEmail" id = "txtEmail" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">Username:</label>
+<input type = "text" name = "txtUsername" id = "txtUsername" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">Password:</label>
+<input type = "password" name = "txtPassword" id = "txtPassword" autocomplete="off">
+</div>
+<div>
+<label style="color:white;font-family:verdana;" for="name">Confirm Password:</label>
+<input type = "password" name = "txtConfPassword" id = "txtConfPassword" autocomplete="off">
+</div>
 </div>
 <div class="fields2">
-<p><font face="Helvetica" color="white">Username:</font><br>
-<td><input type = "text" name = "txtUsername" id = "txtUsername" autocomplete="off"><p>
-<p><font face="Helvetica" color="white">Password:</font><br>
-<td><input type = "password" name = "txtPassword" id = "txtPassword" autocomplete="off"><p>
-<td><input type = "submit" value= "Submit" class= "sub">
+<input type = "submit" value= "Submit" class= "sub">
 </div>
 </form>
 <div class="viewinc">

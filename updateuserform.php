@@ -371,6 +371,13 @@ input[type=password]:focus {
 }
 </style>
 </head>
+<link rel="stylesheet" href="jquery/upnotif/jquery-ui-1.8.16.custom.css" type="text/css"/>
+<link rel="stylesheet" href="jquery/upnotif/style.css" type="text/css"/>
+
+<script src="jquery/upnotif/jquery-1.3.2.min.js" type="text/javascript" ></script>
+<script type="text/javascript" src="jquery/upnotif/jquery-ui-1.7.3.custom.min.js"></script>
+<script type="text/javascript" src="jquery/upnotif/script.js"></script>
+<script type="text/javascript" src="jquery/upnotif/script3.js"></script>
 <body>
 <div id="header">
 </div>
@@ -449,9 +456,9 @@ input[type=password]:focus {
 	echo "<td align = 'center'> $email </td>";
 	echo "<td align = 'center'> $username </td>";
 	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> <a href= 'archiverecords.php?id=$id'> Archive </a> </td>";
+	echo "<td align = 'center'> <a class='archive' href= 'archiverecords.php?id=$id'> Archive </a> </td>";
 	echo "<td align = 'center'> $blockstatus </td>";
-	echo "<td align = 'center'> <a href= 'unblockstaff.php?id=$id'> Unblock </a> </td></tr>";
+	echo "<td align = 'center'> <a class='unblock' href= 'unblockstaff.php?id=$id'> Unblock </a> </td></tr>";
 	
 	}
 	?>

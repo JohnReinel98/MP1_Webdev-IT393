@@ -6,17 +6,14 @@ class PDF extends FPDF
 {
 function Header()
 {
-$mon=$_SESSION['month'];
-$day=$_SESSION['day'];
-$yea=$_SESSION['year'];
-$mon1=$_SESSION['month1'];
-$day1=$_SESSION['day1'];
-$yea1=$_SESSION['year1'];
+$start=$_SESSION['start'];
+$ending=$_SESSION['ending'];
+
 $this->Image('Assets/pdflogo.jpg',5,0,50,50);
 $this->SetFont('Arial','B',15);
 $this->Cell(80);
 $this->Cell(-20,20,'Income Computation',0,0,'C');
-$this->Cell(-20,50,'                            '.$mon.'/'.$day.'/'.$yea.' - '.$mon1.'/'.$day1.'/'.$yea1.'',0,0,'C');
+$this->Cell(-20,50,'                            '.$start.' - '.$ending.' ',0,0,'C');
 $this->Ln(20);
 }
 

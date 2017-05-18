@@ -277,6 +277,12 @@ th {
 }
 </style>
 </head>
+<link rel="stylesheet" href="jquery/upnotif/jquery-ui-1.8.16.custom.css" type="text/css"/>
+<link rel="stylesheet" href="jquery/upnotif/style.css" type="text/css"/>
+
+<script src="jquery/upnotif/jquery-1.3.2.min.js" type="text/javascript" ></script>
+<script type="text/javascript" src="jquery/upnotif/jquery-ui-1.7.3.custom.min.js"></script>
+<script type="text/javascript" src="jquery/upnotif/script1.js"></script>
 <body>
 <div id="header">
 </div>
@@ -330,7 +336,7 @@ th {
 	echo "<td align = 'center'> $email </td>";
 	echo "<td align = 'center'> $username </td>";
 	echo "<td align = 'center'> $status </td>";
-	echo "<td align = 'center'> <a href= 'unarchiverecords.php?id=$id'> Unarchive </a> </td>";
+	echo "<td align = 'center'> <a class='unarchive' href= 'unarchiverecords.php?id=$id'> Unarchive </a> </td>";
 	echo "<td align = 'center'> $blockstatus </td></tr>";
 	}
 	?>

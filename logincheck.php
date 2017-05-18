@@ -49,7 +49,7 @@
 						$tries+=1;
 						$sql2="UPDATE tblstaff set Tries = '$tries' where ID ='$id'";
 						$result2=mysql_query($sql2);
-						header('Location: loginform.php');
+						header('Location: index.php');
 						echo mysql_error();
 					}
 					else if($tries==2){
@@ -61,7 +61,7 @@
 				$reg = 1;		
 		}
 		if(!$reg){
-			header('Location: loginform.php');
+			header('Location: index.php');
 		}
 	}
 ?>
