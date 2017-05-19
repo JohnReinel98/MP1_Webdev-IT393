@@ -1,4 +1,4 @@
-<?php include 'checkDate.php'; ?>
+<?php include 'deliveryreceivedcode.php'; ?>
 <?php
 	session_start();
 	$conn = @mysql_connect("localhost","root","");

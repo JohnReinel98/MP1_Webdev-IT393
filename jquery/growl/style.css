@@ -1,4 +1,4 @@
-#receiving {
+#growl {
   position: absolute;
   bottom: 0;
   right: 5px;
@@ -6,7 +6,7 @@
   z-index: 10;
 }
 
-#sending {
+#growl2 {
   position: absolute;
   bottom: 0;
   right: 5px;

@@ -214,7 +214,7 @@ li.dropdown_pdfs {
 #panel{
 	position: absolute;
 	background:#429bf4;
-	width: 385px;
+	width: 400px;
 	height: 700px;
 	border-radius: 15px 15px 15px 15px;
 	float: center;

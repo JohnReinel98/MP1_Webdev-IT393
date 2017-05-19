@@ -28,15 +28,15 @@ function LoadData()
 $end=$_SESSION['ending'];
 $sta=$_SESSION['start'];
 
-$result=mysql_query("select date_format(DateRemitted,'%M %d, %Y'),TrackNo,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
+	$result=mysql_query("select date_format(DateRemitted,'%M %d, %Y'),TrackNo,Fee from tblmoney_remit where DateRemitted between '$sta' and '$end'");
 	while($row=mysql_fetch_row($result)) { 
 		$data[] = $row;
 	}
 	$result2=mysql_query("select date_format(DateDelivered,'%M %d, %Y'),TrackNo,Amount from tblpackage_delivery where DateDelivered between '$sta' and '$end'");	
-		while($row2=mysql_fetch_row($result2)) { 
-			$data[] = $row2;
-		}
-		return $data;
+	while($row2=mysql_fetch_row($result2)) { 
+		$data[] = $row2;
+	}
+return $data;
 }
 
 function FancyTable($header,$data)
@@ -53,7 +53,7 @@ $this->SetX(18);
 //Header
 $w=array(40,40,40);
 for($i=0;$i<count($header);$i++)
-$this->Cell($w[$i],7,$header[$i],1,0,'C',true);
+$this->Cell($w[0],7,$header[$i],1,0,'C',true);
 $this->Ln();
 //Color and font restoration
 $this->SetFillColor(224,235,255);
@@ -61,7 +61,6 @@ $this->SetTextColor(0);
 $this->SetFont('');
 //Data
 $fill=false;
-foreach($header as $col)
 		
 			foreach($data as $row)
 			{
